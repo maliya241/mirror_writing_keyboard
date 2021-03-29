@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Mirror Keyboard</title>
+		<!-- links, scripts, etc. -->
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/responsive.css">
+		<script src="js/html2canvas.js"></script> <!-- version 1 -->
+		<script src="js/canvas2image.js"></script> 
+	</head>
+	<body>
+
+		<h1>Test</h1>
+		<p>hallo, people. gato. neko. cat. baka.</p>
+		<p id= "textarea_p" ><span id="mirrored_text_box" class="textarea mirrored_text" role="textbox" contenteditable></span></p>
+		<input  style="text-align:right;unicode-bidi:bidi-override; direction:rtl;"></input>
+		<button type="button" onclick="save_as_png()">Save as PNG</button> 
+		
+		<svg version="1.1" id="onscreen_keyboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1107 335.66" style="enable-background:new 0 0 1107 335.66;" xml:space="preserve">
+			<!-- class names -->
+			<!-- key_name - text for all keys -->
+			<!-- keyboard_font_style - font styling for key text -->
+			<!-- mirrored_font_key_name - text for custom mirrored font -->
+			<!-- mirrored_key_name - normal text that has been mirrored  -->
+			<!-- two_option_keyboard - punctuation_numbers, accent_chars, shift, caps_lock -->
+			<!-- punctuation_numbers_group - group punctuation_numbers keys -->
+			<!-- accent_chars_group - group accent_chars keys -->
+			<!-- single_option_keyboard - tab, backspace, enter -->
+			<!-- alphanumeric_punctuation - keys for alphabet, numbers, punctuation -->
+			<!-- uppercase_letter_group - group uppercase_letter -->
+			<!-- lowercase_letter_group - group lowercase_letter -->
+			<!-- shift_group - group shift keys-->
+			<!-- unshift_group - group unshift keys -->
+			<!-- alphabet_key_punctuation_numbers_group - group punctuation_numbers alphabet_key keys-->
+			<!-- alphabet_key_accent_chars_group - group accent_chars alphabet_key keys-->
+			
+			<g id="right_punctuation_numbers">
+				<path class="key_button key_style" d="M1105.12,323.4c0,5.5-4.5,10-10,10h-139.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h139.5
+					c5.5,0,10,4.5,10,10V323.4z"/>
+				<g class="text" transform="translate(945.62, 270.4)">
+					<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_punctuation_numbers" class="mirrored_font_key_name key_name keyboard_font_style punctuation_numbers_group">.?123</text>
+					<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_punctuation_numbers" class="mirrored_key_name key_name keyboard_font_style punctuation_numbers_group">.?123</text>
+					<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_punctuation_numbers_alphabet" class="mirrored_font_key_name key_name keyboard_font_style alphabet_key_punctuation_numbers_group">abc</text>
+					<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_punctuation_numbers_alphabet" class="mirrored_key_name key_name keyboard_font_style alphabet_key_punctuation_numbers_group">abc</text>
+				</g>
+			</g>
+			<g id="right_accent_chars">
+				<path class="key_button key_style" d="M941.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
+					V323.4z"/>
+				<g class="text" transform="translate(781.62, 270.4)">
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_accent_chars" class="mirrored_font_key_name key_name keyboard_font_style accent_chars_group">Accent Char</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_accent_chars" class="mirrored_key_name key_name keyboard_font_style accent_chars_group">Accent Char</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_accent_chars_alphabet" class="mirrored_font_key_name key_name keyboard_font_style alphabet_key_accent_chars_group">abc</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_accent_chars_alphabet" class="mirrored_key_name key_name keyboard_font_style alphabet_key_accent_chars_group">abc</text>
+				</g>
+			</g>
+			<g id="space_bar">
+				<path class="key_button key_style" d="M777.62,323.4c0,5.5-4.5,10-10,10h-428c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h428c5.5,0,10,4.5,10,10
+					V323.4z"/>
+			</g>
+			<g id="left_accent_chars">
+				<path class="key_button key_style" d="M325.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
+					V323.4z"/>
+				<g class="text" transform="translate(165.62, 270.4)">
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_accent_chars" class="mirrored_font_key_name key_name keyboard_font_style accent_chars_group">Accent Char</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_accent_chars" class="mirrored_key_name key_name keyboard_font_style accent_chars_group">Accent Char</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_accent_chars_alphabet" class="mirrored_font_key_name key_name keyboard_font_style alphabet_key_accent_chars_group">abc</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_accent_chars_alphabet" class="mirrored_key_name key_name keyboard_font_style alphabet_key_accent_chars_group">abc</text>
+				</g>
+			</g>
+			<g id="left_punctuation_numbers">
+				<path class="key_button key_style" d="M161.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
+					V323.4z"/>
+				<g class="text" transform="translate(1.62, 270.4)">		
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_punctuation_numbers" class="mirrored_font_key_name key_name keyboard_font_style punctuation_numbers_group">.?123</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_punctuation_numbers" class="mirrored_key_name key_name keyboard_font_style punctuation_numbers_group">.?123</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_punctuation_numbers_alphabet" class="mirrored_font_key_name key_name keyboard_font_style alphabet_key_punctuation_numbers_group">abc</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_punctuation_numbers_alphabet" class="mirrored_key_name key_name keyboard_font_style alphabet_key_punctuation_numbers_group">abc</text>
+				</g>
+			</g>
+			
+			<g id="right_shift">
+				<path class="key_button key_style" d="M1105.12,256.4c0,5.5-4.5,10-10,10h-139.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h139.5
+					c5.5,0,10,4.5,10,10V256.4z"/>
+				<g class="text" transform="translate(945.62, 203.4)">
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_shift" class="mirrored_font_key_name key_name keyboard_font_style shift_group">Shift</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_shift" class="mirrored_key_name key_name keyboard_font_style shift_group">Shift</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_unshift" class="mirrored_font_key_name key_name keyboard_font_style unshift_group">Unshift</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_unshift" class="mirrored_key_name key_name keyboard_font_style unshift_group">Unshift</text>
+				</g>
+			</g>
+			<g id="period">
+				<path class="key_button key_style" d="M941.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(863.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_period" class="mirrored_font_key_name key_name keyboard_font_style">.</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_period" class="mirrored_key_name key_name keyboard_font_style">.</text>
+				</g>
+			</g>
+			<g id="comma">
+				<path class="key_button key_style" d="M859.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(781.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_comma" class="mirrored_font_key_name key_name keyboard_font_style">,</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_comma" class="mirrored_key_name key_name keyboard_font_style">,</text>
+				</g>
+			</g>
+			<g id="m">
+				<path class="key_button key_style" d="M777.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(699.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_m" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">m</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_m" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">m</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_m" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">M</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_m" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">M</text>
+				</g>
+			</g>
+			<g id="n">
+				<path class="key_button key_style" d="M695.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(617.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_n" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">n</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_n" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">n</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_n" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">N</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_n" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">N</text>
+				</g>
+			</g>
+			<g id="b">
+				<path class="key_button key_style" d="M613.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(535.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_b" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">b</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_b" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">b</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_b" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">B</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_b" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">B</text>
+				</g>
+			</g>
+			<g id="v">
+				<path class="key_button key_style" d="M531.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(453.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_v" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">v</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_v" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">v</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_v" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">V</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_v" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">V</text>
+				</g>
+			</g>
+			<g id="c">
+				<path class="key_button key_style" d="M449.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(371.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_c" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">c</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_c" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">c</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_c" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">C</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_c" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">C</text>
+				</g>
+			</g>
+			<g id="x">
+				<path class="key_button key_style" d="M367.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(289.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_x" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">x</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_x" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">x</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_x" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">X</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_x" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">X</text>
+				</g>
+			</g>
+			<g id="z">
+				<path class="key_button key_style" d="M285.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(207.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_z" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">z</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_z" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">z</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_z" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">Z</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_z" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">Z</text>
+				</g>
+			</g>
+			<g id="left_shift">
+				<path class="key_button key_style" d="M202.62,256.4c0,5.5-4.5,10-10,10h-181c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h181c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(1.62, 203.4)">
+					<text x="100.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_shift" class="mirrored_font_key_name key_name keyboard_font_style shift_group">Shift</text>
+					<text x="-100.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_shift" class="mirrored_key_name key_name keyboard_font_style shift_group">Shift</text>
+					<text x="100.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_unshift" class="mirrored_font_key_name key_name keyboard_font_style unshift_group">Unshift</text>
+					<text x="-100.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_unshift" class="mirrored_key_name key_name keyboard_font_style unshift_group">Unshift</text>
+				</g>
+			</g>
+			
+			<g id="enter">
+				<path class="key_button key_style" d="M1105.12,189.4c0,5.5-4.5,10-10,10h-178.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h178.5
+					c5.5,0,10,4.5,10,10V189.4z"/>
+				<g class="text" transform="translate(906.62, 136.4)">
+					<text x="99.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_enter" class="mirrored_font_key_name key_name keyboard_font_style">Enter</text>
+					<text x="-99.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_enter" class="mirrored_key_name key_name keyboard_font_style">Enter</text>
+				</g>
+			</g>
+			<g id="l">
+				<path class="key_button key_style" d="M902.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(824.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_l" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">l</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">l</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_l" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">L</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_l" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">L</text>
+				</g>
+			</g>
+			<g id="k">
+				<path class="key_button key_style" d="M820.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(742.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_k" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">k</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_k" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">k</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_k" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">K</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_k" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">K</text>
+				</g>
+			</g>
+			<g id="j">
+				<path class="key_button key_style" d="M738.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(660.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_j" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">j</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_j" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">j</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_j" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">J</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_j" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">J</text>
+				</g>
+			</g>
+			<g id="h">
+				<path class="key_button key_style" d="M656.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(578.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_h" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">h</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_h" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">h</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_h" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">H</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_h" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">H</text>
+				</g>
+			</g>
+			<g id="g">
+				<path class="key_button key_style" d="M574.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(496.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_g" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">g</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_g" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">g</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_g" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">G</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_g" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">G</text>
+				</g>
+			</g>
+			<g id="f">
+				<path class="key_button key_style" d="M492.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(414.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_f" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">f</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_f" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">f</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_f" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">F</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_f" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">F</text>
+				</g>
+			</g>
+			<g id="d">
+				<path class="key_button key_style" d="M410.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(332.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_d" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">d</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_d" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">d</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_d" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">D</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_d" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">D</text>
+				</g>
+			</g>
+			<g id="s">
+				<path class="key_button key_style" d="M328.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(250.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_s" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">s</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_s" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">s</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_s" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">S</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_s" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">S</text>
+				</g>
+			</g>
+			<g id="a">
+				<path class="key_button key_style" d="M246.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(168.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_a" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">a</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_a" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">a</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_a" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">A</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_a" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">A</text>
+				</g>
+			</g>
+			<g id="caps_lock">
+				<path class="key_button key_style" d="M164.62,189.4c0,5.5-4.5,10-10,10h-143c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h143c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(1.62, 136.4)">
+					<text x="81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_caps_lock" class="mirrored_font_key_name key_name keyboard_font_style caps_lock">Caps Lock</text>
+					<text x="-81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_caps_lock" class="mirrored_key_name key_name keyboard_font_style caps_lock">Caps Lock</text>
+					<text x="81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_caps_unlock" class="mirrored_font_key_name key_name keyboard_font_style caps_unlock">Caps Unlock</text>
+					<text x="-81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_caps_unlock" class="mirrored_key_name key_name keyboard_font_style caps_unlock">Caps Unlock</text>
+				</g>
+			</g>
+			
+			<g id="backspace">
+				<path class="key_button key_style" d="M1105.12,122.4c0,5.5-4.5,10-10,10h-140.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140.5
+					c5.5,0,10,4.5,10,10V122.4z"/>
+				<g class="text" transform="translate(945.11, 69.4)">
+					<text x="80.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_backspace" class="mirrored_font_key_name key_name keyboard_font_style">Backspace</text>
+					<text x="-80.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_backspace" class="mirrored_key_name key_name keyboard_font_style">Backspace</text>
+				</g>
+			</g>
+			<g id="p">
+				<path class="key_button key_style" d="M940.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(862.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_p" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">p</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_p" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">p</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_p" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">P</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_p" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">P</text>
+				</g>
+			</g>
+			<g id="o">
+				<path class="key_button key_style" d="M858.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(780.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_o" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">o</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_o" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">o</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_o" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">O</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_o" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">O</text>
+				</g>
+			</g>
+			<g id="i">
+				<path class="key_button key_style" d="M776.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(698.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_i" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">i</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_i" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">i</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_i" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">I</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_i" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">I</text>
+				</g>
+			</g>
+			<g id="u">
+				<path class="key_button key_style" d="M694.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(616.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_u" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">u</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_u" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">u</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_u" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">U</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_u" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">U</text>
+				</g>
+			</g>
+			<g id="y">
+				<path class="key_button key_style" d="M612.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(534.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_y" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">y</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_y" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">y</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_y" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">Y</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_y" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">Y</text>
+				</g>
+			</g>
+			<g id="t">
+				<path class="key_button key_style" d="M530.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(452.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_t" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">t</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_t" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">t</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_t" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">T</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_t" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">T</text>
+				</g>
+			</g>
+			<g id="r">
+				<path class="key_button key_style" d="M448.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(370.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_r" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">r</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">r</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_r" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">R</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_r" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">R</text>
+				</g>
+			</g>
+			<g id="e">
+				<path class="key_button key_style" d="M366.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(288.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_e" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">e</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_e" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">e</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_e" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">E</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_e" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">E</text>
+				</g>
+			</g>
+			<g id="w">
+				<path class="key_button key_style" d="M284.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(206.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_w" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">w</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_w" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">w</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_w" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">W</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_w" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">W</text>
+				</g>
+			</g>
+			<g id="q">
+				<path class="key_button key_style" d="M202.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(124.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_q" class="mirrored_font_key_name key_name keyboard_font_style lowercase_letter_group">q</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_q" class="mirrored_key_name key_name keyboard_font_style lowercase_letter_group">q</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_q" class="mirrored_font_key_name key_name keyboard_font_style uppercase_letter_group">Q</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_q" class="mirrored_key_name key_name keyboard_font_style uppercase_letter_group">Q</text>
+				</g>
+			</g>
+			<g id="tab">
+				<path class="key_button key_style" d="M120.62,122.4c0,5.5-4.5,10-10,10h-99c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h99c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(1.62, 69.4)">
+					<text x="59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_tab" class="mirrored_font_key_name key_name keyboard_font_style">Tab</text>
+					<text x="-59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_tab" class="mirrored_key_name key_name keyboard_font_style">Tab</text>
+				</g>
+			</g>
+			
+			<g id="keyboard_option_7">
+				<path class="key_button key_style" d="M1105.12,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(950.4, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_option_7" class="mirrored_font_key_name key_name keyboard_font_style option_7">option 7</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_option_7" class="mirrored_key_name key_name keyboard_font_style option_7">option 7</text>
+				</g>
+			</g>
+			<g id="keyboard_option_6">
+				<path class="key_button key_style" d="M946.96,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(792.23, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_option_6" class="mirrored_font_key_name key_name keyboard_font_style option_6">option 6</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_option_6" class="mirrored_key_name key_name keyboard_font_style option_6">option 6</text>
+				</g>
+			</g>
+			<g id="keyboard_option_5">
+				<path class="key_button key_style" d="M788.79,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(634.06, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_option_5" class="mirrored_font_key_name key_name keyboard_font_style option_5">option 5</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_option_5" class="mirrored_key_name key_name keyboard_font_style option_5">option 5</text>
+				</g>
+			</g>
+			<g id="keyboard_option_4">
+				<path class="key_button key_style" d="M630.62,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(475.89, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_option_4" class="mirrored_font_key_name key_name keyboard_font_style option_4">option 4</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_option_4" class="mirrored_key_name key_name keyboard_font_style option_4">option 4</text>
+				</g>
+			</g>
+			<g id="keyboard_option_3">
+				<path class="key_button key_style" d="M472.45,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(317.73, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_option_3" class="mirrored_font_key_name key_name keyboard_font_style option_3">option 3</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_option_3" class="mirrored_key_name key_name keyboard_font_style option_3">option 3</text>
+				</g>
+			</g>
+			<g id="keyboard_option_2">
+				<path class="key_button key_style" d="M314.29,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(159.56, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_option_2" class="mirrored_font_key_name key_name keyboard_font_style option_2">option 2</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_option_2" class="mirrored_key_name key_name keyboard_font_style option_2">option 2</text>
+				</g>
+			</g>
+			<g id="keyboard_option_1">
+				<path class="key_button key_style" d="M156.12,55.74c0,5.5-4.5,10-10,10H11.62c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(1.39, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_option_1" class="mirrored_font_key_name key_name keyboard_font_style option_1">option 1</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_option_1" class="mirrored_key_name key_name keyboard_font_style option_1">option 1</text>
+				</g>
+			</g>
+		</svg>
+
+		<script src="js/main.js"></script>
+		<script src="js/keyboard.js"></script>
+	</body>				
+</html>
