@@ -1,0 +1,106 @@
+@font-face {
+	font-family: "mirror_writing";
+	src: url("mirror_writing.woff") format("woff");
+}
+
+* {
+	font-family: serif;
+}
+
+body {
+	display: block;
+	width: 75vw;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.textarea {
+	min-height: 5em;
+	width: 100%;
+	resize: none;
+	white-space: normal;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	border: 0.25em solid #ccc;
+	border-radius: 0.25em;
+}
+
+.mirrored_text {
+	display: block;
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+
+.mirror_font_text {
+	text-align: right;
+	unicode-bidi: bidi-override; 
+	direction: rtl;
+}
+
+/********************************************************************************
+Font Options
+********************************************************************************/
+.mirror_font {
+	font-family: "mirror_writing";
+}
+.arial { 
+	font-family: "Arial";
+}
+.brush_script_mt {
+	font-family: "Brush Script MT";
+}
+.courier_new { 
+	font-family: "Courier New";
+}
+.garamond { 
+    font-family: "Garamond";
+}
+.georgia { 
+    font-family: "Georgia";
+}
+.helvetica { 
+    font-family: "Helvetica";
+}
+.tahoma { 
+    font-family: "Tahoma";
+}
+.times_new_roman { 
+    font-family: "Times New Roman";
+}
+.trebuchet { 
+    font-family: "Trebuchet";
+}
+.verdana { 
+    font-family: "Verdana";
+}
+
+/********************************************************************************
+Keyboard
+********************************************************************************/
+.hide {
+	display: none;
+}
+
+.key_button_style{
+	fill:white;
+	stroke:#ED1C24;
+	stroke-miterlimit:10;
+}
+
+.key_name_style{
+	font-size:24px;
+	fill:#000000;
+}
+
+.key_button:hover {
+	fill: pink;
+}
+
+.key_button:focus {
+	fill: aquamarine;
+}
+
+svg {
+	margin: 1em 0em;
+}
