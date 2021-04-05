@@ -41,12 +41,6 @@ var mirrored_font_lowercase_letter_comma_period_array = []; //group mirrored fon
 var mirrored_uppercase_letter_comma_period_array = []; //group mirrored uppercase_letter plus comma and period; 28 key names
 var mirrored_lowercase_letter_comma_period_array = []; //group mirrored lowercase_letter plus comma and period; 28 key names
 
-var uppercase_letter_comma_period_array = [
-	"q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
-	"a", "s", "d", "f", "g", "h", "j", "k", "l",
-	"z", "x", "c", "v", "b", "n", "m",  ",", "."
-]
-
 window.addEventListener("load", keyboard_set_up);
 
 function keyboard_set_up() {
