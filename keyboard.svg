@@ -30,48 +30,48 @@
 
 </style>
 	
-			<g class="key_button_and_name" id="right_punctuation_numbers">
+			<g class="key_button_and_name" id="accent_chars_two">
 				<path class="key_button key_button_style" d="M1105.12,323.4c0,5.5-4.5,10-10,10h-139.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h139.5
 					c5.5,0,10,4.5,10,10V323.4z"/>
 				<g class="text" transform="translate(945.62, 270.4)">
-					<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_punctuation_numbers" class="hide mirrored_font_key_name key_name key_name_style punctuation_numbers_group two_state_key_names">.?123</text>
-					<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_punctuation_numbers" class="mirrored_key_name key_name key_name_style punctuation_numbers_group two_state_key_names">.?123</text>
-					<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_punctuation_numbers_alphabet" class="hide mirrored_font_key_name key_name key_name_style alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
-					<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_punctuation_numbers_alphabet" class="hide mirrored_key_name key_name key_name_style alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
+					<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_two" class="hide mirrored_font_key_name key_name key_name_style punctuation_numbers_group two_state_key_names">accent chars 2</text>
+					<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_two" class="mirrored_key_name key_name key_name_style punctuation_numbers_group two_state_key_names">accent chars 2</text>
+					<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_two_alphabet" class="hide mirrored_font_key_name key_name key_name_style alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
+					<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_two_alphabet" class="hide mirrored_key_name key_name key_name_style alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="right_accent_chars">
+			<g class="key_button_and_name" id="accent_chars_one">
 				<path class="key_button key_button_style" d="M941.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
 					V323.4z"/>
 				<g class="text" transform="translate(781.62, 270.4)">
-					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_accent_chars" class="hide mirrored_font_key_name key_name key_name_style accent_chars_group two_state_key_names">Accent Char</text>
-					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_accent_chars" class="mirrored_key_name key_name key_name_style accent_chars_group two_state_key_names">Accent Char</text>
-					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_accent_chars_alphabet" class="hide mirrored_font_key_name key_name key_name_style alphabet_key_accent_chars_group two_state_key_names">abc</text>
-					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_accent_chars_alphabet" class="hide mirrored_key_name key_name key_name_style alphabet_key_accent_chars_group two_state_key_names">abc</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_one" class="hide mirrored_font_key_name key_name key_name_style accent_chars_group two_state_key_names">áëį</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_one" class="mirrored_key_name key_name key_name_style accent_chars_group two_state_key_names">áëį</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_one_alphabet" class="hide mirrored_font_key_name key_name key_name_style alphabet_key_accent_chars_group two_state_key_names">abc</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_one_alphabet" class="hide mirrored_key_name key_name key_name_style alphabet_key_accent_chars_group two_state_key_names">abc</text>
 				</g>
 			</g>
 			<g class="key_button_and_name" id="space_bar">
 				<path class="key_button key_button_style" d="M777.62,323.4c0,5.5-4.5,10-10,10h-428c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h428c5.5,0,10,4.5,10,10
 					V323.4z"/>
 			</g>
-			<g class="key_button_and_name" id="left_accent_chars">
+			<g class="key_button_and_name" id="punctuation_numbers_two">
 				<path class="key_button key_button_style" d="M325.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
 					V323.4z"/>
 				<g class="text" transform="translate(165.62, 270.4)">
-					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_accent_chars" class="hide mirrored_font_key_name key_name key_name_style accent_chars_group two_state_key_names">Accent Char</text>
-					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_accent_chars" class="mirrored_key_name key_name key_name_style accent_chars_group two_state_key_names">Accent Char</text>
-					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_accent_chars_alphabet" class="hide mirrored_font_key_name key_name key_name_style alphabet_key_accent_chars_group two_state_key_names">abc</text>
-					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_accent_chars_alphabet" class="hide mirrored_key_name key_name key_name_style alphabet_key_accent_chars_group two_state_key_names">abc</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_two" class="hide mirrored_font_key_name key_name key_name_style accent_chars_group two_state_key_names">punct. 2</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_two" class="mirrored_key_name key_name key_name_style accent_chars_group two_state_key_names">punct. 2</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_two_alphabet" class="hide mirrored_font_key_name key_name key_name_style alphabet_key_accent_chars_group two_state_key_names">abc</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_two_alphabet" class="hide mirrored_key_name key_name key_name_style alphabet_key_accent_chars_group two_state_key_names">abc</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="left_punctuation_numbers">
+			<g class="key_button_and_name" id="punctuation_numbers_one">
 				<path class="key_button key_button_style" d="M161.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
 					V323.4z"/>
 				<g class="text" transform="translate(1.62, 270.4)">		
-					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_punctuation_numbers" class="hide mirrored_font_key_name key_name key_name_style punctuation_numbers_group two_state_key_names">.?123</text>
-					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_punctuation_numbers" class="mirrored_key_name key_name key_name_style punctuation_numbers_group two_state_key_names">.?123</text>
-					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_punctuation_numbers_alphabet" class="hide mirrored_font_key_name key_name key_name_style alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
-					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_punctuation_numbers_alphabet" class="hide mirrored_key_name key_name key_name_style alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_one" class="hide mirrored_font_key_name key_name key_name_style punctuation_numbers_group two_state_key_names">.?123</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_one" class="mirrored_key_name key_name key_name_style punctuation_numbers_group two_state_key_names">.?123</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_one_alphabet" class="hide mirrored_font_key_name key_name key_name_style alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_one_alphabet" class="hide mirrored_key_name key_name key_name_style alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
 				</g>
 			</g>
 			
@@ -85,90 +85,76 @@
 					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_unshift" class="hide mirrored_key_name key_name key_name_style unshift_group two_state_key_names">Unshift</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="period">
+			<g class="key_button_and_name" id="0">
 				<path class="key_button key_button_style numbers_punctuation_button" d="M941.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V256.4z"/>
 				<g class="text" transform="translate(863.62, 203.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_period" class="hide mirrored_font_key_name key_name key_name_style">.</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_period" class="mirrored_key_name key_name key_name_style">.</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_0" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">0</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_0" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">0</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="comma">
+			<g class="key_button_and_name" id="1">
 				<path class="key_button key_button_style numbers_punctuation_button" d="M859.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V256.4z"/>
 				<g class="text" transform="translate(781.62, 203.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_comma" class="hide mirrored_font_key_name key_name key_name_style">,</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_comma" class="mirrored_key_name key_name key_name_style">,</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_1" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">1</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_1" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">1</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="m">
+			<g class="key_button_and_name" id="2">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M777.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V256.4z"/>
 				<g class="text" transform="translate(699.62, 203.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_m" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">m</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_m" class="mirrored_key_name key_name key_name_style lowercase_letter">m</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_m" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">M</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_m" class="hide mirrored_key_name key_name key_name_style uppercase_letter">M</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_2" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">2</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_2" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">2</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="n">
+			<g class="key_button_and_name" id="3">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M695.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V256.4z"/>
 				<g class="text" transform="translate(617.62, 203.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_n" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">n</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_n" class="mirrored_key_name key_name key_name_style lowercase_letter">n</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_n" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">N</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_n" class="hide mirrored_key_name key_name key_name_style uppercase_letter">N</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_3" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">3</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_3" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">3</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="b">
+			<g class="key_button_and_name" id="4">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M613.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V256.4z"/>
 				<g class="text" transform="translate(535.62, 203.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_b" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">b</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_b" class="mirrored_key_name key_name key_name_style lowercase_letter">b</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_b" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">B</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_b" class="hide mirrored_key_name key_name key_name_style uppercase_letter">B</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_4" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">4</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_4" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">4</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="v">
+			<g class="key_button_and_name" id="5">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M531.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V256.4z"/>
 				<g class="text" transform="translate(453.62, 203.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_v" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">v</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_v" class="mirrored_key_name key_name key_name_style lowercase_letter">v</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_v" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">V</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_v" class="hide mirrored_key_name key_name key_name_style uppercase_letter">V</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_5" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">5</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_5" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">5</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="c">
+			<g class="key_button_and_name" id="6">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M449.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V256.4z"/>
 				<g class="text" transform="translate(371.62, 203.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_c" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">c</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_c" class="mirrored_key_name key_name key_name_style lowercase_letter">c</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_c" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">C</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_c" class="hide mirrored_key_name key_name key_name_style uppercase_letter">C</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_6" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">6</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_6" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">6</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="x">
+			<g class="key_button_and_name" id="7">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M367.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V256.4z"/>
 				<g class="text" transform="translate(289.62, 203.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_x" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">x</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_x" class="mirrored_key_name key_name key_name_style lowercase_letter">x</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_x" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">X</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_x" class="hide mirrored_key_name key_name key_name_style uppercase_letter">X</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_7" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">7</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_7" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">7</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="z">
+			<g class="key_button_and_name" id="8">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M285.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V256.4z"/>
 				<g class="text" transform="translate(207.62, 203.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_z" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">z</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_z" class="mirrored_key_name key_name key_name_style lowercase_letter">z</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_z" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">Z</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_z" class="hide mirrored_key_name key_name key_name_style uppercase_letter">Z</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_8" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">8</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_8" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">8</text>
 				</g>
 			</g>
 			<g class="key_button_and_name" id="left_shift">
@@ -186,107 +172,89 @@
 				<path class="key_button key_button_style" d="M1105.12,189.4c0,5.5-4.5,10-10,10h-178.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h178.5
 					c5.5,0,10,4.5,10,10V189.4z"/>
 				<g class="text" transform="translate(906.62, 136.4)">
-					<text x="99.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_enter" class="hide mirrored_font_key_name key_name key_name_style single_state_key_names">Enter</text>
+					<text x="99.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_enter" class="hide mirrored_font_key_name key_name key_name_style single_state_key_names">Enter</text>
 					<text x="-99.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_enter" class="mirrored_key_name key_name key_name_style single_state_key_names">Enter</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="l">
+			<g class="key_button_and_name" id="9">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M902.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V189.4z"/>
 				<g class="text" transform="translate(824.62, 136.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_l" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">l</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l" class="mirrored_key_name key_name key_name_style lowercase_letter">l</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_l" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">L</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_l" class="hide mirrored_key_name key_name key_name_style uppercase_letter">L</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_9" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">9</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_9" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">9</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="k">
+			<g class="key_button_and_name" id="10">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M820.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V189.4z"/>
 				<g class="text" transform="translate(742.62, 136.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_k" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">k</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_k" class="mirrored_key_name key_name key_name_style lowercase_letter">k</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_k" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">K</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_k" class="hide mirrored_key_name key_name key_name_style uppercase_letter">K</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_10" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">10</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_10" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">10</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="j">
+			<g class="key_button_and_name" id="11">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M738.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V189.4z"/>
 				<g class="text" transform="translate(660.62, 136.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_j" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">j</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_j" class="mirrored_key_name key_name key_name_style lowercase_letter">j</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_j" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">J</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_j" class="hide mirrored_key_name key_name key_name_style uppercase_letter">J</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_11" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">11</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_11" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">11</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="h">
+			<g class="key_button_and_name" id="12">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M656.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V189.4z"/>
 				<g class="text" transform="translate(578.62, 136.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_h" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">h</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_h" class="mirrored_key_name key_name key_name_style lowercase_letter">h</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_h" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">H</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_h" class="hide mirrored_key_name key_name key_name_style uppercase_letter">H</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_12" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">12</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_12" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">12</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="g">
+			<g class="key_button_and_name" id="13">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M574.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V189.4z"/>
 				<g class="text" transform="translate(496.62, 136.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_g" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">g</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_g" class="mirrored_key_name key_name key_name_style lowercase_letter">g</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_g" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">G</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_g" class="hide mirrored_key_name key_name key_name_style uppercase_letter">G</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_13" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">13</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_13" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">13</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="f">
+			<g class="key_button_and_name" id="14">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M492.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V189.4z"/>
 				<g class="text" transform="translate(414.62, 136.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_f" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">f</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_f" class="mirrored_key_name key_name key_name_style lowercase_letter">f</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_f" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">F</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_f" class="hide mirrored_key_name key_name key_name_style uppercase_letter">F</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_14" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">14</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_14" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">14</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="d">
+			<g class="key_button_and_name" id="15">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M410.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V189.4z"/>
 				<g class="text" transform="translate(332.62, 136.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_d" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">d</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_d" class="mirrored_key_name key_name key_name_style lowercase_letter">d</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_d" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">D</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_d" class="hide mirrored_key_name key_name key_name_style uppercase_letter">D</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_15" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">15</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_15" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">15</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="s">
+			<g class="key_button_and_name" id="16">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M328.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V189.4z"/>
 				<g class="text" transform="translate(250.62, 136.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_s" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">s</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_s" class="mirrored_key_name key_name key_name_style lowercase_letter">s</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_s" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">S</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_s" class="hide mirrored_key_name key_name key_name_style uppercase_letter">S</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_16" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">16</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_16" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">16</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="a">
+			<g class="key_button_and_name" id="17">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M246.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V189.4z"/>
 				<g class="text" transform="translate(168.62, 136.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_a" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">a</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_a" class="mirrored_key_name key_name key_name_style lowercase_letter">a</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_a" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">A</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_a" class="hide mirrored_key_name key_name key_name_style uppercase_letter">A</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_17" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">17</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_17" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">17</text>
 				</g>
 			</g>
 			<g class="key_button_and_name" id="caps_lock">
 				<path class="key_button key_button_style" d="M164.62,189.4c0,5.5-4.5,10-10,10h-143c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h143c5.5,0,10,4.5,10,10
 					V189.4z"/>
 				<g class="text" transform="translate(1.62, 136.4)">
-					<text x="81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_caps_lock" class="hide mirrored_font_key_name key_name key_name_style caps_lock two_state_key_names">Caps Lock</text>
+					<text x="81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_caps_lock" class="hide mirrored_font_key_name key_name key_name_style caps_lock two_state_key_names">Caps Lock</text>
 					<text x="-81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_caps_lock" class="mirrored_key_name key_name key_name_style caps_lock two_state_key_names">Caps Lock</text>
-					<text x="81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_caps_unlock" class="hide mirrored_font_key_name key_name key_name_style caps_unlock two_state_key_names">Caps Unlock</text>
+					<text x="81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_caps_unlock" class="hide mirrored_font_key_name key_name key_name_style caps_unlock two_state_key_names">Caps Unlock</text>
 					<text x="-81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_caps_unlock" class="hide mirrored_key_name key_name key_name_style caps_unlock two_state_key_names">Caps Unlock</text>
 				</g>
 			</g>
@@ -295,116 +263,96 @@
 				<path class="key_button key_button_style" d="M1105.12,122.4c0,5.5-4.5,10-10,10h-140.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140.5
 					c5.5,0,10,4.5,10,10V122.4z"/>
 				<g class="text" transform="translate(945.11, 69.4)">
-					<text x="80.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_backspace" class="hide mirrored_font_key_name key_name key_name_style single_state_key_names">Backspace</text>
+					<text x="80.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_backspace" class="hide mirrored_font_key_name key_name key_name_style single_state_key_names">Backspace</text>
 					<text x="-80.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_backspace" class="mirrored_key_name key_name key_name_style single_state_key_names">Backspace</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="p">
+			<g class="key_button_and_name" id="18">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M940.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V122.4z"/>
 				<g class="text" transform="translate(862.62, 69.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_p" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">p</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_p" class="mirrored_key_name key_name key_name_style lowercase_letter">p</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_p" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">P</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_p" class="hide mirrored_key_name key_name key_name_style uppercase_letter">P</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_18" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">18</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_18" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">18</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="o">
+			<g class="key_button_and_name" id="19">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M858.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V122.4z"/>
 				<g class="text" transform="translate(780.62, 69.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_o" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">o</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_o" class="mirrored_key_name key_name key_name_style lowercase_letter">o</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_o" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">O</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_o" class="hide mirrored_key_name key_name key_name_style uppercase_letter">O</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_19" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">19</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_19" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">19</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="i">
+			<g class="key_button_and_name" id="20">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M776.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V122.4z"/>
 				<g class="text" transform="translate(698.62, 69.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_i" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">i</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_i" class="mirrored_key_name key_name key_name_style lowercase_letter">i</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_i" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">I</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_i" class="hide mirrored_key_name key_name key_name_style uppercase_letter">I</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_20" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">20</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_20" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">20</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="u">
+			<g class="key_button_and_name" id="21">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M694.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V122.4z"/>
 				<g class="text" transform="translate(616.62, 69.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_u" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">u</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_u" class="mirrored_key_name key_name key_name_style lowercase_letter">u</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_u" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">U</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_u" class="hide mirrored_key_name key_name key_name_style uppercase_letter">U</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_21" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">21</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_21" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">21</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="y">
+			<g class="key_button_and_name" id="22">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M612.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V122.4z"/>
 				<g class="text" transform="translate(534.62, 69.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_y" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">y</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_y" class="mirrored_key_name key_name key_name_style lowercase_letter">y</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_y" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">Y</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_y" class="hide mirrored_key_name key_name key_name_style uppercase_letter">Y</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_22" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">22</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_22" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">22</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="t">
+			<g class="key_button_and_name" id="23">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M530.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V122.4z"/>
 				<g class="text" transform="translate(452.62, 69.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_t" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">t</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_t" class="mirrored_key_name key_name key_name_style lowercase_letter">t</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_t" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">T</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_t" class="hide mirrored_key_name key_name key_name_style uppercase_letter">T</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_23" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">23</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_23" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">23</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="r">
+			<g class="key_button_and_name" id="24">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M448.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V122.4z"/>
 				<g class="text" transform="translate(370.62, 69.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_r" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">r</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r" class="mirrored_key_name key_name key_name_style lowercase_letter">r</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_r" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">R</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_r" class="hide mirrored_key_name key_name key_name_style uppercase_letter">R</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_24" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">24</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_24" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">24</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="e">
+			<g class="key_button_and_name" id="25">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M366.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V122.4z"/>
 				<g class="text" transform="translate(288.62, 69.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_e" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">e</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_e" class="mirrored_key_name key_name key_name_style lowercase_letter">e</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_e" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">E</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_e" class="hide mirrored_key_name key_name key_name_style uppercase_letter">E</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_25" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">25</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_25" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">25</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="w">
+			<g class="key_button_and_name" id="26">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M284.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V122.4z"/>
 				<g class="text" transform="translate(206.62, 69.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_w" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">w</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_w" class="mirrored_key_name key_name key_name_style lowercase_letter">w</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_w" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">W</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_w" class="hide mirrored_key_name key_name key_name_style uppercase_letter">W</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_26" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">26</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_26" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">26</text>
 				</g>
 			</g>
-			<g class="key_button_and_name" id="q">
+			<g class="key_button_and_name" id="27">
 				<path class="key_button key_button_style alphabet_button numbers_punctuation_button" d="M202.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
 					V122.4z"/>
 				<g class="text" transform="translate(124.62, 69.4)">
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_lowercase_q" class="hide mirrored_font_key_name key_name key_name_style lowercase_letter">q</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_q" class="mirrored_key_name key_name key_name_style lowercase_letter">q</text>
-					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_uppercase_q" class="hide mirrored_font_key_name key_name key_name_style uppercase_letter">Q</text>
-					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_uppercase_q" class="hide mirrored_key_name key_name key_name_style uppercase_letter">Q</text>
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_27" class="hide mirrored_font_key_name key_name key_name_style alphanumeric_punctuation">27</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_27" class="mirrored_key_name key_name key_name_style alphanumeric_punctuation">27</text>
 				</g>
 			</g>
 			<g class="key_button_and_name" id="tab">
 				<path class="key_button key_button_style" d="M120.62,122.4c0,5.5-4.5,10-10,10h-99c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h99c5.5,0,10,4.5,10,10
 					V122.4z"/>
 				<g class="text" transform="translate(1.62, 69.4)">
-					<text x="59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_tab" class="hide mirrored_font_key_name key_name key_name_style single_state_key_names">Tab</text>
-					<text x="-59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_tab" class="mirrored_key_name key_name key_name_style single_state_key_names">Tab</text>
+					<text x="59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_tab" class="hide mirrored_font_key_name key_name key_name_style single_state_key_names">Tab</text>
+					<text x="-59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_tab" class="mirrored_key_name key_name key_name_style single_state_key_names">Tab</text>
 				</g>
 			</g>
 			
@@ -412,7 +360,7 @@
 				<path class="key_button key_button_style" d="M1105.12,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
 					c5.5,0,10,4.5,10,10V55.74z"/>
 				<g class="text" transform="translate(950.4, 2.26)">
-					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_state_6" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_6">option 6</text>
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_6" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_6">option 6</text>
 					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_6" class="mirrored_key_name key_name key_name_style option_key_names option_6">option 6</text>
 				</g>
 			</g>
@@ -420,7 +368,7 @@
 				<path class="key_button key_button_style" d="M946.96,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
 					c5.5,0,10,4.5,10,10V55.74z"/>
 				<g class="text" transform="translate(792.23, 2.26)">
-					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_state_5" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_5">option 5</text>
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_5" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_5">option 5</text>
 					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_5" class="mirrored_key_name key_name key_name_style option_key_names option_5">option 5</text>
 				</g>
 			</g>
@@ -428,7 +376,7 @@
 				<path class="key_button key_button_style" d="M788.79,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
 					c5.5,0,10,4.5,10,10V55.74z"/>
 				<g class="text" transform="translate(634.06, 2.26)">
-					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_state_4" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_4">option 4</text>
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_4" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_4">option 4</text>
 					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_4" class="mirrored_key_name key_name key_name_style option_key_names option_4">option 4</text>
 				</g>
 			</g>
@@ -436,7 +384,7 @@
 				<path class="key_button key_button_style" d="M630.62,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
 					c5.5,0,10,4.5,10,10V55.74z"/>
 				<g class="text" transform="translate(475.89, 2.26)">
-					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_state_3" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_3">option 3</text>
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_3" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_3">option 3</text>
 					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_3" class="mirrored_key_name key_name key_name_style option_key_names option_3">option 3</text>
 				</g>
 			</g>
@@ -444,7 +392,7 @@
 				<path class="key_button key_button_style" d="M472.45,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
 					c5.5,0,10,4.5,10,10V55.74z"/>
 				<g class="text" transform="translate(317.73, 2.26)">
-					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_state_2" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_2">.?123</text>
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_2" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_2">.?123</text>
 					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_2" class="mirrored_key_name key_name key_name_style option_key_names option_2">.?123</text>
 				</g>
 			</g>
@@ -452,15 +400,15 @@
 				<path class="key_button key_button_style" d="M314.29,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
 					c5.5,0,10,4.5,10,10V55.74z"/>
 				<g class="text" transform="translate(159.56, 2.26)">
-					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_state_1" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_1">Accent Chars</text>
-					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_1" class="mirrored_key_name key_name key_name_style option_key_names option_1">Accent Chars</text>
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_1" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_1">áëį</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_1" class="mirrored_key_name key_name key_name_style option_key_names option_1">áëį</text>
 				</g>
 			</g>
 			<g class="key_button_and_name" id="keyboard_state_0">
 				<path class="key_button key_button_style" d="M156.12,55.74c0,5.5-4.5,10-10,10H11.62c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
 					c5.5,0,10,4.5,10,10V55.74z"/>
 				<g class="text" transform="translate(1.39, 2.26)">
-					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="regular_keyboard_state_0" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_0">abc</text>
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_0" class="hide mirrored_font_key_name key_name key_name_style option_key_names option_0">abc</text>
 					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_0" class="mirrored_key_name key_name key_name_style option_key_names option_0">abc</text>
 				</g>
 			</g>
