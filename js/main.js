@@ -1,15 +1,14 @@
-var textarea = document.getElementById("mirrored_textarea");
+var textarea_element = document.getElementById("mirrored_textarea");
 
 window.addEventListener("load", main_set_up);
 
 function main_set_up() {
-    textarea.addEventListener('input', autoResize, false);
-
+    textarea_element.addEventListener("input", auto_resize, false);
 }
 
-function autoResize() {
-    textarea.style.height = 'auto';
-    textarea.style.height = textarea.scrollHeight + 'px';
+function auto_resize() {
+    textarea_element.style.height = 'auto';
+    textarea_element.style.height = textarea_element.scrollHeight + 'px';
 }
 
 function save_as_png() {
