@@ -2,15 +2,17 @@
 var key_name_array = []; //text for all keys; 
 var key_button_array = []; //button for all keys; 46 buttons
 var key_array = []; //all keys, both names and button; 46 keys
-var keyboard_option = "lowercase_alphabet"; //lowercase_alphabet, uppercase_alphabet, punctuation_numbers_one, punctuation_numbers_two, lowercase_accent_characters_one, uppercase_accent_characters_one, lowercase_accent_characters_two, uppercase_accent_characters_two,lowercase_accent_characters_three, uppercase_accent_characters_three,lowercase_accent_characters_four, uppercase_accent_characters_four,
+var virtual_keyboard_option = "lowercase_alphabet"; //lowercase_alphabet, uppercase_alphabet, punctuation_numbers_one, punctuation_numbers_two, lowercase_accent_characters_one, uppercase_accent_characters_one, lowercase_accent_characters_two, uppercase_accent_characters_two,lowercase_accent_characters_three, uppercase_accent_characters_three,lowercase_accent_characters_four, uppercase_accent_characters_four,
 var previous_mirror_text_type = "mirrored_text"; //previous mirror_text_type 
 var mirror_text_type = "mirrored_text"; //mirrored_text, mirrored_font_text
 
+var textarea_element = document.getElementById("mirrored_textarea");
+
 //Key Groups
-var mirrored_font_two_state_key_names_array = []; //punctuation_numbers, accent_chars, shift, caps_lock buttons; 14 keys 
-var mirrored_two_state_key_names_array = []; //punctuation_numbers, accent_chars, shift, caps_lock buttons; 14 keys
-var mirrored_font_single_state_key_names_array = []; //tab, backspace, enter; 3 keys
-var mirrored_single_state_key_names_array = []; //tab, backspace, enter; 3 keys
+var mirrored_font_two_state_key_names_array = []; //punctuation_numbers, accent_chars, caps_lock buttons; 12 keys 
+var mirrored_two_state_key_names_array = []; //punctuation_numbers, accent_chars, caps_lock buttons; 12 keys
+var mirrored_font_single_state_key_names_array = []; //delete, backspace, tab, enter; 4 keys
+var mirrored_single_state_key_names_array = []; //delete, backspace, tab, enter; 4 keys
 var mirrored_font_option_key_names_array = []; //mirrored key names for additional key options; 7 key names
 var mirrored_option_key_names_array = []; //mirrored key names for additional key options; 7 key names
 
@@ -49,7 +51,14 @@ var punctuation_numbers_one_utf_8_array = [
 	// 0 (48), 9 (57), 8 (56), 7 (55), 6 (54), 5 (53), 4 (52), 3 (51), 2 (50), 1 (49)
 ];
 
-var punctuation_numbers_two_utf_8_array = [ ];
+var punctuation_numbers_two_utf_8_array = [
+	46, 44, 62, 60, 92, 8230, 8764, 124, 167,
+	// . (46), , (44), > (62), < (60), \ (92), … (8230), ∼ (8764) , | (124),  § (167)
+	125, 123, 93, 91, 94, 95, 165, 163, 8364,
+	// } (125), { (123), ] (93), [ (91), ^ (94), _ (95), ¥ (165), £ (163) , € (8364)
+	48, 57, 56, 55, 54, 53, 52, 51, 50, 49
+	// 0 (48), 9 (57), 8 (56), 7 (55), 6 (54), 5 (53), 4 (52), 3 (51), 2 (50), 1 (49)
+];
 
 var lowercase_accent_characters_one_utf_8_array = [
 	303, 105, 301, 299, 297, 239, 238, 236, 237,
@@ -121,9 +130,9 @@ var uppercase_accent_characters_four_utf_8_array = [
 	//Ÿ (376), Ŷ (374), Ỳ (7922), Ý (221), Ẅ (7812), Ŵ (372), Ẃ (7810), Ŧ (358), Ţ (354), Ť (356)
 ];
 
-window.addEventListener("load", keyboard_set_up);
+window.addEventListener("load", virtual_keyboard_set_up);
 
-function keyboard_set_up() {
+function virtual_keyboard_set_up() {
 	//populate all key buttons array
 	for (i = 0; i < 46; i++) {
 		key_array[i] = document.getElementsByClassName("key_button_and_name")[i];
@@ -137,12 +146,12 @@ function keyboard_set_up() {
 		mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_letter_comma_period_utf_8_array[i]); 
 	}
  	//populate single state key names array
-	for (i = 0; i < 3; i++) {
+	for (i = 0; i < 4; i++) {
 		mirrored_font_single_state_key_names_array[i] = document.getElementsByClassName("single_state_key_names mirrored_font_key_name")[i];
 		mirrored_single_state_key_names_array[i] = document.getElementsByClassName("single_state_key_names mirrored_key_name")[i];
 	}
 	//populate two state key names array
-	for (i = 0; i < 14; i++) {
+	for (i = 0; i < 12; i++) {
 		mirrored_font_two_state_key_names_array[i] = document.getElementsByClassName("two_state_key_names mirrored_font_key_name")[i];
 		mirrored_two_state_key_names_array[i] = document.getElementsByClassName("two_state_key_names mirrored_key_name")[i];
 	}
@@ -170,7 +179,7 @@ function keyboard_set_up() {
 	 
 	//Debug 
 	document.getElementById("introduction").innerHTML = "\n";
-	for (i = 0; i < 14; i++) {
+	for (i = 0; i < 12; i++) {
 		document.getElementById("introduction").innerHTML += i + ". " + mirrored_two_state_key_names_array[i].textContent + "	";
 	}
 	document.getElementById("introduction").innerHTML += "\n"; 
@@ -184,12 +193,12 @@ function mirror_text_type_selection() {
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].classList.toggle("hide");
 		}
 		//toggle visibility of single state key names
-		for (i = 0; i < 3; i++) {
+		for (i = 0; i < 4; i++) {
 			mirrored_font_single_state_key_names_array[i].classList.toggle("hide");
 			mirrored_single_state_key_names_array[i].classList.toggle("hide");
 		}
 		//toggle visibility of two state key names
-		for (i = 0; i < 14; i += 2) {
+		for (i = 0; i < 12; i += 2) {
 			mirrored_font_two_state_key_names_array[i].classList.toggle("hide");
 			mirrored_two_state_key_names_array[i].classList.toggle("hide");
 		}
@@ -204,28 +213,28 @@ function mirror_text_type_selection() {
 function input(event_type) {
 	key_array[0].addEventListener(event_type, function(event) {
 		event.preventDefault(); //takes care of multiple event listener inputs
-		keyboard_toggle(0, 1, switch_keyboard, "lowercase_accent_characters_two");
+		virtual_keyboard_toggle(0, 1, switch_virtual_keyboard, "lowercase_accent_characters_two");
 	}); //accent chars 2
 	key_array[1].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		keyboard_toggle(2, 3, switch_keyboard, "lowercase_accent_characters_one");
+		virtual_keyboard_toggle(2, 3, switch_virtual_keyboard, "lowercase_accent_characters_one");
 	}); //accent chars
 	key_array[2].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(32);
+		add_character_move_cursor(String.fromCharCode(32));
 	}); //space (32)
 	key_array[3].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		keyboard_toggle(4, 5, switch_keyboard, "punctuation_numbers_two");
+		virtual_keyboard_toggle(4, 5, switch_virtual_keyboard, "punctuation_numbers_two");
 	}); //punctuation 2
 	key_array[4].addEventListener(event_type, function(event)  {
 		event.preventDefault();
-		keyboard_toggle(6, 7, switch_keyboard, "punctuation_numbers_one");
+		virtual_keyboard_toggle(6, 7, switch_virtual_keyboard, "punctuation_numbers_one");
 	}); //.?123
 	key_array[5].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		shift_function();
-	}); //right shift
+		capitalize_alphabet(8, 9, 10, 11);
+	}); //right caps lock
 
 	key_array[6].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
@@ -266,11 +275,11 @@ function input(event_type) {
 
 	key_array[15].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		shift_function();
-	}); //left shift
+		capitalize_alphabet(10, 11, 8, 9);
+	}); //left caps lock
 	key_array[16].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(13);
+		add_character_move_cursor(String.fromCharCode(13));
 	}); //enter (13)
 
 	key_array[17].addEventListener(event_type, function(event)  {
@@ -312,11 +321,11 @@ function input(event_type) {
 
 	key_array[26].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		capitalize_alphabet(12, 13);
-	}); //caps lock
+		add_character_move_cursor(String.fromCharCode(9));
+	}); //horizonal tab (9)
 	key_array[27].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		
+		backspace_function();
 	}); //backspace
 
 	key_array[28].addEventListener(event_type, function(event)  {
@@ -362,42 +371,42 @@ function input(event_type) {
 
 	key_array[38].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(9);
-	}); //horizonal tab (9)
+		delete_function();
+	}); //delete 
 	key_array[39].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		keyboard_toggle(4, 5, switch_keyboard, "punctuation_numbers_two");
-	}); //keyboard option 6; punctuation
+		virtual_keyboard_toggle(4, 5, switch_virtual_keyboard, "punctuation_numbers_two");
+	}); //virtual_keyboard option 6; punctuation
 	key_array[40].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		keyboard_toggle(6, 7, switch_keyboard, "punctuation_numbers_one");
-	}); //keyboard option 5; punctuation and numbers
+		virtual_keyboard_toggle(6, 7, switch_virtual_keyboard, "punctuation_numbers_one");
+	}); //virtual_keyboard option 5; punctuation and numbers
 	key_array[41].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		keyboard_option = "lowercase_accent_characters_four";
-		keyboard_toggle_reset();
-		switch_keyboard();
-	}); //keyboard option 4; accent characters four
+		virtual_keyboard_option = "lowercase_accent_characters_four";
+		virtual_keyboard_toggle_reset();
+		switch_virtual_keyboard();
+	}); //virtual_keyboard option 4; accent characters four
 	key_array[42].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		keyboard_option = "lowercase_accent_characters_three";
-		keyboard_toggle_reset();
-		switch_keyboard();
-	}); //keyboard option 3; accent characters three
+		virtual_keyboard_option = "lowercase_accent_characters_three";
+		virtual_keyboard_toggle_reset();
+		switch_virtual_keyboard();
+	}); //virtual_keyboard option 3; accent characters three
 	key_array[43].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		keyboard_toggle(0, 1, switch_keyboard, "lowercase_accent_characters_two");
-	}); //keyboard option 2; accent characters two
+		virtual_keyboard_toggle(0, 1, switch_virtual_keyboard, "lowercase_accent_characters_two");
+	}); //virtual_keyboard option 2; accent characters two
 	key_array[44].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		keyboard_toggle(2, 3, switch_keyboard, "lowercase_accent_characters_one");
-	}); //keyboard option 1; accent characters one
+		virtual_keyboard_toggle(2, 3, switch_virtual_keyboard, "lowercase_accent_characters_one");
+	}); //virtual_keyboard option 1; accent characters one
 	key_array[45].addEventListener(event_type, function(event)  {
 		event.preventDefault(); 
-		keyboard_option = "lowercase_alphabet";
-		keyboard_toggle_reset();
-		switch_keyboard();
-	}); //keyboard option 0; alphabet
+		virtual_keyboard_option = "lowercase_alphabet";
+		virtual_keyboard_toggle_reset();
+		switch_virtual_keyboard();
+	}); //virtual_keyboard option 0; alphabet
 	
 }
 
@@ -414,222 +423,185 @@ function keyboard_input() {
 }
 
 function edit_textarea(index) {
-	if (keyboard_option == "lowercase_alphabet") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(lowercase_letter_comma_period_utf_8_array[index]);
-	} else if (keyboard_option == "uppercase_alphabet") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(uppercase_letter_comma_period_utf_8_array[index]);
-	} else if (keyboard_option == "punctuation_numbers_one") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(punctuation_numbers_one_utf_8_array[index]);
-	} else if (keyboard_option == "punctuation_numbers_two") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(punctuation_numbers_two_utf_8_array[index]);
-	} else if (keyboard_option == "lowercase_accent_characters_one") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(lowercase_accent_characters_one_utf_8_array[index]);
-	} else if (keyboard_option == "uppercase_accent_characters_one") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(uppercase_accent_characters_one_utf_8_array[index]);
-	} else if (keyboard_option == "lowercase_accent_characters_two") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(lowercase_accent_characters_two_utf_8_array[index]);
-	} else if (keyboard_option == "uppercase_accent_characters_two") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(uppercase_accent_characters_two_utf_8_array[index]);
-	} else if (keyboard_option == "lowercase_accent_characters_three") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(lowercase_accent_characters_three_utf_8_array[index]);
-	} else if (keyboard_option == "uppercase_accent_characters_three") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(uppercase_accent_characters_three_utf_8_array[index]);
-	} else if (keyboard_option == "lowercase_accent_characters_four") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(lowercase_accent_characters_four_utf_8_array[index]);
-	} else if (keyboard_option == "uppercase_accent_characters_four") {
-		document.getElementById("mirrored_textarea").value += String.fromCharCode(uppercase_accent_characters_four_utf_8_array[index]);
+	if (virtual_keyboard_option == "lowercase_alphabet") {
+		add_character_move_cursor(String.fromCharCode(lowercase_letter_comma_period_utf_8_array[index]));
+	} else if (virtual_keyboard_option == "uppercase_alphabet") {
+		add_character_move_cursor(String.fromCharCode(uppercase_letter_comma_period_utf_8_array[index]));
+	} else if (virtual_keyboard_option == "punctuation_numbers_one") {
+		add_character_move_cursor(String.fromCharCode(punctuation_numbers_one_utf_8_array[index]));
+	} else if (virtual_keyboard_option == "punctuation_numbers_two") {
+		add_character_move_cursor(String.fromCharCode(punctuation_numbers_two_utf_8_array[index]));
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_one") {
+		add_character_move_cursor(String.fromCharCode(lowercase_accent_characters_one_utf_8_array[index]));
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_one") {
+		add_character_move_cursor(String.fromCharCode(uppercase_accent_characters_one_utf_8_array[index]));
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_two") {
+		add_character_move_cursor(String.fromCharCode(lowercase_accent_characters_two_utf_8_array[index]));
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_two") {
+		add_character_move_cursor(String.fromCharCode(uppercase_accent_characters_two_utf_8_array[index]));
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_three") {
+		add_character_move_cursor(String.fromCharCode(lowercase_accent_characters_three_utf_8_array[index]));
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_three") {
+		add_character_move_cursor(String.fromCharCode(uppercase_accent_characters_three_utf_8_array[index]));
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_four") {
+		add_character_move_cursor(String.fromCharCode(lowercase_accent_characters_four_utf_8_array[index]));
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_four") {
+		add_character_move_cursor(String.fromCharCode(uppercase_accent_characters_four_utf_8_array[index]));
 	} 
+	auto_resize(); //function from main.js
 }
 
-function capitalize_alphabet(first_state_index, second_state_index) {
-	if (keyboard_option == "lowercase_alphabet") {
-		keyboard_toggle(first_state_index, second_state_index, switch_keyboard, "uppercase_alphabet");
-	} else if (keyboard_option == "uppercase_alphabet") {
-		keyboard_toggle(first_state_index, second_state_index, switch_keyboard, "lowercase_alphabet");
-	} else if (keyboard_option == "lowercase_accent_characters_one") {
-		keyboard_toggle(first_state_index, second_state_index, switch_keyboard, "uppercase_accent_characters_one");
-	} else if (keyboard_option == "uppercase_accent_characters_one") {
-		keyboard_toggle(first_state_index, second_state_index, switch_keyboard, "lowercase_accent_characters_one");
-	} else if (keyboard_option == "lowercase_accent_characters_two") {
-		keyboard_toggle(first_state_index, second_state_index, switch_keyboard, "uppercase_accent_characters_two");
-	} else if (keyboard_option == "uppercase_accent_characters_two") {
-		keyboard_toggle(first_state_index, second_state_index, switch_keyboard, "lowercase_accent_characters_two");
-	} else if (keyboard_option == "lowercase_accent_characters_three") {
-		keyboard_option = "uppercase_accent_characters_three";
-		switch_keyboard();
-	} else if (keyboard_option == "uppercase_accent_characters_three") {
-		keyboard_option = "lowercase_accent_characters_three";
-		switch_keyboard();
-	} else if (keyboard_option == "lowercase_accent_characters_four") {
-		keyboard_option = "uppercase_accent_characters_four";
-		switch_keyboard();
-	} else if (keyboard_option == "uppercase_accent_characters_four") {
-		keyboard_option = "lowercase_accent_characters_four";
-		switch_keyboard();
-	}
+function capitalize_alphabet(first_state_index, second_state_index, first_state_index_two, second_state_index_two) {
+	if (virtual_keyboard_option == "lowercase_alphabet") {
+		virtual_keyboard_toggle(first_state_index, second_state_index, switch_virtual_keyboard, "uppercase_alphabet", first_state_index_two, second_state_index_two);
+	} else if (virtual_keyboard_option == "uppercase_alphabet") {
+		virtual_keyboard_toggle(first_state_index, second_state_index, switch_virtual_keyboard, "lowercase_alphabet", first_state_index_two, second_state_index_two);
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_one") {
+		virtual_keyboard_toggle(first_state_index, second_state_index, switch_virtual_keyboard, "uppercase_accent_characters_one", first_state_index_two, second_state_index_two);
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_one") {
+		virtual_keyboard_toggle(first_state_index, second_state_index, switch_virtual_keyboard, "lowercase_accent_characters_one", first_state_index_two, second_state_index_two);
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_two") {
+		virtual_keyboard_toggle(first_state_index, second_state_index, switch_virtual_keyboard, "uppercase_accent_characters_two", first_state_index_two, second_state_index_two);
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_two") {
+		virtual_keyboard_toggle(first_state_index, second_state_index, switch_virtual_keyboard, "lowercase_accent_characters_two", first_state_index_two, second_state_index_two);
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_three") {
+		virtual_keyboard_toggle(first_state_index, second_state_index, switch_virtual_keyboard, "uppercase_accent_characters_three", first_state_index_two, second_state_index_two);
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_three") {
+		virtual_keyboard_toggle(first_state_index, second_state_index, switch_virtual_keyboard, "lowercase_accent_characters_three", first_state_index_two, second_state_index_two);
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_four") {
+		virtual_keyboard_toggle(first_state_index, second_state_index, switch_virtual_keyboard, "uppercase_accent_characters_four", first_state_index_two, second_state_index_two);
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_four") {
+		virtual_keyboard_toggle(first_state_index, second_state_index, switch_virtual_keyboard, "lowercase_accent_characters_four", first_state_index_two, second_state_index_two);
+	} 
  }
 
-// var shift_toggle = false;
-// function shift_function() {
-// 	if (shift_toggle == false) {
-// 		shift_toggle = true;
-// 	} else {
-// 		shift_toggle = false;
-// 	}
-// 	if (mirror_text_type == "mirrored_font_text") {
-// 		// mirrored_font_two_state_key_names_array[8].classList.toggle("hide");
-// 		// mirrored_font_two_state_key_names_array[9].classList.toggle("hide");
-// 		mirrored_font_two_state_key_names_array[10].classList.toggle("hide");
-// 		mirrored_font_two_state_key_names_array[11].classList.toggle("hide");
-// 	} else {
-// 		// mirrored_two_state_key_names_array[8].classList.toggle("hide");
-// 		// mirrored_two_state_key_names_array[9].classList.toggle("hide");
-// 		mirrored_two_state_key_names_array[10].classList.toggle("hide");
-// 		mirrored_two_state_key_names_array[11].classList.toggle("hide");
-// 	}
-
-// 	capitalize_alphabet(8, 9);
-
-// 	if (mirrored_font_two_state_key_names_array[9].classList.contains("hide") == false || mirrored_two_state_key_names_array[9].classList.contains("hide") == false) {
-// 		document.addEventListener("click", function shift_capitalize(event) {
-// 			shift_toggle = false;
-// 			document.removeEventListener("click", shift_capitalize, true);
-// 		}, true);
-// 	}
-
-// 	if (shift_toggle == false) {
-// 		if (mirror_text_type == "mirrored_font_text") {
-// 			// mirrored_font_two_state_key_names_array[8].classList.toggle("hide");
-// 			// mirrored_font_two_state_key_names_array[9].classList.toggle("hide");
-// 			mirrored_font_two_state_key_names_array[10].classList.toggle("hide");
-// 			mirrored_font_two_state_key_names_array[11].classList.toggle("hide");
-// 		} else {
-// 			// mirrored_two_state_key_names_array[8].classList.toggle("hide");
-// 			// mirrored_two_state_key_names_array[9].classList.toggle("hide");
-// 			mirrored_two_state_key_names_array[10].classList.toggle("hide");
-// 			mirrored_two_state_key_names_array[11].classList.toggle("hide");
-// 		} 
-
-// 		capitalize_alphabet(8, 9);
-// 	}
-
-// }
-
-function keyboard_toggle(first_state_index, second_state_index, function_name, new_keyboard_option) {
+function virtual_keyboard_toggle(first_state_index, second_state_index, function_name, new_virtual_keyboard_option, first_state_index_two, second_state_index_two) {
 	var previous_key_state_second_state_index = mirrored_two_state_key_names_array[second_state_index].classList.contains("hide");
-	keyboard_toggle_reset();
-	if (mirror_text_type == "mirrored_font_text" && (new_keyboard_option == "punctuation_numbers_one" || new_keyboard_option == "punctuation_numbers_two" || new_keyboard_option == "lowercase_accent_characters_one" || new_keyboard_option == "lowercase_accent_characters_two")) {
-		if (previous_key_state_second_state_index) {
+	virtual_keyboard_toggle_reset();
+	if (mirror_text_type == "mirrored_font_text") {
+		if (previous_key_state_second_state_index) { //second state contains class hide
 			mirrored_font_two_state_key_names_array[first_state_index].classList.add("hide");
 			mirrored_font_two_state_key_names_array[second_state_index].classList.remove("hide");
+			if (first_state_index_two != null && second_state_index_two != null) {
+				mirrored_font_two_state_key_names_array[first_state_index_two].classList.add("hide");
+				mirrored_font_two_state_key_names_array[second_state_index_two].classList.remove("hide");
+			}
 		} else {
 			mirrored_font_two_state_key_names_array[first_state_index].classList.remove("hide");
 			mirrored_font_two_state_key_names_array[second_state_index].classList.add("hide");
+			if (first_state_index_two != null && second_state_index_two != null) {
+				mirrored_font_two_state_key_names_array[first_state_index_two].classList.remove("hide");
+				mirrored_font_two_state_key_names_array[second_state_index_two].classList.add("hide");
+			}
 		}
 	} else if (mirror_text_type == "mirrored_text") {
-		if (previous_key_state_second_state_index) {
+		if (previous_key_state_second_state_index) { //second state contains class hide
 			mirrored_two_state_key_names_array[first_state_index].classList.add("hide");
 			mirrored_two_state_key_names_array[second_state_index].classList.remove("hide");
+			if (first_state_index_two != null && second_state_index_two != null) { 
+				mirrored_two_state_key_names_array[first_state_index_two].classList.add("hide");
+				mirrored_two_state_key_names_array[second_state_index_two].classList.remove("hide");
+			}
 		} else {
 			mirrored_two_state_key_names_array[first_state_index].classList.remove("hide");
 			mirrored_two_state_key_names_array[second_state_index].classList.add("hide");
+			if (first_state_index_two != null && second_state_index_two != null) {
+				mirrored_two_state_key_names_array[first_state_index_two].classList.remove("hide");
+				mirrored_two_state_key_names_array[second_state_index_two].classList.add("hide");
+			}
 		}
 	}
-	if (keyboard_option != new_keyboard_option) {
-		keyboard_option = new_keyboard_option;
+	if (virtual_keyboard_option != new_virtual_keyboard_option) {
+		virtual_keyboard_option = new_virtual_keyboard_option;
 	} else {
-		keyboard_option = "lowercase_alphabet";
+		virtual_keyboard_option = "lowercase_alphabet";
 	}
 	function_name();
-
 }
 
-function keyboard_toggle_reset() {
-		if (mirror_text_type == "mirrored_font_text") {
-			mirrored_font_two_state_key_names_array[0].classList.remove("hide");
-			mirrored_font_two_state_key_names_array[1].classList.add("hide");
-			mirrored_font_two_state_key_names_array[2].classList.remove("hide");
-			mirrored_font_two_state_key_names_array[3].classList.add("hide");
-			mirrored_font_two_state_key_names_array[4].classList.remove("hide");
-			mirrored_font_two_state_key_names_array[5].classList.add("hide");
-			mirrored_font_two_state_key_names_array[6].classList.remove("hide");
-			mirrored_font_two_state_key_names_array[7].classList.add("hide");
-			mirrored_font_two_state_key_names_array[8].classList.remove("hide");
-			mirrored_font_two_state_key_names_array[9].classList.add("hide");
-			mirrored_font_two_state_key_names_array[10].classList.remove("hide");
-			mirrored_font_two_state_key_names_array[11].classList.add("hide");
-			mirrored_font_two_state_key_names_array[12].classList.remove("hide");
-			mirrored_font_two_state_key_names_array[13].classList.add("hide");
-		} else {
-			mirrored_two_state_key_names_array[0].classList.remove("hide");
-			mirrored_two_state_key_names_array[1].classList.add("hide");
-			mirrored_two_state_key_names_array[2].classList.remove("hide");
-			mirrored_two_state_key_names_array[3].classList.add("hide");
-			mirrored_two_state_key_names_array[4].classList.remove("hide");
-			mirrored_two_state_key_names_array[5].classList.add("hide");
-			mirrored_two_state_key_names_array[6].classList.remove("hide");
-			mirrored_two_state_key_names_array[7].classList.add("hide");
-			mirrored_two_state_key_names_array[8].classList.remove("hide");
-			mirrored_two_state_key_names_array[9].classList.add("hide");
-			mirrored_two_state_key_names_array[10].classList.remove("hide");
-			mirrored_two_state_key_names_array[11].classList.add("hide");
-			mirrored_two_state_key_names_array[12].classList.remove("hide");
-			mirrored_two_state_key_names_array[13].classList.add("hide");
-		}
+function virtual_keyboard_toggle_reset() {
+	//even indices are the first state, odd indices are the second state
+	if (mirror_text_type == "mirrored_font_text") { 
+		mirrored_font_two_state_key_names_array[0].classList.remove("hide");
+		mirrored_font_two_state_key_names_array[1].classList.add("hide");
+		mirrored_font_two_state_key_names_array[2].classList.remove("hide");
+		mirrored_font_two_state_key_names_array[3].classList.add("hide");
+		mirrored_font_two_state_key_names_array[4].classList.remove("hide");
+		mirrored_font_two_state_key_names_array[5].classList.add("hide");
+		mirrored_font_two_state_key_names_array[6].classList.remove("hide");
+		mirrored_font_two_state_key_names_array[7].classList.add("hide");
+		mirrored_font_two_state_key_names_array[8].classList.remove("hide");
+		mirrored_font_two_state_key_names_array[9].classList.add("hide");
+		mirrored_font_two_state_key_names_array[10].classList.remove("hide");
+		mirrored_font_two_state_key_names_array[11].classList.add("hide");
+	} else {
+		mirrored_two_state_key_names_array[0].classList.remove("hide");
+		mirrored_two_state_key_names_array[1].classList.add("hide");
+		mirrored_two_state_key_names_array[2].classList.remove("hide");
+		mirrored_two_state_key_names_array[3].classList.add("hide");
+		mirrored_two_state_key_names_array[4].classList.remove("hide");
+		mirrored_two_state_key_names_array[5].classList.add("hide");
+		mirrored_two_state_key_names_array[6].classList.remove("hide");
+		mirrored_two_state_key_names_array[7].classList.add("hide");
+		mirrored_two_state_key_names_array[8].classList.remove("hide");
+		mirrored_two_state_key_names_array[9].classList.add("hide");
+		mirrored_two_state_key_names_array[10].classList.remove("hide");
+		mirrored_two_state_key_names_array[11].classList.add("hide");
+	}
 }
 
-function switch_keyboard() {
-	if (keyboard_option == "uppercase_alphabet") {
+function switch_virtual_keyboard() {
+	if (virtual_keyboard_option == "uppercase_alphabet") {
 		for (i = 0; i < 28; i++) {
 			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_letter_comma_period_utf_8_array[i]); 
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_letter_comma_period_utf_8_array[i]); 
 		}
-	} else if (keyboard_option == "punctuation_numbers_one") {
+	} else if (virtual_keyboard_option == "punctuation_numbers_one") {
 		for (i = 0; i < 28; i++) {
 			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(punctuation_numbers_one_utf_8_array[i]); 
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(punctuation_numbers_one_utf_8_array[i]); 
 		}
-	} else if (keyboard_option == "punctuation_numbers_two") {
+	} else if (virtual_keyboard_option == "punctuation_numbers_two") {
 		for (i = 0; i < 28; i++) {
 			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(punctuation_numbers_two_utf_8_array[i]); 
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(punctuation_numbers_two_utf_8_array[i]); 
 		}
-	} else if (keyboard_option == "lowercase_accent_characters_one") {
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_one") {
 		for (i = 0; i < 28; i++) {
 			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_one_utf_8_array[i]); 
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_one_utf_8_array[i]); 
 		}
-	} else if (keyboard_option == "uppercase_accent_characters_one") {
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_one") {
 		for (i = 0; i < 28; i++) {
 			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_one_utf_8_array[i]); 
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_one_utf_8_array[i]); 
 		}
-	} else if (keyboard_option == "lowercase_accent_characters_two") {
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_two") {
 		for (i = 0; i < 28; i++) {
 			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_two_utf_8_array[i]); 
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_two_utf_8_array[i]); 
 		}
-	} else if (keyboard_option == "uppercase_accent_characters_two") {
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_two") {
 		for (i = 0; i < 28; i++) {
 			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_two_utf_8_array[i]); 
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_two_utf_8_array[i]); 
 		}
-	} else if (keyboard_option == "lowercase_accent_characters_three") {
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_three") {
 		for (i = 0; i < 28; i++) {
 			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_three_utf_8_array[i]); 
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_three_utf_8_array[i]); 
 		}
-	} else if (keyboard_option == "uppercase_accent_characters_three") {
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_three") {
 		for (i = 0; i < 28; i++) {
 			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_three_utf_8_array[i]); 
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_three_utf_8_array[i]); 
 		}
-	} else if (keyboard_option == "lowercase_accent_characters_four") {
+	} else if (virtual_keyboard_option == "lowercase_accent_characters_four") {
 		for (i = 0; i < 28; i++) {
 			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_four_utf_8_array[i]); 
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_four_utf_8_array[i]); 
 		}
-	} else if (keyboard_option == "uppercase_accent_characters_four") {
+	} else if (virtual_keyboard_option == "uppercase_accent_characters_four") {
 		for (i = 0; i < 28; i++) {
 			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_four_utf_8_array[i]); 
 			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_four_utf_8_array[i]); 
@@ -642,3 +614,28 @@ function switch_keyboard() {
 	}
 }
 
+function add_character_move_cursor(input_string) {
+	textarea_element.setRangeText(input_string, textarea_element.selectionStart, textarea_element.selectionEnd, "end");
+	textarea_element.focus();
+	auto_resize(); //function from main.js
+}
+
+function backspace_function() {
+	var backspace_beginning_char = textarea_element.selectionStart;
+	if (backspace_beginning_char > 0) {
+		backspace_beginning_char--;
+	}
+	textarea_element.setRangeText("", backspace_beginning_char, textarea_element.selectionEnd, "end");
+	textarea_element.focus();
+	auto_resize(); //function from main.js
+}
+
+function delete_function() {
+	var delete_end_char = textarea_element.selectionEnd;
+	if (delete_end_char < textarea_element.value.length) {
+		delete_end_char++;
+	}
+	textarea_element.setRangeText("", textarea_element.selectionStart, delete_end_char, "end");
+	textarea_element.focus();
+	auto_resize(); //function from main.js
+}
