@@ -829,6 +829,7 @@ function edit_textarea(index) {
 		add_character_move_cursor(String.fromCharCode(uppercase_accent_characters_four_utf_8_array[index]));
 	} 
 	auto_resize();
+	update_printable_table();
 }
 
 /*
@@ -1028,6 +1029,7 @@ function add_character_move_cursor(input_string) {
 	textarea_element.setRangeText(input_string, textarea_element.selectionStart, textarea_element.selectionEnd, "end");
 	textarea_element.focus();
 	auto_resize();
+	update_printable_table();
 }
 
 /*
@@ -1042,6 +1044,7 @@ function backspace_function() {
 	textarea_element.setRangeText("", backspace_beginning_char, textarea_element.selectionEnd, "end");
 	textarea_element.focus();
 	auto_resize();
+	update_printable_table();
 }
 
 /*
@@ -1055,7 +1058,8 @@ function delete_function() {
 	}
 	textarea_element.setRangeText("", textarea_element.selectionStart, delete_end_char, "end");
 	textarea_element.focus();
-	auto_resize(); 
+	auto_resize();
+	update_printable_table(); 
 }
 
 /*
@@ -1065,4 +1069,12 @@ Executes after the textarea has been edited.
 function auto_resize() {
     textarea_element.style.height = 'auto';
     textarea_element.style.height = textarea_element.scrollHeight + 'px';
+}
+
+/*
+update_printable_table function updates the print_formating table when the textarea value has been changed.
+Executes after the textarea has been edited.
+*/
+function update_printable_table() {
+    document.getElementById("mirror_writing_printable_content").innerText = textarea_element.value;
 }
