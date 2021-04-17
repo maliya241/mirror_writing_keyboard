@@ -3,8 +3,8 @@
 	src: url("mirror_writing.woff") format("woff");
 }
 
-* {
-	font-family: serif;
+.print_formating {
+	display: none;
 }
 
 body {
@@ -12,6 +12,7 @@ body {
 	width: 75vw;
 	margin-left: auto;
     margin-right: auto;
+	color: blue;
 }
 
 .textarea {
@@ -38,41 +39,10 @@ body {
 	direction: rtl;
 }
 
-/********************************************************************************
-Font Options
-********************************************************************************/
-.mirror_font {
-	font-family: "mirror_writing";
-}
-.arial { 
-	font-family: "Arial";
-}
-.brush_script_mt {
-	font-family: "Brush Script MT";
-}
-.courier_new { 
-	font-family: "Courier New";
-}
-.garamond { 
-    font-family: "Garamond";
-}
-.georgia { 
-    font-family: "Georgia";
-}
-.helvetica { 
-    font-family: "Helvetica";
-}
-.tahoma { 
-    font-family: "Tahoma";
-}
-.times_new_roman { 
-    font-family: "Times New Roman";
-}
-.trebuchet { 
-    font-family: "Trebuchet";
-}
-.verdana { 
-    font-family: "Verdana";
+#font_selection:focus, .font_option:focus, #mirrored_textarea:focus, #print_button:focus {
+	outline: none;
+	border: 2.5px solid black;
+	border-radius: 0.25em;
 }
 
 /********************************************************************************
@@ -82,13 +52,13 @@ Keyboard
 	display: none;
 }
 
-.key_button_style{
+.key_button {
 	fill:white;
 	stroke:#ED1C24;
 	stroke-miterlimit:10;
 }
 
-.key_name_style{
+.key_name {
 	font-size:24px;
 	fill:#000000;
 }
@@ -98,9 +68,14 @@ Keyboard
 }
 
 .key_button:focus {
-	fill: aquamarine;
+	fill: rgba(120, 230, 238, 0.774);
+	outline: none;
+	stroke:black;
+	stroke-width:2.5px;
 }
 
 svg {
-	margin: 1em 0em;
+	display: block;
+	width: 100%;
+	margin: 1em auto;
 }
