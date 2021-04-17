@@ -1,0 +1,65 @@
+.page_header {
+    text-align: center;
+}
+
+.page_header, .page_header_space, .page_footer_space {
+    height: 75px;
+}
+
+.page_footer {
+    height: 50px;
+}
+
+.page_footer {
+    position: fixed;
+    bottom: 24px; /* 0.25 in */
+    width: 100%;
+}
+
+.page_header {
+    position: fixed;
+    top: 48px; /* 0.5 in */
+    width: 100%;
+}
+
+.page {
+    page-break-after: always;
+}
+
+@page {
+    size: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media print {
+    @page {
+        size: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    thead {
+        display: table_header_group;
+    } 
+    tfoot {
+        display: table_footer_group;
+    }  
+    body {
+        margin: 0;
+    }
+}
+
+h1, p, form, textarea, button, svg {
+    display: none !important;
+}
+
+.mirrored_text {
+	display: block;
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+  
+.print_formating {
+    width: 100%;
+}
