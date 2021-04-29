@@ -64,21 +64,28 @@ p, label, button {
 	font-size: 1.5em;
 }
 
+fieldset {
+	border: none;
+	outline: none;
+	padding: 0;
+	margin: 0;
+}
+
 .textarea {
 	min-height: 5em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
-	margin: 1em auto;
-	padding: 0.25em;
+	margin: 16px auto;
+	padding: 4px;
 	resize: none;
 	white-space: normal;
 	word-wrap: break-word;
 	overflow: hidden;
 	overflow-wrap: break-word;
 	border: 1.5px solid #837F7E;
-	border-radius: 0.25em;
+	border-radius: 4px;
 }
 
 .mirrored_text {
@@ -101,9 +108,9 @@ p, label, button {
 }
 
 #print_button, .dropdown_button, .dropdown_content {
-	padding: 0.25em;
+	padding: 4px;
 	border: 1.5px solid #837F7E;
-	border-radius: 0.25em;
+	border-radius: 4px;
 	background-color: #E0DFDF;
 	color: #BF2B2B;
 }
@@ -111,7 +118,7 @@ p, label, button {
 #mirrored_textarea:focus, #print_button:focus, .dropdown_button:focus {
 	outline: none;
 	border: 3px solid #000000;
-	border-radius: 0.25em;
+	border-radius: 4px;
 }
 
 #print_button:focus, #print_button:hover, .dropdown_button:focus, .dropdown_button:hover {
@@ -122,7 +129,7 @@ p, label, button {
 .dropdown_content {
 	display: none;
 	position: absolute;
-	padding: 0.25em;
+	padding: 4px;
 	background-color: #E0DFDF;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
@@ -138,7 +145,7 @@ p, label, button {
 	white-space: nowrap;
 	width: 100%;
 	display: block;
-	padding: 0.25em;
+	padding: 4px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -245,7 +252,7 @@ Keyboard
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 1em auto;
-	padding: 0.25em;
+	padding: 4px;
 	white-space: pre;
 	position: relative;
 	position: -webkit-sticky;
@@ -253,5 +260,5 @@ Keyboard
 	bottom: 1em;
 	width: inherit;
 	background-color: rgba(191, 42, 42, 0.75);
-	border-radius: 0.25em;
+	border-radius: 4px;
 }
