@@ -34,9 +34,9 @@
 		</header>
 		<p id="introduction">hallo, people. gato. neko. cat. </p>
 		<section id="text_editor">
-			<div id="font_family" class="dropdown">
-				<button type="button" id="font_dropdown_button" class="dropdown_button font_dropdown_element">Font &#9660;</button>
-				<fieldset id="font_dropdown" class="dropdown_content">
+			<fieldset id="font_family" class="dropdown">
+				<button type="button" id="font_dropdown_button" class="dropdown_button font_dropdown_element"><legend>Font &#9660;</legend></button>
+				<div id="font_dropdown" class="dropdown_content">
 					<div class="dropdown_element">
 						<input type="radio" id="arial_font" class="input_radio_button font_dropdown_element" name="font_selection" value="arial" onchange="change_font_family(this)">
 						<label for="arial_font" id="arial" class="dropdown_label font_dropdown_element arial">Arial</label>
@@ -81,11 +81,11 @@
 						<input type="radio" id="verdana_font" class="input_radio_button font_dropdown_element" name="font_selection" value="verdana" onchange="change_font_family(this)">
 						<label for="verdana_font" id="verdana" class="dropdown_label font_dropdown_element verdana">Verdana</label>
 					</div>
-				</fieldset>
-			</div>
-			<div id="font_size" class="dropdown">
-				<button type="button" id="font_size_dropdown_button" class="dropdown_button font_size_dropdown_element">font_size &#9660;</button>
-				<fieldset id="font_size_dropdown" class="dropdown_content">
+				</div>
+			</fieldset>
+			<fieldset id="font_size" class="dropdown">
+				<button type="button" id="font_size_dropdown_button" class="dropdown_button font_size_dropdown_element"><legend>Font Size &#9660;</legend></button>
+				<div id="font_size_dropdown" class="dropdown_content">
 					<div class="dropdown_element">
 						<input type="radio" id="eight_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eight" onchange="change_font_size(this)">
 						<label for="eight_font_size" id="eight" class="dropdown_label font_size_dropdown_element">8</label>
@@ -142,8 +142,8 @@
 						<input type="radio" id="ninety_six_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="ninety_six" onchange="change_font_size(this)">
 						<label for="ninety_six_font_size" id="ninety_six" class="dropdown_label font_size_dropdown_element">96</label>
 					</div>		
-				</fieldset>
-			</div>
+				</div>
+			</fieldset>
 			<textarea id="mirrored_textarea" class="textarea mirrored_text" aria-label="Textarea for Mirrored Writing" placeholder="Type here." autofocus></textarea>
 			<button type="button" id="print_button">Print</button>
 		</section>
