@@ -59,7 +59,7 @@
 						<input type="radio" id="garamond_font" class="input_radio_button font_dropdown_element" name="font_selection" value="garamond" onchange="change_font_family(this)">
 						<label for="garamond_font" id="garamond" class="dropdown_label font_dropdown_element garamond">Garamond</label>
 					</div>
-					<div for="georgia_font" class="dropdown_element">
+					<div class="dropdown_element">
 						<input type="radio" id="georgia_font" class="input_radio_button font_dropdown_element" name="font_selection" value="georgia" onchange="change_font_family(this)">
 						<label for="georgia_font" id="georgia" class="dropdown_label font_dropdown_element georgia">Georgia</label>
 					</div>
@@ -85,7 +85,67 @@
 					</div>
 				</div>
 			</div>
-
+			<div id="font_size" class="dropdown">
+				<button type="button" id="font_size_dropdown_button" class="dropdown_button font_size_dropdown_element">font_size &#9660;</button>
+				<div id="font_size_dropdown" class="dropdown_content">
+					<div class="dropdown_element">
+						<input type="radio" id="eight_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eight" onchange="change_font_size(this)">
+						<label for="eight_font_size" id="eight" class="dropdown_label font_size_dropdown_element">8</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="nine_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="nine" onchange="change_font_size(this)">
+						<label for="nine_font_size" id="nine" class="dropdown_label font_size_dropdown_element">9</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="ten_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="ten" onchange="change_font_size(this)">
+						<label for="ten_font_size" id="ten" class="dropdown_label font_size_dropdown_element">10</label>
+					</div>	
+					<div class="dropdown_element">
+						<input type="radio" id="eleven_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eleven" onchange="change_font_size(this)">
+						<label for="eleven_font_size" id="eleven" class="dropdown_label font_size_dropdown_element">11</label>
+					</div>	
+					<div class="dropdown_element">
+						<input type="radio" id="twelve_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="twelve" onchange="change_font_size(this)">
+						<label for="twelve_font_size" id="twelve" class="dropdown_label font_size_dropdown_element">12</label>
+					</div>		
+					<div class="dropdown_element">
+						<input type="radio" id="fourteen_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="fourteen" onchange="change_font_size(this)">
+						<label for="fourteen_font_size" id="fourteen" class="dropdown_label font_size_dropdown_element">14</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="eighteen_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eighteen" onchange="change_font_size(this)">
+						<label for="eighteen_font_size" id="eighteen" class="dropdown_label font_size_dropdown_element">18</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="twenty_four_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="twenty_four" onchange="change_font_size(this)" checked>
+						<label for="twenty_four_font_size" id="twenty_four" class="dropdown_label font_size_dropdown_element">24</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="thirty_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="thirty" onchange="change_font_size(this)">
+						<label for="thirty_font_size" id="thirty" class="dropdown_label font_size_dropdown_element">30</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="thirty_six_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="thirty_six" onchange="change_font_size(this)">
+						<label for="thirty_six_font_size" id="thirty_six" class="dropdown_label font_size_dropdown_element">36</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="forty_eight_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="forty_eight" onchange="change_font_size(this)">
+						<label for="forty_eight_font_size" id="forty_eight" class="dropdown_label font_size_dropdown_element">48</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="sixty_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="sixty" onchange="change_font_size(this)">
+						<label for="sixty_font_size" id="sixty" class="dropdown_label font_size_dropdown_element">60</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="seventy_two_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="seventy_two" onchange="change_font_size(this)">
+						<label for="seventy_two_font_size" id="seventy_two" class="dropdown_label font_size_dropdown_element">72</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="ninety_six_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="ninety_six" onchange="change_font_size(this)">
+						<label for="ninety_six_font_size" id="ninety_six" class="dropdown_label font_size_dropdown_element">96</label>
+					</div>		
+				</div>
+			</div>
 			<textarea id="mirrored_textarea" class="textarea mirrored_text" autofocus></textarea>
 			<button id="print_button" type="button">Print</button>
 		</section>
