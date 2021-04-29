@@ -60,7 +60,7 @@ h1 {
 	color: #000000;
 }
 
-p, label, select, textarea, button {
+p, label, button {
 	font-size: 1.5em;
 }
 
@@ -77,7 +77,7 @@ p, label, select, textarea, button {
 	word-wrap: break-word;
 	overflow: hidden;
 	overflow-wrap: break-word;
-	border: 1.5pt solid #837F7E;
+	border: 1.5px solid #837F7E;
 	border-radius: 0.25em;
 }
 
@@ -102,7 +102,7 @@ p, label, select, textarea, button {
 
 #print_button, .dropdown_button, .dropdown_content {
 	padding: 0.25em;
-	border: 1.5pt solid #837F7E;
+	border: 1.5px solid #837F7E;
 	border-radius: 0.25em;
 	background-color: #E0DFDF;
 	color: #BF2B2B;
