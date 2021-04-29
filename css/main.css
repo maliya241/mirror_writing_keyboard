@@ -1,28 +1,83 @@
+/* Color Theme Swatches in Hex */
+.light_grey_hex { color: #E0DFDF; }
+.lighter-grey-hex { color: #837F7E; }
+.dark-grey-hex { color: #595958; }
+.red-hex { color: #BF2B2B; }
+.teal-hex { color: #22BFA8; }
+
+/* Color Theme Swatches in RGBA */
+.light_grey_rgba { color: rgba(224, 223, 223, 1); }
+.lighter-grey-rgba { color: rgba(131, 126, 126, 1); }
+.dark-grey-rgba { color: rgba(89, 89, 87, 1); }
+.red-rgba { color: rgba(191, 42, 42, 1); }
+.teal-rgba { color: rgba(34, 191, 168, 1); }
+
+
+@font-face {
+	font-family: "test_1";
+	src: url("../test_1.woff") format("woff");
+}
+
 @font-face {
 	font-family: "mirror_writing";
-	src: url("mirror_writing.woff") format("woff");
+	src: url("../mirror_writing.woff") format("woff");
 }
 
 .print_formating {
 	display: none;
 }
 
-body {
+body, header {
 	display: block;
-	width: 75vw;
+	width: 90vw;
 	margin-left: auto;
     margin-right: auto;
-	color: blue;
+	color: #000000;
+}
+
+h1 {
+	font-size: 2.5em;
+	display: none;
+}
+
+#mirror_writing_logo {
+	display: block;
+	height: 11em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-left: auto;
+    margin-right: auto;
+	white-space: pre;
+}
+
+#logo_text_cursor {
+	fill: #BF2B2B;
+}
+
+.logo_text {
+	font-size: 2.5em;
+	color: #000000;
+}
+
+p, label, select, textarea, button {
+	font-size: 1.5em;
 }
 
 .textarea {
 	min-height: 5em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	width: 100%;
+	margin: 1em auto;
+	padding: 0.25em;
 	resize: none;
 	white-space: normal;
 	word-wrap: break-word;
+	overflow: hidden;
 	overflow-wrap: break-word;
-	border: 0.25em solid #ccc;
+	border: 1.5pt solid #837F7E;
 	border-radius: 0.25em;
 }
 
@@ -33,49 +88,170 @@ body {
 	transform: scale(-1, 1);
 }
 
+/* mirrored_font
 .mirror_font_text {
 	text-align: right;
 	unicode-bidi: bidi-override; 
 	direction: rtl;
+} */
+
+.dropdown {
+	position: relative;
+	display: inline-block;
 }
 
-#font_selection:focus, .font_option:focus, #mirrored_textarea:focus, #print_button:focus {
-	outline: none;
-	border: 2.5px solid black;
+#print_button, .dropdown_button, .dropdown_content {
+	padding: 0.25em;
+	border: 1.5pt solid #837F7E;
 	border-radius: 0.25em;
+	background-color: #E0DFDF;
+	color: #BF2B2B;
+}
+
+#mirrored_textarea:focus, #print_button:focus, .dropdown_button:focus {
+	outline: none;
+	border: 3px solid #000000;
+	border-radius: 0.25em;
+}
+
+#print_button:focus, #print_button:hover, .dropdown_button:focus, .dropdown_button:hover {
+	color: #000000;
+	background-color: #22BFA8;
+}
+
+.dropdown_content {
+	display: none;
+	position: absolute;
+	padding: 0.25em;
+	background-color: #E0DFDF;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.input_radio_button {
+	position: fixed;
+	opacity: 0;
+	width: 0;
+}  
+
+.dropdown_label {
+	white-space: nowrap;
+	width: 100%;
+	display: block;
+	padding: 0.25em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.dropdown_element {
+	display: block;
+} 
+
+.input_radio_button:checked + .dropdown_label {
+	background-color: #BF2B2B;
+	color: #E0DFDF;
+}
+
+.input_radio_button:focus + .dropdown_label, .dropdown_element:hover {
+	background-color: #22BFA8;
+	color: #000000;
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+
+/********************************************************************************
+Fonts
+********************************************************************************/
+.arial {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.brush_script_mt {
+	font-family: "Brush Script MT", cursive;
+}
+
+.copperplate {
+	font-family: Copperplate, Papyrus, fantasy;
+}
+
+.courier_new {
+	font-family: "Courier New", Courier, monospace;
+}
+
+.garamond {
+	font-family: Garamond, serif;
+}
+
+.georgia {
+	font-family: Georgia, serif;
+}
+
+.helvetica {
+	font-family: Helvetica, sans-serif;
+}
+
+.tahoma {
+	font-family: Tahoma, Verdana, sans-serif;
+}
+
+.times_new_roman {
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.trebuchet_ms {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.verdana {
+	font-family: Verdana, sans-serif;
 }
 
 /********************************************************************************
 Keyboard
 ********************************************************************************/
-.hide {
-	display: none;
-}
-
 .key_button {
-	fill:white;
-	stroke:#ED1C24;
-	stroke-miterlimit:10;
+	fill: #FFFFFF;
+	stroke: #000000;
+	stroke-miterlimit: 10;
 }
 
 .key_name {
-	font-size:24px;
-	fill:#000000;
+	font-size: 1.5em;
+	fill: #000000;
 }
 
 .key_button:hover {
-	fill: pink;
+	fill: rgba(255, 255, 255, 0.5);
 }
 
 .key_button:focus {
-	fill: rgba(120, 230, 238, 0.774);
+	fill: #22BFA8;
 	outline: none;
-	stroke:black;
-	stroke-width:2.5px;
+	stroke: #000000;
+	stroke-width: 2.5px;
 }
 
-svg {
+#onscreen_keyboard {
 	display: block;
-	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	margin: 1em auto;
+	padding: 0.25em;
+	white-space: pre;
+	position: relative;
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 1em;
+	width: inherit;
+	background-color: rgba(191, 42, 42, 0.75);
+	border-radius: 0.25em;
 }
