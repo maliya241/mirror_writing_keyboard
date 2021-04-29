@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "test_1";
+	src: url("../test_1.woff") format("woff");
+}
+
 .page_header {
     text-align: center;
 }
@@ -49,7 +54,7 @@
     }
 }
 
-h1, p, form, textarea, button, svg {
+header, #introduction, #text_editor, #onscreen_keyboard {
     display: none !important;
 }
 
@@ -58,6 +63,7 @@ h1, p, form, textarea, button, svg {
 	-moz-transform: scale(-1, 1);
 	-webkit-transform: scale(-1, 1);
 	transform: scale(-1, 1);
+    font-size: 14pt;
 }
   
 .print_formating {
