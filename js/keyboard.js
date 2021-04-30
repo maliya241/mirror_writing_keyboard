@@ -176,11 +176,6 @@ function virtual_keyboard_set_up() {
 	input("click"); //mouse click events
 	input("touchend"); //touch screen events
 	input("keydown"); //physical keyboard events
-
-	document.getElementById("introduction").innerHTML = " ";
-	for (i = 0; i < 12; i++) {
-		document.getElementById("introduction").innerHTML += i + ". " + mirrored_font_two_state_key_names_array[i].textContent + " ";
-	}
 }
 
 /*
