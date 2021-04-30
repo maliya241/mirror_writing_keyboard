@@ -1,1085 +1,576 @@
-//28 keys for alphabet, numbers, and punctuation keys
-var key_name_array = []; //text for all keys; 
-var key_button_array = []; //button for all keys; 46 buttons
-var key_array = []; //all keys, both names and button; 46 keys
-var virtual_keyboard_option = "lowercase_alphabet"; //lowercase_alphabet, uppercase_alphabet, punctuation_numbers_one, punctuation_numbers_two, lowercase_accent_characters_one, uppercase_accent_characters_one, lowercase_accent_characters_two, uppercase_accent_characters_two,lowercase_accent_characters_three, uppercase_accent_characters_three,lowercase_accent_characters_four, uppercase_accent_characters_four
-var previous_mirror_text_type = "mirrored_text"; //previous mirror_text_type 
-var mirror_text_type = "mirrored_text"; //mirrored_text, mirrored_font_text
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Mirror Writing Keyboard</title>
+		<!-- links, scripts, etc. -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
+		<link rel="stylesheet" type="text/css" media="print" href="css/print.css">
+		<meta charset="UTF-8">
+	</head>
+	<body class="">
+		<header>
+			<h1>Mirror Writing Keyboard</h1>
+			<svg id="mirror_writing_logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			viewBox="0 0 500 172.5" style="enable-background:new 0 0 500 172.5;" >
+				<g>
+					<text class="logo_text" transform="matrix(1 0 0 1 256.3123 49.9899)">
+						<tspan x="0" y="0">Mirror </tspan>
+						<tspan x="0" y="48">Writing</tspan>
+						<tspan x="0" y="96">Keyboard</tspan>
+					</text>
+					<text class="logo_text" transform="matrix(-1 0 0 1 243.6875 49.9901)">
+						<tspan x="0" y="0">Mirror </tspan>
+						<tspan x="0" y="48">Writing</tspan>
+						<tspan x="0" y="96">Keyboard</tspan>
+					</text>
+				</g>
+				<path id="logo_text_cursor" d="M275.18,171.25h-18.04c-2.91,0-5.58-1.15-7.41-2.94c-1.83,1.79-4.5,2.94-7.42,2.94h-18.04c-1.38,0-2.5-1.12-2.5-2.49 s1.12-2.49,2.5-2.49h18.04c2.53,0,4.92-1.72,4.92-3.55c0-0.08,0-0.16,0.01-0.24l0.53-152.72c-0.02-1.81-2.4-3.52-4.92-3.52h-18.04 c-1.38,0-2.5-1.12-2.5-2.49s1.12-2.49,2.5-2.49h18.04c2.91,0,5.58,1.15,7.42,2.94c1.83-1.79,4.5-2.94,7.41-2.94h18.04 c1.38,0,2.5,1.12,2.5,2.49s-1.12,2.49-2.5,2.49h-18.04c-2.53,0-4.91,1.72-4.91,3.55c0,0.01,0,0.03,0,0.04l-0.53,153.09 c0.17,1.75,2.47,3.35,4.9,3.35h18.04c1.38,0,2.5,1.12,2.5,2.49S276.56,171.25,275.18,171.25z"/>
+			</svg>
+		</header>
+		<p id="introduction">hallo, people. gato. neko. cat. </p>
+		<section id="text_editor">
+			<fieldset id="font_family" class="dropdown">
+				<legend><button type="button" id="font_dropdown_button" class="dropdown_button font_dropdown_element">Font &#9660;</button></legend>
+				<div id="font_dropdown" class="dropdown_content">
+					<div class="dropdown_element">
+						<input type="radio" id="arial_font" class="input_radio_button font_dropdown_element" name="font_selection" value="arial" onchange="change_font_family(this)">
+						<label for="arial_font" id="arial" class="dropdown_label font_dropdown_element arial">Arial</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="brush_script_mt_font" class="input_radio_button font_dropdown_element" name="font_selection" value="brush_script_mt" onchange="change_font_family(this)">
+						<label for="brush_script_mt_font" id="brush_script_mt" class="dropdown_label font_dropdown_element brush_script_mt">Brush Script MT</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="copperplate_font" class="input_radio_button font_dropdown_element" name="font_selection" value="copperplate" onchange="change_font_family(this)">
+						<label for="copperplate_font" id="copperplate" class="dropdown_label font_dropdown_element copperplate">Copperplate</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="courier_new_font" class="input_radio_button font_dropdown_element" name="font_selection" value="courier_new" onchange="change_font_family(this)">
+						<label for="courier_new_font" id="courier_new" class="dropdown_label font_dropdown_element courier_new">Courier New</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="garamond_font" class="input_radio_button font_dropdown_element" name="font_selection" value="garamond" onchange="change_font_family(this)">
+						<label for="garamond_font" id="garamond" class="dropdown_label font_dropdown_element garamond">Garamond</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="georgia_font" class="input_radio_button font_dropdown_element" name="font_selection" value="georgia" onchange="change_font_family(this)">
+						<label for="georgia_font" id="georgia" class="dropdown_label font_dropdown_element georgia">Georgia</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="helvetica_font" class="input_radio_button font_dropdown_element" name="font_selection" value="helvetica" onchange="change_font_family(this)">
+						<label for="helvetica_font" id="helvetica" class="dropdown_label font_dropdown_element helvetica">Helvetica</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="tahoma_font" class="input_radio_button font_dropdown_element" name="font_selection" value="tahoma" onchange="change_font_family(this)">
+						<label for="tahoma_font" id="tahoma" class="dropdown_label font_dropdown_element tahoma">Tahoma</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="times_new_roman_font" class="input_radio_button font_dropdown_element" name="font_selection" value="times_new_roman" onchange="change_font_family(this)" checked>
+						<label for="times_new_roman_font" id="times_new_roman" class="dropdown_label font_dropdown_element times_new_roman">Times New Roman</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="trebuchet_ms_font" class="input_radio_button font_dropdown_element" name="font_selection" value="trebuchet_ms" onchange="change_font_family(this)">
+						<label for="trebuchet_ms_font" id="trebuchet_ms" class="dropdown_label font_dropdown_element trebuchet_ms">Trebuchet MS</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="verdana_font" class="input_radio_button font_dropdown_element" name="font_selection" value="verdana" onchange="change_font_family(this)">
+						<label for="verdana_font" id="verdana" class="dropdown_label font_dropdown_element verdana">Verdana</label>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset id="font_size" class="dropdown">
+				<legend><button type="button" id="font_size_dropdown_button" class="dropdown_button font_size_dropdown_element">Font Size &#9660;</button></legend>
+				<div id="font_size_dropdown" class="dropdown_content">
+					<div class="dropdown_element">
+						<input type="radio" id="eight_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eight" onchange="change_font_size(this)">
+						<label for="eight_font_size" id="eight" class="dropdown_label font_size_dropdown_element">8</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="nine_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="nine" onchange="change_font_size(this)">
+						<label for="nine_font_size" id="nine" class="dropdown_label font_size_dropdown_element">9</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="ten_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="ten" onchange="change_font_size(this)">
+						<label for="ten_font_size" id="ten" class="dropdown_label font_size_dropdown_element">10</label>
+					</div>	
+					<div class="dropdown_element">
+						<input type="radio" id="eleven_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eleven" onchange="change_font_size(this)">
+						<label for="eleven_font_size" id="eleven" class="dropdown_label font_size_dropdown_element">11</label>
+					</div>	
+					<div class="dropdown_element">
+						<input type="radio" id="twelve_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="twelve" onchange="change_font_size(this)">
+						<label for="twelve_font_size" id="twelve" class="dropdown_label font_size_dropdown_element">12</label>
+					</div>		
+					<div class="dropdown_element">
+						<input type="radio" id="fourteen_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="fourteen" onchange="change_font_size(this)">
+						<label for="fourteen_font_size" id="fourteen" class="dropdown_label font_size_dropdown_element">14</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="eighteen_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eighteen" onchange="change_font_size(this)">
+						<label for="eighteen_font_size" id="eighteen" class="dropdown_label font_size_dropdown_element">18</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="twenty_four_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="twenty_four" onchange="change_font_size(this)" checked>
+						<label for="twenty_four_font_size" id="twenty_four" class="dropdown_label font_size_dropdown_element">24</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="thirty_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="thirty" onchange="change_font_size(this)">
+						<label for="thirty_font_size" id="thirty" class="dropdown_label font_size_dropdown_element">30</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="thirty_six_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="thirty_six" onchange="change_font_size(this)">
+						<label for="thirty_six_font_size" id="thirty_six" class="dropdown_label font_size_dropdown_element">36</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="forty_eight_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="forty_eight" onchange="change_font_size(this)">
+						<label for="forty_eight_font_size" id="forty_eight" class="dropdown_label font_size_dropdown_element">48</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="sixty_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="sixty" onchange="change_font_size(this)">
+						<label for="sixty_font_size" id="sixty" class="dropdown_label font_size_dropdown_element">60</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="seventy_two_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="seventy_two" onchange="change_font_size(this)">
+						<label for="seventy_two_font_size" id="seventy_two" class="dropdown_label font_size_dropdown_element">72</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="ninety_six_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="ninety_six" onchange="change_font_size(this)">
+						<label for="ninety_six_font_size" id="ninety_six" class="dropdown_label font_size_dropdown_element">96</label>
+					</div>		
+				</div>
+			</fieldset>
+			<textarea id="mirrored_textarea" class="textarea mirrored_text" aria-label="Textarea for Mirrored Writing" placeholder="Type here." autofocus></textarea>
+			<button type="button" id="print_button">Print</button>
+		</section>
 
-var textarea_element = document.getElementById("mirrored_textarea");
+		<svg id="onscreen_keyboard" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1107 335.66" style="enable-background:new 0 0 1107 335.66;">
+			<g class="key_button_and_name" id="keyboard_state_0">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M156.12,55.74c0,5.5-4.5,10-10,10H11.62c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(1.39, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_0" class="hide mirrored_font_key_name key_name option_key_names option_0">cba</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_0" class="mirrored_key_name key_name option_key_names option_0">abc</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_1">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M314.29,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(159.56, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_1" class="hide mirrored_font_key_name key_name option_key_names option_1">&#303;&#235;&#225;</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_1" class="mirrored_key_name key_name option_key_names option_1">&#225;&#235;&#303;</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_2">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M472.45,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(317.73, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_2" class="hide mirrored_font_key_name key_name option_key_names option_2">&#273;&#231;&#248;&#367;</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_2" class="mirrored_key_name key_name option_key_names option_2">&#367;&#248;&#231;&#273;</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_3">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M630.62,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(475.89, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_3" class="hide mirrored_font_key_name key_name option_key_names option_3">&#223;-&#241;-&#311;</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_3" class="mirrored_key_name key_name option_key_names option_3">&#311;-&#241;-&#223;</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_4">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M788.79,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(634.06, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_4" class="hide mirrored_font_key_name key_name option_key_names option_4">&#254;&#240;&#382;-&#359;</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_4" class="mirrored_key_name key_name option_key_names option_4">&#359;-&#382;&#240;&#254;</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_5">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M946.96,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(792.23, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_5" class="hide mirrored_font_key_name key_name option_key_names option_5">321?.</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_5" class="mirrored_key_name key_name option_key_names option_5">.?123</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_6">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(950.4, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_6" class="hide mirrored_font_key_name key_name option_key_names option_6">&#8230;|&#167;}[&#8364;</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_6" class="mirrored_key_name key_name option_key_names option_6">&#8364;[}&#167;|&#8230;</text>
+				</g>
+			</g>
+			
+			<g class="key_button_and_name" id="delete">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M120.62,122.4c0,5.5-4.5,10-10,10h-99c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h99c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(1.62, 69.4)">
+					<text x="59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_delete" class="hide mirrored_font_key_name key_name single_state_key_names">eteleD</text>
+					<text x="-59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_delete" class="mirrored_key_name key_name single_state_key_names">Delete</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_zero">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M202.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(124.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_27" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">0</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_27" class="mirrored_key_name key_name alphanumeric_punctuation">0</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_one">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M284.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(206.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_26" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">1</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_26" class="mirrored_key_name key_name alphanumeric_punctuation">1</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_two">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M366.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(288.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_25" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">2</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_25" class="mirrored_key_name key_name alphanumeric_punctuation">2</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_three">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M448.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(370.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_24" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">3</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_24" class="mirrored_key_name key_name alphanumeric_punctuation">3</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_four">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M530.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(452.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_23" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">4</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_23" class="mirrored_key_name key_name alphanumeric_punctuation">4</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_five">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M612.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(534.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_22" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">5</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_22" class="mirrored_key_name key_name alphanumeric_punctuation">5</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_six">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M694.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(616.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_21" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">6</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_21" class="mirrored_key_name key_name alphanumeric_punctuation">6</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_seven">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M776.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(698.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_20" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">7</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_20" class="mirrored_key_name key_name alphanumeric_punctuation">7</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_eight">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M858.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(780.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_19" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">8</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_19" class="mirrored_key_name key_name alphanumeric_punctuation">8</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_nine">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M940.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(862.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_18" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">9</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_18" class="mirrored_key_name key_name alphanumeric_punctuation">9</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="backspace">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,122.4c0,5.5-4.5,10-10,10h-140.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140.5
+					c5.5,0,10,4.5,10,10V122.4z"/>
+				<g class="text" transform="translate(945.11, 69.4)">
+					<text x="80.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_backspace" class="hide mirrored_font_key_name key_name single_state_key_names">ecapskcaB</text>
+					<text x="-80.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_backspace" class="mirrored_key_name key_name single_state_key_names">Backspace</text>
+				</g>
+			</g>
+			
+			<g class="key_button_and_name" id="tab">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M164.62,189.4c0,5.5-4.5,10-10,10h-143c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h143c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(1.62, 136.4)">
+					<text x="81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_tab" class="hide mirrored_font_key_name key_name single_state_key_names">baT</text>
+					<text x="-81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_tab" class="mirrored_key_name key_name tab single_state_key_names">Tab</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_ten">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M246.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(168.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_17" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">10</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_17" class="mirrored_key_name key_name alphanumeric_punctuation">10</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_eleven">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M328.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(250.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_16" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">11</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_16" class="mirrored_key_name key_name alphanumeric_punctuation">11</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twelve">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M410.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(332.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_15" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">12</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_15" class="mirrored_key_name key_name alphanumeric_punctuation">12</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_thirteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M492.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(414.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_14" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">13</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_14" class="mirrored_key_name key_name alphanumeric_punctuation">13</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_fourteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M574.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(496.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_13" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">14</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_13" class="mirrored_key_name key_name alphanumeric_punctuation">14</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_fifteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M656.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(578.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_12" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">15</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_12" class="mirrored_key_name key_name alphanumeric_punctuation">15</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_sixteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M738.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(660.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_11" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">16</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_11" class="mirrored_key_name key_name alphanumeric_punctuation">16</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_seventeen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M820.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(742.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_10" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">17</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_10" class="mirrored_key_name key_name alphanumeric_punctuation">17</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_eighteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M902.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(824.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_9" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">18</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_9" class="mirrored_key_name key_name alphanumeric_punctuation">18</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="enter">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,189.4c0,5.5-4.5,10-10,10h-178.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h178.5
+					c5.5,0,10,4.5,10,10V189.4z"/>
+				<g class="text" transform="translate(906.62, 136.4)">
+					<text x="99.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_enter" class="hide mirrored_font_key_name key_name single_state_key_names">retnE</text>
+					<text x="-99.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_enter" class="mirrored_key_name key_name single_state_key_names">Enter</text>
+				</g>
+			</g>
+			
+			<g class="key_button_and_name" id="left_caps_lock">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M182.62,256.4c0,5.5-4.5,10-10,10h-161c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h161c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(1.62, 203.4)">
+					<text x="90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_caps_lock" class="hide mirrored_font_key_name key_name caps_lock_group two_state_key_names">kcoL spaC</text>
+					<text x="-90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_caps_lock" class="mirrored_key_name key_name caps_lock_group two_state_key_names">Caps Lock</text>
+					<text x="90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_uncaps_lock" class="hide mirrored_font_key_name key_name uncaps_lock_group two_state_key_names">kcolnU spaC</text>
+					<text x="-90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_uncaps_lock" class="hide mirrored_key_name key_name uncaps_lock_group two_state_key_names">Caps Unlock</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_nineteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M265.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(187.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_8" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">19</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_8" class="mirrored_key_name key_name alphanumeric_punctuation">19</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M347.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(269.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_7" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">20</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_7" class="mirrored_key_name key_name alphanumeric_punctuation">20</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_one">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M429.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(351.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_6" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">21</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_6" class="mirrored_key_name key_name alphanumeric_punctuation">21</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_two">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M511.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(433.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_5" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">22</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_5" class="mirrored_key_name key_name alphanumeric_punctuation">22</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_three">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M593.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(515.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_4" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">23</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_4" class="mirrored_key_name key_name alphanumeric_punctuation">23</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_four">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M675.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(597.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_3" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">24</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_3" class="mirrored_key_name key_name alphanumeric_punctuation">24</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_five">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M757.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(679.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_2" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">25</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_2" class="mirrored_key_name key_name alphanumeric_punctuation">25</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_six">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button numbers_punctuation_button" d="M839.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(761.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_1" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">26</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_1" class="mirrored_key_name key_name alphanumeric_punctuation">26</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_seven">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button numbers_punctuation_button" d="M921.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(843.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_0" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">27</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_0" class="mirrored_key_name key_name alphanumeric_punctuation">27</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="right_caps_lock">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,256.4c0,5.5-4.5,10-10,10h-159.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h159.5
+					c5.5,0,10,4.5,10,10V256.4z"/>
+				<g class="text" transform="translate(925.62, 203.4)">
+					<text x="88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_caps_lock" class="hide mirrored_font_key_name key_name caps_lock_group two_state_key_names">kcoL spaC</text>
+					<text x="-88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_caps_lock" class="mirrored_key_name key_name caps_lock_group two_state_key_names">Caps Lock</text>
+					<text x="88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_uncaps_lock" class="hide mirrored_font_key_name key_name uncaps_lock_group two_state_key_names">kcolnU spaC</text>
+					<text x="-88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_uncaps_lock" class="hide mirrored_key_name key_name uncaps_lock_group two_state_key_names">Caps Unlock</text>
+				</g>
+			</g>
+			
+			<g class="key_button_and_name" id="punctuation_numbers_one">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M161.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
+					V323.4z"/>
+				<g class="text" transform="translate(1.62, 270.4)">		
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_one" class="hide mirrored_font_key_name key_name punctuation_numbers_group two_state_key_names">321?.</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_one" class="mirrored_key_name key_name punctuation_numbers_group two_state_key_names">.?123</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_one_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">cba</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_one_alphabet" class="hide mirrored_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="punctuation_numbers_two">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M325.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
+					V323.4z"/>
+				<g class="text" transform="translate(165.62, 270.4)">
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_two" class="hide mirrored_font_key_name key_name accent_chars_group two_state_key_names">&#8230;|&#167;}[&#8364;</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_two" class="mirrored_key_name key_name accent_chars_group two_state_key_names">&#8364;[}&#167;|&#8230;</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_two_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_accent_chars_group two_state_key_names">cba</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_two_alphabet" class="hide mirrored_key_name key_name alphabet_key_accent_chars_group two_state_key_names">abc</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="space_bar">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M777.62,323.4c0,5.5-4.5,10-10,10h-428c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h428c5.5,0,10,4.5,10,10
+					V323.4z"/>
+			</g>
+			<g class="key_button_and_name" id="accent_chars_one">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M941.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
+					V323.4z"/>
+				<g class="text" transform="translate(781.62, 270.4)">
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_one" class="hide mirrored_font_key_name key_name accent_chars_group two_state_key_names">&#303;&#235;&#225;</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_one" class="mirrored_key_name key_name accent_chars_group two_state_key_names">&#225;&#235;&#303;</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_one_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_accent_chars_group two_state_key_names">cba</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_one_alphabet" class="hide mirrored_key_name key_name alphabet_key_accent_chars_group two_state_key_names">abc</text>
+				</g>
+			</g>			
+			<g class="key_button_and_name" id="accent_chars_two">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,323.4c0,5.5-4.5,10-10,10h-139.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h139.5
+					c5.5,0,10,4.5,10,10V323.4z"/>
+				<g class="text" transform="translate(945.62, 270.4)">
+					<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_two" class="hide mirrored_font_key_name key_name punctuation_numbers_group two_state_key_names">&#273;&#231;&#248;&#367;</text>
+					<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_two" class="mirrored_key_name key_name punctuation_numbers_group two_state_key_names">&#367;&#248;&#231;&#273;</text>
+					<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_two_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">cba</text>
+					<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_two_alphabet" class="hide mirrored_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
+				</g>
+			</g>
+		</svg>
 
-//Key Groups
-var mirrored_font_two_state_key_names_array = []; //punctuation_numbers, accent_chars, caps_lock buttons; 12 keys 
-var mirrored_two_state_key_names_array = []; //punctuation_numbers, accent_chars, caps_lock buttons; 12 keys
-var mirrored_font_single_state_key_names_array = []; //delete, backspace, tab, enter; 4 keys
-var mirrored_single_state_key_names_array = []; //delete, backspace, tab, enter; 4 keys
-var mirrored_font_option_key_names_array = []; //mirrored key names for additional key options; 7 key names
-var mirrored_option_key_names_array = []; //mirrored key names for additional key options; 7 key names
+		<section id="for_print">
+			<div id="page_header" class="page_header print_formating"></div>
+			<div id="page_footer" class="page_footer print_formating">
+				<svg id="mirror_writing_logo_printable" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				viewBox="0 0 1000 172.5" style="enable-background:new 0 0 500 172.5;" >
+					<g>
+						<text class="logo_text" transform="matrix(1 0 0 1 509.4673 66.2053)">Mirror Writing</text>
+						<text class="logo_text" transform="matrix(1 0 0 1 509.4673 138.3772)">Keyboard</text>
+						<text class="logo_text" transform="matrix(-1 0 0 1 490.5327 66.2058)">Mirror Writing</text>
+						<text class="logo_text" transform="matrix(-1 0 0 1 490.5327 138.3782)">Keyboard</text>
+					</g>
+					<path id="logo_text_cursor" d="M525.2,171.2h-18c-2.9,0-5.6-1.1-7.4-2.9c-1.8,1.8-4.5,2.9-7.4,2.9h-18c-1.4,0-2.5-1.1-2.5-2.5s1.1-2.5,2.5-2.5h18 c2.5,0,4.9-1.7,4.9-3.6c0-0.1,0-0.2,0-0.2l0.5-152.7c0-1.8-2.4-3.5-4.9-3.5h-18c-1.4,0-2.5-1.1-2.5-2.5s1.1-2.5,2.5-2.5h18 c2.9,0,5.6,1.2,7.4,2.9c1.8-1.8,4.5-2.9,7.4-2.9h18c1.4,0,2.5,1.1,2.5,2.5s-1.1,2.5-2.5,2.5h-18c-2.5,0-4.9,1.7-4.9,3.5 c0,0,0,0,0,0l-0.5,153.1c0.2,1.8,2.5,3.4,4.9,3.4h18c1.4,0,2.5,1.1,2.5,2.5S526.6,171.2,525.2,171.2z"/>
+				</svg>
+			</div>
+			<table class="print_formating">
+				<thead>
+					<tr>
+						<td id="print_header">
+							<!--place holder for the fixed-position header-->
+							<div class="page_header_space"></div>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td id="print_content">
+							<!--content-->
+							<div id="mirror_writing_printable_content" class="page mirrored_text"></div>
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td id="print_header">
+							<!--place holder for the fixed-position footer-->
+							<div class="page_footer_space"></div>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</section>
 
-//Arrays of Arrays
-var mirrored_font_key_name_array = []; //text for custom mirrored font;
-var mirrored_key_name_array = []; //normal text that has been mirrored;
-
-//Alphabet Keys
-var mirrored_font_alphanumeric_punctuation_key_names_arrray = []; //group alphanumeric_punctuation key names; 28 keys
-var mirrored_alphanumeric_punctuation_key_names_arrray = []; //group alphanumeric_punctuation key names; 28 keys
-
-/*
-Character Keyboard Arrays 
-contains the unicode value of the characters
-characters are arranged in the order of keyboard from bottom right to to top left
-*/
-var lowercase_letter_comma_period_utf_8_array = [
-	113, 119, 101, 114, 116, 121, 117, 105, 111, 112,
-	//q (113), w (119), e (101), r (114), t (116), y (121), u (117), i (105), o (111), p (112)
-	97, 115, 100, 102, 103, 104, 106, 107, 108,
-	//a (97), s (115), d (100), f (102), g (103), h (104), j (106),  k (107), l (108)
-	122, 120, 99, 118, 98, 110, 109, 44, 46
-	// z (122), x (120), c (99), v (118), b (98), n (110), m (109), (44), , . (46)
-
-];
-var uppercase_letter_comma_period_utf_8_array = [ 
-	81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 
-	// Q (81), W (87), E (69), R (82), T (84), Y (89), U (85), I (73), O (79), P (80)
-	65, 83, 68, 70, 71, 72, 74, 75, 76,
-	// A (65), S (83), D (68), F (70), G (71), H (72), J (74), K (75), L (76)
-	90, 88, 67, 86, 66, 78, 77, 33, 63
-	// Z (90), X (88), C (67), V (86), B (66), N (78), M (77), ! (33), ? (63)
-];
-var punctuation_numbers_one_utf_8_array = [ 
-	49, 50, 51, 52, 53, 54, 55, 56, 57, 48,
-	// 1 (49), 2 (50), 3 (51), 4 (52), 5 (53), 6 (54), 7 (55), 8 (56), 9 (57), 0 (48)
-	64, 35, 36, 38, 42, 40, 41, 39, 34,
-	// @ (64), # (35), $ (36), & (38), * (42),  ( (40), ) (41), ' (39), " (34)
-	37, 45, 43, 61, 47, 59, 58, 33, 63
-	// % (37), - (45), + (43), = (61), / (47), ; (59), : (58), ! (33), ? (63)
-];
-var punctuation_numbers_two_utf_8_array = [
-	49, 50, 51, 52, 53, 54, 55, 56, 57, 48,
-	// 1 (49), 2 (50), 3 (51), 4 (52), 5 (53), 6 (54), 7 (55), 8 (56), 9 (57), 0 (48)
-	8364, 163, 165, 95, 94, 91, 93, 123, 125,
-	// € (8364), £ (163) , ¥ (165), _ (95), ^ (94), [ (91), ] (93), { (123), } (125)
-	167, 124, 126, 8230, 92, 60, 62, 161, 191
-	// § (167), | (124), ~ (126) , … (8230), \ (92), < (60), > (62), ¡ (161), ¿ (191)
-];
-var lowercase_accent_characters_one_utf_8_array = [
-	225, 224, 226, 228, 227, 257, 229, 259, 261, 230,
-	// á (225), à (224), â (226), ä (228), ã (227), ā (257), å (229), ă (259), ą (261), æ (230)
-	233, 232, 234, 235, 275, 283, 277, 279, 281,
-	// é (233), è (232), ê (234), ë (235), ē (275), ě (283), ĕ (277), ė (279), ę (281)
-	237, 236, 238, 239, 297, 299, 301, 105, 303
-	// í (237), ì (236), î (238), ï (239), ĩ (297), ī (299), ĭ (301), i (105), į (303)
-];
-var uppercase_accent_characters_one_utf_8_array = [
-	193, 192, 194, 196, 195, 256, 197, 258, 260, 198,
-	// Á (193), À (192), Â (194), Ä (196), Ã (195), Ā (256), Å (197), Ă (258), Ą (260), Æ (198)
-	201, 200, 202, 203, 274, 282, 276, 278, 280,
-	// É (201), È (200), Ê (202), Ë (203), Ē (274), Ě (282), Ĕ (276), Ė (278), Ę (280)
-	205, 204, 206, 207, 296, 298, 300, 304, 302
-	// Í (205), Ì (204), Î (206), Ï (207), Ĩ (296), Ī (298), Ĭ (300), İ (304), Į (302)
-];
-var lowercase_accent_characters_two_utf_8_array = [
-	250, 249, 251, 252, 361, 363, 367, 365, 371, 369,
-	// ú (250), ù (249), û (251), ü (252), ũ (361), ū (363), ů (367), ŭ (365), ų (371), ű (369)
-	243, 242, 244, 246, 245, 333, 335, 337, 248,
-	// ó (243), ò (242), ô (244), ö (246), õ (245), ō (333), ŏ (335), ő (337), ø (248)
-	339, 263, 265, 269, 267, 231, 271, 7691, 273
-	// œ (339), ć (263), ĉ (265), č (269), ċ (267), ç (231), ď (271), ḋ (7691), đ (273)
-];
-var uppercase_accent_characters_two_utf_8_array = [
-	218, 217, 219, 220, 360, 362, 366, 364, 370, 368,
-	// Ú (218), Ù (217), Û (219), Ü (220), Ũ (360), Ū (362), Ů (366), Ŭ (364), Ų (370), Ű (368)
-	211, 210, 212, 214, 213, 332, 334, 336, 216,
-	// Ó (211), Ò (210), Ô (212), Ö (214), Õ (213), Ō (332), Ŏ (334), Ő (336), Ø (216)
-	338, 262, 264, 268, 266, 199, 270, 7690, 272
-	// Œ (338), Ć (262), Ĉ (264), Č (268), Ċ (266), Ç (199), Ď (270), Ḋ (7690), Đ (272)	
-];
-var lowercase_accent_characters_three_utf_8_array = [
-	501, 285, 287, 289, 291, 293, 295, 309, 7729, 311,
-	// ǵ (501), ĝ (285), ğ (287), ġ (289), ģ (291), ĥ (293), ħ (295), ĵ (309), ḱ (7729), ķ (311)
-	314, 318, 320, 316, 322, 324, 241, 328, 326,
-	// ĺ (314), ľ (318), ŀ (320), ļ (316), ł (322), ń (324), ñ (241), ň (328), ņ (326)
-	341, 345, 343, 347, 349, 353, 351, 537, 223
-	// ŕ (341), ř (345), ŗ (343), ś (347), ŝ (349), š (353), ş (351), ș (537), ß (223)
-];
-var uppercase_accent_characters_three_utf_8_array = [ 
-	500, 284, 286, 288, 290, 292, 294, 308, 7728, 310,
-	// Ǵ (500), Ĝ (284), Ğ (286), Ġ (288), Ģ (290), Ĥ (292), Ħ (294), Ĵ (308), Ḱ (7728), Ķ (310)
-	313, 317, 319, 315, 321, 323, 209, 327, 325,
-	// Ĺ (313), Ľ (317), Ŀ (319), Ļ (315), Ł (321), Ń (323), Ñ (209), Ň (327), Ņ (325)
-	340, 344, 342, 346, 348, 352, 350, 536, 7838
-	// Ŕ (340), Ř (344), Ŗ (342), Ś (346), Ŝ (348), Š (352), Ş (350), Ș (536), ẞ (7838)
-];
-var lowercase_accent_characters_four_utf_8_array = [
-	357, 355, 359, 7811, 373, 7813, 253, 7923, 375, 255,
-	// ť (357), ţ (355), ŧ (359), ẃ (7811), ŵ (373), ẅ (7813), ý (253), ỳ (7923), ŷ (375), ÿ (255)
-	378, 7825, 382, 380, 8288, 240, 254, 170, 186, 
-	// ź (378), ẑ (7825), ž (382), ż (380), no break 8288, ð (240), þ (254), ª (170), º (186)
-	8288, 8288, 8288, 8288, 8288, 8288, 8288, 8288, 8288
-];
-var uppercase_accent_characters_four_utf_8_array = [
-	356, 354, 358, 7810, 372, 7812, 221, 7922, 374, 376,
-	// Ť (356), Ţ (354), Ŧ (358), Ẃ (7810), Ŵ (372), Ẅ (7812), Ý (221), Ỳ (7922), Ŷ (374), Ÿ (376)
-	377, 7824, 381, 379,  8288, 208, 222, 170, 186,
-	// Ź (377), Ẑ (7824), Ž (381), Ż (379), no break (8288), Ð (208), Þ (222), ª (170), º (186)
-	8288, 8288, 8288, 8288, 8288, 8288, 8288, 8288, 8288,
-];
-
-window.addEventListener("load", virtual_keyboard_set_up);
-
-/*
-virtual_keyboard_set_up function populates the arrays with the svg elements, handles switching keyboards based on mirror_text_type, and executes eventListener functions.
-Executes automatically after the website loads.
-*/
-function virtual_keyboard_set_up() {
-	//populate all key buttons array
-	for (i = 0; i < 46; i++) {
-		key_array[i] = document.getElementsByClassName("key_button_and_name")[i];
-		key_button_array[i] = document.getElementsByClassName("key_button")[i];
-	}
-	//populate alphanumeric_puncutation key names arrays with lowrcase text
-	for (i = 0; i < 28; i++) {
-		mirrored_font_alphanumeric_punctuation_key_names_arrray[i] = document.getElementsByClassName("mirrored_font_key_name alphanumeric_punctuation")[i];
-		mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_letter_comma_period_utf_8_array[i]); 
-		mirrored_alphanumeric_punctuation_key_names_arrray[i] = document.getElementsByClassName("mirrored_key_name alphanumeric_punctuation")[i];
-		mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_letter_comma_period_utf_8_array[i]); 
-	}
- 	//populate single state key names array
-	for (i = 0; i < 4; i++) {
-		mirrored_font_single_state_key_names_array[i] = document.getElementsByClassName("single_state_key_names mirrored_font_key_name")[i];
-		mirrored_single_state_key_names_array[i] = document.getElementsByClassName("single_state_key_names mirrored_key_name")[i];
-	}
-	//populate two state key names array
-	for (i = 0; i < 12; i++) {
-		mirrored_font_two_state_key_names_array[i] = document.getElementsByClassName("two_state_key_names mirrored_font_key_name")[i];
-		mirrored_two_state_key_names_array[i] = document.getElementsByClassName("two_state_key_names mirrored_key_name")[i];
-	}
-	//populate options key names arrays
-	for (i = 0; i < 7; i++) {
-		mirrored_font_option_key_names_array[i] = document.getElementsByClassName("option_key_names mirrored_font_key_name")[i];
-		mirrored_option_key_names_array[i] = document.getElementsByClassName("option_key_names mirrored_key_name")[i];
-	}
-
-	//populate mirrored_font_key_name_array
-	mirrored_font_key_name_array.push(mirrored_font_alphanumeric_punctuation_key_names_arrray);
-	mirrored_font_key_name_array.push(mirrored_font_single_state_key_names_array);
-	mirrored_font_key_name_array.push(mirrored_font_two_state_key_names_array);
-	mirrored_font_key_name_array.push(mirrored_font_option_key_names_array);
-	//populate mirrored_key_name_array
-	mirrored_key_name_array.push(mirrored_alphanumeric_punctuation_key_names_arrray);
-	mirrored_key_name_array.push(mirrored_single_state_key_names_array);
-	mirrored_key_name_array.push(mirrored_two_state_key_names_array);
-	mirrored_key_name_array.push(mirrored_option_key_names_array);
-
-	mirror_text_type_selection();
-
-	input("click"); //mouse click events
-	input("touchend"); //touch screen events
-	input("keydown"); //physical keyboard events
-
-	document.getElementById("introduction").innerHTML = " ";
-	for (i = 0; i < 12; i++) {
-		document.getElementById("introduction").innerHTML += i + ". " + mirrored_font_two_state_key_names_array[i].textContent + " ";
-	}
-}
-
-/*
-mirror_text_type_selection function switches the keyboard text based on mirror_text_type.
-Executes in vitual_keyboard_set_up.
-*/
-function mirror_text_type_selection() {
-	if (previous_mirror_text_type != mirror_text_type) {
-		//toggle visibility of alphabet key names
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].classList.toggle("hide");
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].classList.toggle("hide");
-		}
-		//toggle visibility of single state key names
-		for (i = 0; i < 4; i++) {
-			mirrored_font_single_state_key_names_array[i].classList.toggle("hide");
-			mirrored_single_state_key_names_array[i].classList.toggle("hide");
-		}
-		//toggle visibility of two state key names
-		for (i = 0; i < 12; i += 2) {
-			mirrored_font_two_state_key_names_array[i].classList.toggle("hide");
-			mirrored_two_state_key_names_array[i].classList.toggle("hide");
-		}
-		//toggle visibility of option key names
-		for (i = 0; i < 7; i++) {
-			mirrored_font_option_key_names_array[i].classList.toggle("hide");
-			mirrored_option_key_names_array[i].classList.toggle("hide");
-		}
-	}
-}
-
-/*
-input function gives each key its function for a given event type.
-event_type parameter: accepts events in quotation such as "click" as arguments
-Executes in vitual_keyboard_set_up.
-*/
-function input(event_type) {
-	key_array[0].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_option = "lowercase_alphabet";
-				virtual_keyboard_toggle_reset();
-				switch_virtual_keyboard();
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_option = "lowercase_alphabet";
-			virtual_keyboard_toggle_reset();
-			switch_virtual_keyboard();
-		}
-	}); //virtual_keyboard option 0; alphabet
-	key_array[1].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(8, 9, "lowercase_accent_characters_one");
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_toggle(8, 9, "lowercase_accent_characters_one");
-		}
-	}); //virtual_keyboard option 1; accent characters one
-	key_array[2].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(10, 11, "lowercase_accent_characters_two");
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_toggle(10, 11, "lowercase_accent_characters_two");
-		}
-	}); //virtual_keyboard option 2; accent characters two
-	key_array[3].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_option = "lowercase_accent_characters_three";
-				virtual_keyboard_toggle_reset();
-				switch_virtual_keyboard();
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_option = "lowercase_accent_characters_three";
-			virtual_keyboard_toggle_reset();
-			switch_virtual_keyboard();
-		}
-	}); //virtual_keyboard option 3; accent characters three
-	key_array[4].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_option = "lowercase_accent_characters_four";
-				virtual_keyboard_toggle_reset();
-				switch_virtual_keyboard();
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_option = "lowercase_accent_characters_four";
-			virtual_keyboard_toggle_reset();
-			switch_virtual_keyboard();
-		}
-	}); //virtual_keyboard option 4; accent characters four
-	key_array[5].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(4, 5, "punctuation_numbers_one");
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_toggle(4, 5, "punctuation_numbers_one");
-		}
-	}); //virtual_keyboard option 5; punctuation and numbers
-	key_array[6].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(6, 7, "punctuation_numbers_two");
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_toggle(6, 7, "punctuation_numbers_two");
-		}
-	}); //virtual_keyboard option 6; punctuation
-	key_array[7].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				delete_function();
-			}
-		} else {
-			event.preventDefault();
-			delete_function();
-		}
-	}); //delete 
-	
-	key_array[8].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(0);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(0);
-		}
-	}); //q (113), Q (81), 1 (49)
-	key_array[9].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(1);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(1);
-		}
-	}); //w (119), W (87), 2 (50)
-	key_array[10].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(2);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(2);
-		}
-	}); //e (101), E (69), 3 (51)
-	key_array[11].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(3);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(3);
-		}
-	}); //r (114), R (82), 4 (52)
-	key_array[12].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(4);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(4);
-		}
-	}); //t (116), T (84), 5 (53)
-	key_array[13].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(5);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(5);
-		}
-	}); //y (121), Y (89), 6 (54)
-	key_array[14].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(6);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(6);
-		}
-	}); //u (117), U (85), 7 (55)
-	key_array[15].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(7);	
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(7);
-		}
-	}); //i (105), I (73), 8 (56)
-	key_array[16].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(8);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(8);
-		}
-	}); //o (111), O (79), 9 (57)
-	key_array[17].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(9);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(9);
-		}
-	}); //p (112), P (80), 0 (48)
-	
-	key_array[18].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				backspace_function();
-			}
-		} else {
-			event.preventDefault();
-			backspace_function();
-		}
-	}); //backspace
-	key_array[19].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				add_character_move_cursor(String.fromCharCode(9));
-			}
-		} else {
-			event.preventDefault();
-			add_character_move_cursor(String.fromCharCode(9));
-		}
-	}); //horizonal tab (9)
-	
-	key_array[20].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(10);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(10);
-		}
-	}); //a (97), A (65), @ (64)
-	key_array[21].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(11);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(11);
-		}
-	}); //s (115), S (83), # (35)
-	key_array[22].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(12);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(12);
-		}
-	}); //d (100), D (68), $ (36)
-	key_array[23].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(13);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(13);
-		}
-	}); //f (102), F (70), & (38)
-	key_array[24].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(14);	
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(14);
-		}
-	}); //g (103), G (71), * (42)
-	key_array[25].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(15);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(15);
-		}
-	}); //h (104), H (72), ( (40)
-	key_array[26].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(16);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(16);
-		}
-	}); //j (106), J (74), ) (41)
-	key_array[27].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(17);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(17);
-		}
-	}); //k (107), K (75),' (39)
-	key_array[28].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(18);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(18);
-		}
-	}); //l (108), L (76), " (34)
-	
-	key_array[29].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				add_character_move_cursor(String.fromCharCode(13));
-			}
-		} else {
-			event.preventDefault();
-			add_character_move_cursor(String.fromCharCode(13));
-		}
-	}); //enter (13)
-	key_array[30].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				capitalize_alphabet(0, 1, 2, 3);
-			}
-		} else {
-			event.preventDefault();
-			capitalize_alphabet(0, 1, 2, 3);
-		}
-	}); //left caps lock
-	
-	key_array[31].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(19);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(19);
-		}
-	}); //z (122), Z (90), % (37)
-	key_array[32].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(20);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(20);
-		}
-	}); //x (120), X (88), - (45)
-	key_array[33].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(21);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(21);
-		}
-	}); //c (99), C (67), + (43)
-	key_array[34].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(22);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(22);
-		}
-	}); //v (118), V (86), = (61)
-	key_array[35].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(23);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(23);
-		}
-	}); //b (98), B (66), / (47)
-	key_array[36].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(24);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(24);
-		}
-	}); //n (110), N (78), semicolon (59)
-	key_array[37].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(26);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(26);
-		}
-	}); //m (109), M (77), colon (59)
-	key_array[38].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(27);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(27);
-		}
-	}); //comma (44), exclamtion mark (33)
-	key_array[39].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(0);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(0);
-		}
-	}); //full stop (46), question mark (63)
-	
-	key_array[40].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				capitalize_alphabet(8, 9, 10, 11);
-			}
-		} else {
-			event.preventDefault();
-			capitalize_alphabet(8, 9, 10, 11);
-		}
-	}); //right caps lock
-	key_array[41].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(6, 7, "punctuation_numbers_one");
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_toggle(6, 7, "punctuation_numbers_one");
-		}
-	}); //.?123
-	key_array[42].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(4, 5, "punctuation_numbers_two");
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_toggle(4, 5, "punctuation_numbers_two");
-		}
-	}); //punctuation 2
-	key_array[43].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				add_character_move_cursor(String.fromCharCode(32));
-			}
-		} else {
-			event.preventDefault();
-			add_character_move_cursor(String.fromCharCode(32));
-		}
-	}); //space (32)
-	key_array[44].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(2, 3, "lowercase_accent_characters_one");
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_toggle(2, 3, "lowercase_accent_characters_one");
-		}
-	}); //accent chars
-	key_array[45].addEventListener(event_type, function(event) {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(0, 1, "lowercase_accent_characters_two");
-			}
-		} else {
-			event.preventDefault();//takes care of multiple event listener inputs
-			virtual_keyboard_toggle(0, 1, "lowercase_accent_characters_two");
-		}
-	}); //accent chars 2	
-}
-
-/*
-toggle_button function changes the aria-pressed attribute to true.
-ele parameter: takes event.target
-Executes when specific physical keys are pressed down.
-*/
-function toggle_button(ele) {
-	ele.setAttribute(
-	  "aria-pressed",
-	  ele.getAttribute("aria-pressed") === "true" ? "false" : "true"
-	);
-}
-
-/*
-edit_textarea function gets the element of a keyboard array that corresponds to the virtual_keyboard_option from the index parameter and decodes the element and passes returned output to add_character_move_cursor. It also resizes the textarea as needed.
-index parameter: index of the keyboard arrays (arrays ending in utf_8_array); range: 0 - 27
-Executes when character keys have been clicked on or pressed.
-*/
-function edit_textarea(index) {
-	if (virtual_keyboard_option == "lowercase_alphabet") {
-		add_character_move_cursor(String.fromCharCode(lowercase_letter_comma_period_utf_8_array[index]));
-	} else if (virtual_keyboard_option == "uppercase_alphabet") {
-		add_character_move_cursor(String.fromCharCode(uppercase_letter_comma_period_utf_8_array[index]));
-	} else if (virtual_keyboard_option == "punctuation_numbers_one") {
-		add_character_move_cursor(String.fromCharCode(punctuation_numbers_one_utf_8_array[index]));
-	} else if (virtual_keyboard_option == "punctuation_numbers_two") {
-		add_character_move_cursor(String.fromCharCode(punctuation_numbers_two_utf_8_array[index]));
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_one") {
-		add_character_move_cursor(String.fromCharCode(lowercase_accent_characters_one_utf_8_array[index]));
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_one") {
-		add_character_move_cursor(String.fromCharCode(uppercase_accent_characters_one_utf_8_array[index]));
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_two") {
-		add_character_move_cursor(String.fromCharCode(lowercase_accent_characters_two_utf_8_array[index]));
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_two") {
-		add_character_move_cursor(String.fromCharCode(uppercase_accent_characters_two_utf_8_array[index]));
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_three") {
-		add_character_move_cursor(String.fromCharCode(lowercase_accent_characters_three_utf_8_array[index]));
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_three") {
-		add_character_move_cursor(String.fromCharCode(uppercase_accent_characters_three_utf_8_array[index]));
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_four") {
-		add_character_move_cursor(String.fromCharCode(lowercase_accent_characters_four_utf_8_array[index]));
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_four") {
-		add_character_move_cursor(String.fromCharCode(uppercase_accent_characters_four_utf_8_array[index]));
-	} 
-	auto_resize();
-	update_printable_table();
-}
-
-/*
-capitalize_alphabet function selects the new keyboard option based on the virtual_keyboard_option to pass as an argument for virtual_keyboard_toggle.
-first_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to initial state for the key
-second_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to other state for the key
-first_state_index_two parameter: second index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to initial state for the key because there are two keys that control capitalization
-second_state_index_two parameter: second index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to other state for the key because there are two keys that control capitalization
-Executes when one of the Caps Lock keys have been clicked on or pressed.
-*/
-function capitalize_alphabet(first_state_index, second_state_index, first_state_index_two, second_state_index_two) {
-	if (virtual_keyboard_option == "lowercase_alphabet") {
-		virtual_keyboard_toggle(first_state_index, second_state_index, "uppercase_alphabet", first_state_index_two, second_state_index_two);
-	} else if (virtual_keyboard_option == "uppercase_alphabet") {
-		virtual_keyboard_toggle(first_state_index, second_state_index, "lowercase_alphabet", first_state_index_two, second_state_index_two);
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_one") {
-		virtual_keyboard_toggle(first_state_index, second_state_index, "uppercase_accent_characters_one", first_state_index_two, second_state_index_two);
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_one") {
-		virtual_keyboard_toggle(first_state_index, second_state_index, "lowercase_accent_characters_one", first_state_index_two, second_state_index_two);
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_two") {
-		virtual_keyboard_toggle(first_state_index, second_state_index, "uppercase_accent_characters_two", first_state_index_two, second_state_index_two);
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_two") {
-		virtual_keyboard_toggle(first_state_index, second_state_index, "lowercase_accent_characters_two", first_state_index_two, second_state_index_two);
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_three") {
-		virtual_keyboard_toggle(first_state_index, second_state_index, "uppercase_accent_characters_three", first_state_index_two, second_state_index_two);
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_three") {
-		virtual_keyboard_toggle(first_state_index, second_state_index, "lowercase_accent_characters_three", first_state_index_two, second_state_index_two);
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_four") {
-		virtual_keyboard_toggle(first_state_index, second_state_index, "uppercase_accent_characters_four", first_state_index_two, second_state_index_two);
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_four") {
-		virtual_keyboard_toggle(first_state_index, second_state_index, "lowercase_accent_characters_four", first_state_index_two, second_state_index_two);
-	} 
- }
-
- /*
-virtual_keyboard_toggle switches the keyboard names for two state keys based on its states, then reassigns the virtual_keyboard_option to new_keyboard_option. Finally, it runs the given function.
-first_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to initial state for the key
-second_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to other state for the key
-new_virtual_keyboard_option parameter: new virtual_keyboard_option; acceptable arguments in quotations: lowercase_alphabet, uppercase_alphabet, punctuation_numbers_one, punctuation_numbers_two, lowercase_accent_characters_one, uppercase_accent_characters_one, lowercase_accent_characters_two, uppercase_accent_characters_two,lowercase_accent_characters_three, uppercase_accent_characters_three,lowercase_accent_characters_four, uppercase_accent_characters_four
-first_state_index_two parameter: second index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to initial state for the key because there are two keys that control capitalization
-second_state_index_two parameter: second index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to other state for the key because there are two keys that control capitalization
-Executes when a two state key needs to be switched.
-*/
-function virtual_keyboard_toggle(first_state_index, second_state_index, new_virtual_keyboard_option, first_state_index_two, second_state_index_two) {
-	var previous_key_state_second_state_index = mirrored_two_state_key_names_array[second_state_index].classList.contains("hide");
-	virtual_keyboard_toggle_reset();
-	if (mirror_text_type == "mirrored_font_text") {
-		if (previous_key_state_second_state_index) { //second state contains class hide
-			mirrored_font_two_state_key_names_array[first_state_index].classList.add("hide");
-			mirrored_font_two_state_key_names_array[second_state_index].classList.remove("hide");
-			if (first_state_index_two != null && second_state_index_two != null) {
-				mirrored_font_two_state_key_names_array[first_state_index_two].classList.add("hide");
-				mirrored_font_two_state_key_names_array[second_state_index_two].classList.remove("hide");
-			}
-		} else {
-			mirrored_font_two_state_key_names_array[first_state_index].classList.remove("hide");
-			mirrored_font_two_state_key_names_array[second_state_index].classList.add("hide");
-			if (first_state_index_two != null && second_state_index_two != null) {
-				mirrored_font_two_state_key_names_array[first_state_index_two].classList.remove("hide");
-				mirrored_font_two_state_key_names_array[second_state_index_two].classList.add("hide");
-			}
-		}
-	} else if (mirror_text_type == "mirrored_text") {
-		if (previous_key_state_second_state_index) { //second state contains class hide
-			mirrored_two_state_key_names_array[first_state_index].classList.add("hide");
-			mirrored_two_state_key_names_array[second_state_index].classList.remove("hide");
-			if (first_state_index_two != null && second_state_index_two != null) { 
-				mirrored_two_state_key_names_array[first_state_index_two].classList.add("hide");
-				mirrored_two_state_key_names_array[second_state_index_two].classList.remove("hide");
-			}
-		} else {
-			mirrored_two_state_key_names_array[first_state_index].classList.remove("hide");
-			mirrored_two_state_key_names_array[second_state_index].classList.add("hide");
-			if (first_state_index_two != null && second_state_index_two != null) {
-				mirrored_two_state_key_names_array[first_state_index_two].classList.remove("hide");
-				mirrored_two_state_key_names_array[second_state_index_two].classList.add("hide");
-			}
-		}
-	}
-	if (virtual_keyboard_option != new_virtual_keyboard_option) {
-		virtual_keyboard_option = new_virtual_keyboard_option;
-	} else {
-		virtual_keyboard_option = "lowercase_alphabet";
-	}
-	switch_virtual_keyboard();
-}
-
-/*
-virtual_keyboard_toggle_reset function sets all two state key names back to their initial key name.
-Executes in vitual_keyboard_toggle.
-*/
-function virtual_keyboard_toggle_reset() {
-	//even indices are the first state, odd indices are the second state
-	if (mirror_text_type == "mirrored_font_text") { 
-		mirrored_font_two_state_key_names_array[0].classList.remove("hide");
-		mirrored_font_two_state_key_names_array[1].classList.add("hide");
-		mirrored_font_two_state_key_names_array[2].classList.remove("hide");
-		mirrored_font_two_state_key_names_array[3].classList.add("hide");
-		mirrored_font_two_state_key_names_array[4].classList.remove("hide");
-		mirrored_font_two_state_key_names_array[5].classList.add("hide");
-		mirrored_font_two_state_key_names_array[6].classList.remove("hide");
-		mirrored_font_two_state_key_names_array[7].classList.add("hide");
-		mirrored_font_two_state_key_names_array[8].classList.remove("hide");
-		mirrored_font_two_state_key_names_array[9].classList.add("hide");
-		mirrored_font_two_state_key_names_array[10].classList.remove("hide");
-		mirrored_font_two_state_key_names_array[11].classList.add("hide");
-	} else {
-		mirrored_two_state_key_names_array[0].classList.remove("hide");
-		mirrored_two_state_key_names_array[1].classList.add("hide");
-		mirrored_two_state_key_names_array[2].classList.remove("hide");
-		mirrored_two_state_key_names_array[3].classList.add("hide");
-		mirrored_two_state_key_names_array[4].classList.remove("hide");
-		mirrored_two_state_key_names_array[5].classList.add("hide");
-		mirrored_two_state_key_names_array[6].classList.remove("hide");
-		mirrored_two_state_key_names_array[7].classList.add("hide");
-		mirrored_two_state_key_names_array[8].classList.remove("hide");
-		mirrored_two_state_key_names_array[9].classList.add("hide");
-		mirrored_two_state_key_names_array[10].classList.remove("hide");
-		mirrored_two_state_key_names_array[11].classList.add("hide");
-	}
-}
-
-/*
-switch_virtual_keyboard function iterates through all character keys and changes the key names based on the virtual_keyboard_option. The key names come from the character keyboard arrays.
-Executes when a new virtual_keyboard_option has been assigned.
-*/
-function switch_virtual_keyboard() {
-	if (virtual_keyboard_option == "uppercase_alphabet") {
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_letter_comma_period_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_letter_comma_period_utf_8_array[i]); 
-		}
-	} else if (virtual_keyboard_option == "punctuation_numbers_one") {
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(punctuation_numbers_one_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(punctuation_numbers_one_utf_8_array[i]); 
-		}
-	} else if (virtual_keyboard_option == "punctuation_numbers_two") {
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(punctuation_numbers_two_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(punctuation_numbers_two_utf_8_array[i]); 
-		}
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_one") {
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_one_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_one_utf_8_array[i]); 
-		}
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_one") {
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_one_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_one_utf_8_array[i]); 
-		}
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_two") {
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_two_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_two_utf_8_array[i]); 
-		}
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_two") {
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_two_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_two_utf_8_array[i]); 
-		}
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_three") {
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_three_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_three_utf_8_array[i]); 
-		}
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_three") {
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_three_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_three_utf_8_array[i]); 
-		}
-	} else if (virtual_keyboard_option == "lowercase_accent_characters_four") {
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_four_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_accent_characters_four_utf_8_array[i]); 
-		}
-	} else if (virtual_keyboard_option == "uppercase_accent_characters_four") {
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_four_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(uppercase_accent_characters_four_utf_8_array[i]); 
-		}
-	} else { //default: lowercase_alphabet
-		for (i = 0; i < 28; i++) {
-			mirrored_font_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_letter_comma_period_utf_8_array[i]); 
-			mirrored_alphanumeric_punctuation_key_names_arrray[i].textContent = String.fromCharCode(lowercase_letter_comma_period_utf_8_array[i]); 
-		}
-	}
-}
-
-/*
-add_character_move_cursor function inserts given string whereever the cursor is and moves the cursor after the inserted string. Then it focuses on the textarea to show where the cursor is and resizes the textarea as needed.
-input_string parameter: a string that has been decoded from unicode
-Executes in edit_textarea and when called for Tab, spacebar, and Enter.
-*/
-function add_character_move_cursor(input_string) {
-	textarea_element.setRangeText(input_string, textarea_element.selectionStart, textarea_element.selectionEnd, "end");
-	textarea_element.focus();
-	auto_resize();
-	update_printable_table();
-}
-
-/*
-backspace_function function replaces one character before the cursor or its selected string with an empty string. Then it focuses on the textarea to show where the cursor is and resizes the textarea as needed.
-Executes when the Backspace key has been clicked on or pressed.
-*/
-function backspace_function() {
-	var backspace_beginning_char = textarea_element.selectionStart;
-	if (backspace_beginning_char > 0 && backspace_beginning_char == textarea_element.selectionEnd) {
-		backspace_beginning_char--;
-	}
-	textarea_element.setRangeText("", backspace_beginning_char, textarea_element.selectionEnd, "end");
-	textarea_element.focus();
-	auto_resize();
-	update_printable_table();
-}
-
-/*
-delete_function function replaces one character after the cursor or its selected string with an empty string. Then it focuses on the textarea to show where the cursor is and resizes the textarea as needed.
-Executes when the Delete key has been clicked on or pressed.
-*/
-function delete_function() {
-	var delete_end_char = textarea_element.selectionEnd;
-	if (delete_end_char < textarea_element.value.length && delete_end_char == textarea_element.selectionStart) {
-		delete_end_char++;
-	}
-	textarea_element.setRangeText("", textarea_element.selectionStart, delete_end_char, "end");
-	textarea_element.focus();
-	auto_resize();
-	update_printable_table(); 
-}
-
-/*
-auto_resize function resizes the textarea height as needed.
-Executes after the textarea has been edited.
-*/
-function auto_resize() {
-    textarea_element.style.height = 'auto';
-    textarea_element.style.height = textarea_element.scrollHeight + 'px';
-}
-
-/*
-update_printable_table function updates the print_formating table when the textarea value has been changed.
-Executes after the textarea has been edited.
-*/
-function update_printable_table() {
-    document.getElementById("mirror_writing_printable_content").innerText = textarea_element.value;
-}
+		<script src="js/keyboard.js"></script>
+		<script src="js/main.js"></script>
+		<noscript>This website requires JavaScript to function correctly.</noscript>
+	</body>	
+</html>
