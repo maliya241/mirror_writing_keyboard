@@ -213,576 +213,232 @@ event_type parameter: accepts events in quotation such as "click" as arguments
 Executes in vitual_keyboard_set_up.
 */
 function input(event_type) {
-	key_array[0].addEventListener(event_type, function(event)  {
+	input_keyboard_options_with_one_state(0, event_type, "lowercase_alphabet"); //virtual_keyboard option 0; alphabet
+	input_keyboard_options_with_two_states(1, event_type, "lowercase_accent_characters_one", 8, 9); //virtual_keyboard option 1; accent characters one
+	input_keyboard_options_with_two_states(2, event_type, "lowercase_accent_characters_two", 10, 11); //virtual_keyboard option 2; accent characters two
+	input_keyboard_options_with_one_state(3, event_type, "lowercase_accent_characters_three"); //virtual_keyboard option 3; accent characters three
+	input_keyboard_options_with_one_state(4, event_type, "lowercase_accent_characters_four"); //virtual_keyboard option 4; accent characters four
+	input_keyboard_options_with_two_states(5, event_type, "punctuation_numbers_one", 4, 5); //virtual_keyboard option 5; punctuation and numbers
+	input_keyboard_options_with_two_states(6, event_type, "punctuation_numbers_two", 6, 7); //virtual_keyboard option 6; punctuation
+
+	input_editing_keys(7, event_type, delete_function, "Delete"); //delete 
+	input_character_keys(8, event_type, 0, "KeyQ") //q (113), Q (81), 1 (49)
+	input_character_keys(9, event_type, 1, "KeyW"); //w (119), W (87), 2 (50)
+	input_character_keys(10, event_type, 2, "KeyE"); //e (101), E (69), 3 (51)
+	input_character_keys(11, event_type, 3, "KeyR"); //r (114), R (82), 4 (52)
+	input_character_keys(12, event_type, 4, "KeyT"); //t (116), T (84), 5 (53)
+	input_character_keys(13, event_type, 5, "KeyY"); //y (121), Y (89), 6 (54)
+	input_character_keys(14, event_type, 6, "KeyU"); //u (117), U (85), 7 (55)
+	input_character_keys(15, event_type, 7, "KeyI"); //i (105), I (73), 8 (56)
+	input_character_keys(16, event_type, 8, "KeyO"); //o (111), O (79), 9 (57)
+	input_character_keys(17, event_type, 9, "KeyP"); //p (112), P (80), 0 (48)
+	input_editing_keys(18, event_type, backspace_function, "Backspace") //backspace
+	
+	input_whitespace_keys(19, event_type, 9); //horizonal tab (9)
+	input_character_keys(20, event_type, 10, "KeyA"); //a (97), A (65), @ (64)
+	input_character_keys(21, event_type, 11, "KeyS"); //s (115), S (83), # (35)
+	input_character_keys(22, event_type, 12, "KeyD"); //d (100), D (68), $ (36)
+	input_character_keys(23, event_type, 13, "KeyF"); //f (102), F (70), & (38)
+	input_character_keys(24, event_type, 14, "KeyG"); //g (103), G (71), * (42)
+	input_character_keys(25, event_type, 15, "KeyH"); //h (104), H (72), ( (40)
+	input_character_keys(26, event_type, 16, "KeyJ"); //j (106), J (74), ) (41)
+	input_character_keys(27, event_type, 17, "KeyK"); //k (107), K (75),' (39)
+	input_character_keys(28, event_type, 18, "KeyL"); //l (108), L (76), " (34)
+	input_whitespace_keys(29, event_type, 13) //enter (13)
+
+	input_caps_lock(30, event_type, 0, 1, 2, 3, "CapsLock"); //left caps lock
+	input_character_keys(31, event_type, 19, "KeyZ"); //z (122), Z (90), % (37)
+	input_character_keys(32, event_type, 20, "KeyX"); //x (120), X (88), - (45)
+	input_character_keys(33, event_type, 21, "KeyC"); //c (99), C (67), + (43)
+	input_character_keys(34, event_type, 22, "KeyV"); //v (118), V (86), = (61)
+	input_character_keys(35, event_type, 23, "KeyB"); //b (98), B (66), / (47)
+	input_character_keys(36, event_type, 24, "KeyN"); //n (110), N (78), semicolon (59)
+	input_character_keys(37, event_type, 25, "KeyM"); //m (109), M (77), colon (59)
+	input_character_keys(38, event_type, 26, "Comma"); //comma (44), exclamtion mark (33)
+	input_character_keys(39, event_type, 27, "Period"); //full stop (46), question mark (63)
+	input_caps_lock(40, event_type, 0, 1, 2, 3, "CapsLock"); //right caps lock
+
+	input_keyboard_options_with_two_states(41, event_type, "punctuation_numbers_one", 4, 5); // punctuation numbers 
+	input_keyboard_options_with_two_states(42, event_type, "punctuation_numbers_two", 6, 7);//punctuation 2
+	input_whitespace_keys(43, event_type, 32); //space (32)
+	input_keyboard_options_with_two_states(44, event_type, "lowercase_accent_characters_one", 8, 9); //accent chars
+	input_keyboard_options_with_two_states(45, event_type, "lowercase_accent_characters_two", 10, 11); //accent chars 2	
+}
+
+/*
+input_keyboard_options_with_one_state function add the event listener to reset the keyboard option keys to their initial state and switch the virtual keyboard to the given keyboard option.
+key_array_index parameter: given index for key_array as a number
+event_type parameter: passed from input function
+given_virtual_keyboard_option paramter: given virtual keyboard option as a string
+Executes when called in the input function
+*/
+function input_keyboard_options_with_one_state(key_array_index, event_type, given_virtual_keyboard_option) {
+	key_array[key_array_index].addEventListener(event_type, function(event)  {
 		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
 			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
 				toggle_button(event.target);
 				event.preventDefault();
-				virtual_keyboard_option = "lowercase_alphabet";
+				virtual_keyboard_option = given_virtual_keyboard_option;
 				virtual_keyboard_toggle_reset();
 				switch_virtual_keyboard();
 			}
 		} else {
 			event.preventDefault();
-			virtual_keyboard_option = "lowercase_alphabet";
+			virtual_keyboard_option = given_virtual_keyboard_option;
 			virtual_keyboard_toggle_reset();
 			switch_virtual_keyboard();
 		}
-	}); //virtual_keyboard option 0; alphabet
-	key_array[1].addEventListener(event_type, function(event)  {
+	});
+}
+
+/*
+input_keyboard_options_with_two_states function add the event listener to reset the keyboard option keys to their initial state and switch the virtual keyboard to the given keyboard option. The corresponding keyboard option key will toggle between key states that indicates what the keyboard can change to.
+key_array_index parameter: given index for key_array as a number
+event_type parameter: passed from input function
+given_virtual_keyboard_option paramter: given virtual keyboard option as a string
+first_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to initial state for the key
+second_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to other state for the key
+Executes when called in the input function
+*/
+function input_keyboard_options_with_two_states(key_array_index, event_type, given_virtual_keyboard_option, first_state_index, second_state_index) {
+	key_array[key_array_index].addEventListener(event_type, function(event)  {
 		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
 			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
 				toggle_button(event.target);
 				event.preventDefault();
-				virtual_keyboard_toggle(8, 9, "lowercase_accent_characters_one");
+				virtual_keyboard_toggle(first_state_index, second_state_index, given_virtual_keyboard_option);
 			}
 		} else {
 			event.preventDefault();
-			virtual_keyboard_toggle(8, 9, "lowercase_accent_characters_one");
+			virtual_keyboard_toggle(first_state_index, second_state_index, given_virtual_keyboard_option);
 		}
-	}); //virtual_keyboard option 1; accent characters one
-	key_array[2].addEventListener(event_type, function(event)  {
+	});
+}
+
+/*
+input_keyboard_options_with_two_states function add the event listener to switch the keyboard to its capitalized state if it has one.
+key_array_index parameter: given index for key_array as a number
+event_type parameter: passed from input function
+first_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to initial state for the key
+second_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to other state for the key
+first_state_index_two parameter: second index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to initial state for the key because there are two keys that control capitalization
+second_state_index_two parameter: second index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to other state for the key because there are two keys that control capitalization
+Executes when called in the input function
+*/
+function input_caps_lock(key_array_index, event_type, first_state_index, second_state_index, first_state_index_two, second_state_index_two, key_code) {
+	key_array[key_array_index].addEventListener(event_type, function(event)  {
 		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
 			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
 				toggle_button(event.target);
 				event.preventDefault();
-				virtual_keyboard_toggle(10, 11, "lowercase_accent_characters_two");
+				capitalize_alphabet(first_state_index, second_state_index, first_state_index_two, second_state_index_two);
 			}
 		} else {
 			event.preventDefault();
-			virtual_keyboard_toggle(10, 11, "lowercase_accent_characters_two");
+			capitalize_alphabet(first_state_index, second_state_index, first_state_index_two, second_state_index_two);
 		}
-	}); //virtual_keyboard option 2; accent characters two
-	key_array[3].addEventListener(event_type, function(event)  {
+	});
+
+	document.addEventListener("keydown", function(event)  {
+		if (event.defaultPrevented) {
+			return; // Do nothing if event already handled
+		}
+		if (event.code == key_code) {
+			toggle_button(event.target);
+			key_button_array[30].classList.add("focus");
+			key_button_array[40].classList.add("focus");
+			setTimeout(function () {
+				key_button_array[30].classList.remove("focus"); 
+				key_button_array[40].classList.remove("focus");
+			}, 250);
+			capitalize_alphabet(first_state_index, second_state_index, first_state_index_two, second_state_index_two);
+			event.preventDefault();
+		}
+	});
+}
+
+function input_whitespace_keys(key_array_index, event_type, unicode) {
+	key_array[key_array_index].addEventListener(event_type, function(event)  {
 		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
 			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
 				toggle_button(event.target);
 				event.preventDefault();
-				virtual_keyboard_option = "lowercase_accent_characters_three";
-				virtual_keyboard_toggle_reset();
-				switch_virtual_keyboard();
+				add_character_move_cursor(String.fromCharCode(unicode));
 			}
 		} else {
 			event.preventDefault();
-			virtual_keyboard_option = "lowercase_accent_characters_three";
-			virtual_keyboard_toggle_reset();
-			switch_virtual_keyboard();
+			add_character_move_cursor(String.fromCharCode(unicode));
 		}
-	}); //virtual_keyboard option 3; accent characters three
-	key_array[4].addEventListener(event_type, function(event)  {
+	});
+
+	document.addEventListener("keydown", function(event)  {
+		if (event.defaultPrevented) {
+			return; // Do nothing if event already handled
+		}
+		if (event.code == key_code && document.getElementById("mirrored_textarea") == document.activeElement) {
+			toggle_button(event.target);
+			key_button_array[key_array_index].classList.add("focus");
+			setTimeout(function () {key_button_array[key_array_index].classList.remove("focus");}, 250);
+			edit_textarea(character_key_index);
+			event.preventDefault();
+		}
+	});
+}
+
+function input_character_keys(key_array_index, event_type, character_key_index, key_code) {
+	key_array[key_array_index].addEventListener(event_type, function(event)  {
 		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
 			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
 				toggle_button(event.target);
 				event.preventDefault();
-				virtual_keyboard_option = "lowercase_accent_characters_four";
-				virtual_keyboard_toggle_reset();
-				switch_virtual_keyboard();
+				edit_textarea(character_key_index);
 			}
 		} else {
 			event.preventDefault();
-			virtual_keyboard_option = "lowercase_accent_characters_four";
-			virtual_keyboard_toggle_reset();
-			switch_virtual_keyboard();
+			edit_textarea(character_key_index);
 		}
-	}); //virtual_keyboard option 4; accent characters four
-	key_array[5].addEventListener(event_type, function(event)  {
+	});
+
+	document.addEventListener("keydown", function(event)  {
+		if (event.defaultPrevented) {
+			return; // Do nothing if event already handled
+		}
+		if (event.code == key_code) {
+			toggle_button(event.target);
+			key_button_array[key_array_index].classList.add("focus");
+			setTimeout(function () {key_button_array[key_array_index].classList.remove("focus");}, 250);
+			edit_textarea(character_key_index);
+			event.preventDefault();
+		}
+	});
+}
+
+function input_editing_keys(key_array_index, event_type, edit_function, key_code) {
+	key_array[key_array_index].addEventListener(event_type, function(event)  {
 		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
 			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
 				toggle_button(event.target);
 				event.preventDefault();
-				virtual_keyboard_toggle(4, 5, "punctuation_numbers_one");
+				edit_function();
 			}
 		} else {
 			event.preventDefault();
-			virtual_keyboard_toggle(4, 5, "punctuation_numbers_one");
+			edit_function();
 		}
-	}); //virtual_keyboard option 5; punctuation and numbers
-	key_array[6].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(6, 7, "punctuation_numbers_two");
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_toggle(6, 7, "punctuation_numbers_two");
-		}
-	}); //virtual_keyboard option 6; punctuation
-	key_array[7].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				delete_function();
-			}
-		} else {
-			event.preventDefault();
-			delete_function();
-		}
-	}); //delete 
+	});
 	
-	key_array[8].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(0);
-			}
-		} else {
+	document.addEventListener("keydown", function(event)  {
+		if (event.defaultPrevented) {
+			return; // Do nothing if event already handled
+		}
+		if (event.code == key_code) {
+			toggle_button(event.target);
+			key_button_array[key_array_index].classList.add("focus");
+			setTimeout(function () {key_button_array[key_array_index].classList.remove("focus");}, 250);
+			edit_function();
 			event.preventDefault();
-			edit_textarea(0);
 		}
-	}); //q (113), Q (81), 1 (49)
-	key_array[9].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(1);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(1);
-		}
-	}); //w (119), W (87), 2 (50)
-	key_array[10].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(2);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(2);
-		}
-	}); //e (101), E (69), 3 (51)
-	key_array[11].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(3);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(3);
-		}
-	}); //r (114), R (82), 4 (52)
-	key_array[12].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(4);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(4);
-		}
-	}); //t (116), T (84), 5 (53)
-	key_array[13].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(5);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(5);
-		}
-	}); //y (121), Y (89), 6 (54)
-	key_array[14].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(6);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(6);
-		}
-	}); //u (117), U (85), 7 (55)
-	key_array[15].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(7);	
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(7);
-		}
-	}); //i (105), I (73), 8 (56)
-	key_array[16].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(8);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(8);
-		}
-	}); //o (111), O (79), 9 (57)
-	key_array[17].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(9);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(9);
-		}
-	}); //p (112), P (80), 0 (48)
-	
-	key_array[18].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				backspace_function();
-			}
-		} else {
-			event.preventDefault();
-			backspace_function();
-		}
-	}); //backspace
-	key_array[19].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				add_character_move_cursor(String.fromCharCode(9));
-			}
-		} else {
-			event.preventDefault();
-			add_character_move_cursor(String.fromCharCode(9));
-		}
-	}); //horizonal tab (9)
-	
-	key_array[20].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(10);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(10);
-		}
-	}); //a (97), A (65), @ (64)
-	key_array[21].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(11);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(11);
-		}
-	}); //s (115), S (83), # (35)
-	key_array[22].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(12);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(12);
-		}
-	}); //d (100), D (68), $ (36)
-	key_array[23].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(13);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(13);
-		}
-	}); //f (102), F (70), & (38)
-	key_array[24].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(14);	
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(14);
-		}
-	}); //g (103), G (71), * (42)
-	key_array[25].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(15);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(15);
-		}
-	}); //h (104), H (72), ( (40)
-	key_array[26].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(16);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(16);
-		}
-	}); //j (106), J (74), ) (41)
-	key_array[27].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(17);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(17);
-		}
-	}); //k (107), K (75),' (39)
-	key_array[28].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(18);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(18);
-		}
-	}); //l (108), L (76), " (34)
-	
-	key_array[29].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				add_character_move_cursor(String.fromCharCode(13));
-			}
-		} else {
-			event.preventDefault();
-			add_character_move_cursor(String.fromCharCode(13));
-		}
-	}); //enter (13)
-	key_array[30].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				capitalize_alphabet(0, 1, 2, 3);
-			}
-		} else {
-			event.preventDefault();
-			capitalize_alphabet(0, 1, 2, 3);
-		}
-	}); //left caps lock
-	
-	key_array[31].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(19);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(19);
-		}
-	}); //z (122), Z (90), % (37)
-	key_array[32].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(20);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(20);
-		}
-	}); //x (120), X (88), - (45)
-	key_array[33].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(21);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(21);
-		}
-	}); //c (99), C (67), + (43)
-	key_array[34].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(22);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(22);
-		}
-	}); //v (118), V (86), = (61)
-	key_array[35].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(23);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(23);
-		}
-	}); //b (98), B (66), / (47)
-	key_array[36].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(24);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(24);
-		}
-	}); //n (110), N (78), semicolon (59)
-	key_array[37].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(26);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(26);
-		}
-	}); //m (109), M (77), colon (59)
-	key_array[38].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(27);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(27);
-		}
-	}); //comma (44), exclamtion mark (33)
-	key_array[39].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				edit_textarea(0);
-			}
-		} else {
-			event.preventDefault();
-			edit_textarea(0);
-		}
-	}); //full stop (46), question mark (63)
-	
-	key_array[40].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				capitalize_alphabet(8, 9, 10, 11);
-			}
-		} else {
-			event.preventDefault();
-			capitalize_alphabet(8, 9, 10, 11);
-		}
-	}); //right caps lock
-	key_array[41].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(6, 7, "punctuation_numbers_one");
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_toggle(6, 7, "punctuation_numbers_one");
-		}
-	}); //.?123
-	key_array[42].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(4, 5, "punctuation_numbers_two");
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_toggle(4, 5, "punctuation_numbers_two");
-		}
-	}); //punctuation 2
-	key_array[43].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				add_character_move_cursor(String.fromCharCode(32));
-			}
-		} else {
-			event.preventDefault();
-			add_character_move_cursor(String.fromCharCode(32));
-		}
-	}); //space (32)
-	key_array[44].addEventListener(event_type, function(event)  {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(2, 3, "lowercase_accent_characters_one");
-			}
-		} else {
-			event.preventDefault();
-			virtual_keyboard_toggle(2, 3, "lowercase_accent_characters_one");
-		}
-	}); //accent chars
-	key_array[45].addEventListener(event_type, function(event) {
-		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-				toggle_button(event.target);
-				event.preventDefault();
-				virtual_keyboard_toggle(0, 1, "lowercase_accent_characters_two");
-			}
-		} else {
-			event.preventDefault();//takes care of multiple event listener inputs
-			virtual_keyboard_toggle(0, 1, "lowercase_accent_characters_two");
-		}
-	}); //accent chars 2	
+	});
 }
 
 /*
