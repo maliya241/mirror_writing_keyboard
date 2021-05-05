@@ -23,8 +23,12 @@
 	src: url("../mirror_writing.woff") format("woff");
 }
 
-.print_formating {
+.print_formating, #print_formating {
 	display: none;
+}
+
+* {
+	font-family: 'Times New Roman', Times, serif;
 }
 
 body, header {
@@ -37,7 +41,11 @@ body, header {
 
 h1 {
 	font-size: 2.5em;
-	display: none;
+}
+
+.warning {
+	font-size: 1em;
+	color: #BF2B2B;
 }
 
 #mirror_writing_logo {
@@ -71,6 +79,10 @@ fieldset {
 	margin: 0;
 }
 
+text_controls, .print_controls {
+	vertical-align: middle;
+}
+
 .textarea {
 	min-height: 5em;
 	-webkit-box-sizing: border-box;
@@ -79,6 +91,7 @@ fieldset {
 	width: 100%;
 	margin: 16px auto;
 	padding: 4px;
+	font-size: 24pt;
 	resize: none;
 	white-space: normal;
 	word-wrap: break-word;
@@ -135,7 +148,7 @@ fieldset {
 	z-index: 1;
 }
 
-.input_radio_button {
+.input_radio_button, h1 {
 	position: fixed;
 	opacity: 0;
 	width: 0;
