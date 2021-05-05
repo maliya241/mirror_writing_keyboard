@@ -252,7 +252,7 @@ Keyboard
 	fill: rgba(255, 255, 255, 0.5);
 }
 
-.key_button:focus {
+.key_button:focus, .focus {
 	fill: #22BFA8;
 	outline: none;
 	stroke: #000000;
