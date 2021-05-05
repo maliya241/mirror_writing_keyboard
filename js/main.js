@@ -3,22 +3,19 @@ var font_selection_radio;
 var selected_font = "times_new_roman";
 var previous_selected_font = "times_new_roman";
 var selected_font_size = "24px";
-var previous_selected_font_size = "24px";
+var selected_page_size = "8.5in 11in";
+var selected_page_layout = "portrait";
 
 
 window.addEventListener("load", main_set_up);
 
 function main_set_up() {
-
     textarea_element.addEventListener("input", auto_resize, false);
     textarea_element.addEventListener("input", update_printable_table, false);
 
     button_input("click"); //mouse click events
 	button_input("touchend"); //touch screen events
 	button_input("keydown"); //physical keyboard events
-
-    change_font_family(document.getElementById("times_new_roman_font"));
-    change_font_size(document.getElementById("eighteen_font_size"));
 }
 
 /*
@@ -49,6 +46,30 @@ function button_input(event_type) {
         } else {
             event.preventDefault();//takes care of multiple event listener inputs
             dropdown("font_size_dropdown");
+        }
+    });
+    document.getElementById("page_size_dropdown_button").addEventListener(event_type, function(event) {
+        if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
+            if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
+                toggle_button(event.target);
+                event.preventDefault();
+                dropdown("page_size_dropdown");
+            }
+        } else {
+            event.preventDefault();//takes care of multiple event listener inputs
+            dropdown("page_size_dropdown");
+        }
+    });
+    document.getElementById("page_layout_dropdown_button").addEventListener(event_type, function(event) {
+        if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
+            if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
+                toggle_button(event.target);
+                event.preventDefault();
+                dropdown("page_layout_dropdown");
+            }
+        } else {
+            event.preventDefault();//takes care of multiple event listener inputs
+            dropdown("page_layout_dropdown");
         }
     });
     document.getElementById("print_button").addEventListener(event_type, function(event) {
@@ -111,21 +132,22 @@ function change_font_family(radio_font) {
     previous_selected_font = selected_font;
     selected_font = radio_font.value;
     var font_input_radio_button_id = selected_font + "_font";
+    var button_array = document.getElementsByTagName("button");
     document.getElementById("font_dropdown_button").innerText = document.getElementById(selected_font).innerText + " " + String.fromCharCode("9660");
 
     document.getElementById(font_input_radio_button_id).checked = true;
 
     document.body.classList.remove(previous_selected_font);
     textarea_element.classList.remove(previous_selected_font);
-    document.getElementById("print_button").classList.remove(previous_selected_font);
-    document.getElementById("font_dropdown_button").classList.remove(previous_selected_font);
-    document.getElementById("font_size_dropdown_button").classList.remove(previous_selected_font);
+    for (i = 0; i < button_array.length; i++) {
+        button_array[i].classList.remove(previous_selected_font);
+    }
     document.getElementById("font_dropdown").classList.remove(selected_font);
     document.body.classList.add(selected_font);
     textarea_element.classList.add(selected_font);
-    document.getElementById("print_button").classList.add(selected_font);
-    document.getElementById("font_dropdown_button").classList.add(selected_font);
-    document.getElementById("font_size_dropdown_button").classList.add(selected_font);
+    for (i = 0; i < button_array.length; i++) {
+        button_array[i].classList.add(selected_font);
+    }
 }
 
 /*
@@ -135,15 +157,53 @@ Executes when the selected font size has been changed in font_size_selection.
 */
 function change_font_size(radio_font_size) {
     var pt_to_px_number = 4/3;
-    previous_selected_font_size = selected_font_size;
     selected_font_size = (Number(document.getElementById(radio_font_size.value).innerHTML)*pt_to_px_number).toString() + "px";
     var font_input_radio_button_id = radio_font_size.value + "_font_size";
-    document.getElementById("font_size_dropdown_button").innerText = Number(document.getElementById(radio_font_size.value).innerHTML) + " pt " + String.fromCharCode("9660");
+    document.getElementById("font_size_dropdown_button").innerText = document.getElementById(radio_font_size.value).innerHTML + " pt " + String.fromCharCode("9660");
 
     document.getElementById(font_input_radio_button_id).checked = true;
 
     textarea_element.style.fontSize = selected_font_size;
     document.getElementById("mirror_writing_printable_content").style.fontSize = selected_font_size;
+}
+
+/*
+change_page_size function changes the size of the mirrored text for printing; does not change it for actual print page setting.
+radio_font_size: input element of the selected page size
+Executes when the selected page size has been changed in the page_size_selection or called by change_page_layout.
+*/
+function change_page_size(radio_page_size) {
+    if (radio_page_size != null) {
+        selected_page_size = radio_page_size.value.split(" "); //array: width, height in inches 
+        var radio_page_size_label_id = radio_page_size.id.replace("_page_size", "");
+        document.getElementById("introduction").innerHTML += radio_page_size_label_id;
+        document.getElementById("page_size_dropdown_button").innerText = document.getElementById(radio_page_size_label_id).innerText + String.fromCharCode("9660");
+        radio_page_size.checked = true;
+    } else {
+        change_page_layout();
+    }
+
+    if (selected_page_layout == "landscape") {
+        document.getElementById("print_formating").style.width = selected_page_size[1];
+    } else { //default is protrait
+        document.getElementById("print_formating").style.width = selected_page_size[0];
+    }
+}
+
+/*
+change_page_layout function changes the layout of the mirrored text for printing; does not change it for actual print page setting.
+radio_font_layout: input element of the selected page layout
+Executes when the selected page layout has been changed in the page_layout_selection or called by change_page_size.
+*/
+function change_page_layout(radio_page_layout) {
+    if (radio_page_layout != null) {
+        selected_page_layout = radio_page_layout.value; 
+        var radio_page_layout_label_id = radio_page_layout.id.replace("_page_layout", "");
+        document.getElementById("introduction").innerHTML += radio_page_layout_label_id;
+        document.getElementById("page_layout_dropdown_button").innerText = document.getElementById(radio_page_layout_label_id).innerText + String.fromCharCode("9660");
+        radio_page_layout.checked = true;
+    }
+     change_page_size();
 }
 
 /*
