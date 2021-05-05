@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
-<svg version="1.1" id="onscreen_keyboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1107 335.66" style="enable-background:new 0 0 1107 335.66;" xml:space="preserve">
+		
+		<svg id="onscreen_keyboard" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1107 335.66" style="enable-background:new 0 0 1107 335.66;">
 <style type="text/css">
 	.key_button{
 		fill:white;
@@ -30,385 +29,384 @@
 
 </style>
 	
-	<g class="key_button_and_name" id="accent_chars_two">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,323.4c0,5.5-4.5,10-10,10h-139.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h139.5
-			c5.5,0,10,4.5,10,10V323.4z"/>
-		<g class="text" transform="translate(945.62, 270.4)">
-			<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_two" class="hide mirrored_font_key_name key_name punctuation_numbers_group two_state_key_names">ůøçđ</text>
-			<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_two" class="mirrored_key_name key_name punctuation_numbers_group two_state_key_names">ůøçđ</text>
-			<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_two_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
-			<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_two_alphabet" class="hide mirrored_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="accent_chars_one">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M941.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
-			V323.4z"/>
-		<g class="text" transform="translate(781.62, 270.4)">
-			<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_one" class="hide mirrored_font_key_name key_name accent_chars_group two_state_key_names">áëį</text>
-			<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_one" class="mirrored_key_name key_name accent_chars_group two_state_key_names">áëį</text>
-			<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_one_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_accent_chars_group two_state_key_names">abc</text>
-			<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_one_alphabet" class="hide mirrored_key_name key_name alphabet_key_accent_chars_group two_state_key_names">abc</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="space_bar">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M777.62,323.4c0,5.5-4.5,10-10,10h-428c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h428c5.5,0,10,4.5,10,10
-			V323.4z"/>
-	</g>
-	<g class="key_button_and_name" id="punctuation_numbers_two">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M325.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
-			V323.4z"/>
-		<g class="text" transform="translate(165.62, 270.4)">
-			<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_two" class="hide mirrored_font_key_name key_name accent_chars_group two_state_key_names">€[}§|…</text>
-			<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_two" class="mirrored_key_name key_name accent_chars_group two_state_key_names">€[}§|…</text>
-			<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_two_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_accent_chars_group two_state_key_names">abc</text>
-			<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_two_alphabet" class="hide mirrored_key_name key_name alphabet_key_accent_chars_group two_state_key_names">abc</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="punctuation_numbers_one">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M161.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
-			V323.4z"/>
-		<g class="text" transform="translate(1.62, 270.4)">		
-			<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_one" class="hide mirrored_font_key_name key_name punctuation_numbers_group two_state_key_names">.?123</text>
-			<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_one" class="mirrored_key_name key_name punctuation_numbers_group two_state_key_names">.?123</text>
-			<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_one_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
-			<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_one_alphabet" class="hide mirrored_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
-		</g>
-	</g>
-	
-	<g class="key_button_and_name" id="right_caps_lock">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,256.4c0,5.5-4.5,10-10,10h-159.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h159.5
-			c5.5,0,10,4.5,10,10V256.4z"/>
-		<g class="text" transform="translate(925.62, 203.4)">
-			<text x="88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_caps_lock" class="hide mirrored_font_key_name key_name caps_lock_group two_state_key_names">Caps Lock</text>
-			<text x="-88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_caps_lock" class="mirrored_key_name key_name caps_lock_group two_state_key_names">Caps Lock</text>
-			<text x="88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_uncaps_lock" class="hide mirrored_font_key_name key_name uncaps_lock_group two_state_key_names">Caps Unlock</text>
-			<text x="-88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_uncaps_lock" class="hide mirrored_key_name key_name uncaps_lock_group two_state_key_names">Caps Unlock</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="0">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button numbers_punctuation_button" d="M921.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V256.4z"/>
-		<g class="text" transform="translate(843.62, 203.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_0" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">0</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_0" class="mirrored_key_name key_name alphanumeric_punctuation">0</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="1">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button numbers_punctuation_button" d="M839.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V256.4z"/>
-		<g class="text" transform="translate(761.62, 203.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_1" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">1</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_1" class="mirrored_key_name key_name alphanumeric_punctuation">1</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="2">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M757.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V256.4z"/>
-		<g class="text" transform="translate(679.62, 203.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_2" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">2</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_2" class="mirrored_key_name key_name alphanumeric_punctuation">2</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="3">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M675.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V256.4z"/>
-		<g class="text" transform="translate(597.62, 203.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_3" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">3</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_3" class="mirrored_key_name key_name alphanumeric_punctuation">3</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="4">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M593.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-				V256.4z"/>
-		<g class="text" transform="translate(515.62, 203.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_4" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">4</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_4" class="mirrored_key_name key_name alphanumeric_punctuation">4</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="5">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M511.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-				V256.4z"/>
-		<g class="text" transform="translate(433.62, 203.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_5" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">5</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_5" class="mirrored_key_name key_name alphanumeric_punctuation">5</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="6">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M429.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-				V256.4z"/>
-		<g class="text" transform="translate(351.62, 203.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_6" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">6</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_6" class="mirrored_key_name key_name alphanumeric_punctuation">6</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="7">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M347.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-				V256.4z"/>
-		<g class="text" transform="translate(269.62, 203.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_7" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">7</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_7" class="mirrored_key_name key_name alphanumeric_punctuation">7</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="8">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M265.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-				V256.4z"/>
-		<g class="text" transform="translate(187.62, 203.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_8" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">8</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_8" class="mirrored_key_name key_name alphanumeric_punctuation">8</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="left_caps_lock">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M182.62,256.4c0,5.5-4.5,10-10,10h-161c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h161c5.5,0,10,4.5,10,10
-				V256.4z"/>
-		<g class="text" transform="translate(1.62, 203.4)">
-			<text x="90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_caps_lock" class="hide mirrored_font_key_name key_name caps_lock_group two_state_key_names">Caps Lock</text>
-			<text x="-90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_caps_lock" class="mirrored_key_name key_name caps_lock_group two_state_key_names">Caps Lock</text>
-			<text x="90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_uncaps_lock" class="hide mirrored_font_key_name key_name uncaps_lock_group two_state_key_names">Caps Unlock</text>
-			<text x="-90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_uncaps_lock" class="hide mirrored_key_name key_name uncaps_lock_group two_state_key_names">Caps Unlock</text>
-		</g>
-	</g>
-	
-	<g class="key_button_and_name" id="enter">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,189.4c0,5.5-4.5,10-10,10h-178.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h178.5
-			c5.5,0,10,4.5,10,10V189.4z"/>
-		<g class="text" transform="translate(906.62, 136.4)">
-			<text x="99.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_enter" class="hide mirrored_font_key_name key_name single_state_key_names">Enter</text>
-			<text x="-99.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_enter" class="mirrored_key_name key_name single_state_key_names">Enter</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="9">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M902.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V189.4z"/>
-		<g class="text" transform="translate(824.62, 136.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_9" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">9</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_9" class="mirrored_key_name key_name alphanumeric_punctuation">9</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="10">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M820.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V189.4z"/>
-		<g class="text" transform="translate(742.62, 136.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_10" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">10</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_10" class="mirrored_key_name key_name alphanumeric_punctuation">10</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="11">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M738.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V189.4z"/>
-		<g class="text" transform="translate(660.62, 136.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_11" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">11</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_11" class="mirrored_key_name key_name alphanumeric_punctuation">11</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="12">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M656.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V189.4z"/>
-		<g class="text" transform="translate(578.62, 136.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_12" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">12</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_12" class="mirrored_key_name key_name alphanumeric_punctuation">12</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="13">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M574.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V189.4z"/>
-		<g class="text" transform="translate(496.62, 136.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_13" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">13</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_13" class="mirrored_key_name key_name alphanumeric_punctuation">13</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="14">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M492.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V189.4z"/>
-		<g class="text" transform="translate(414.62, 136.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_14" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">14</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_14" class="mirrored_key_name key_name alphanumeric_punctuation">14</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="15">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M410.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V189.4z"/>
-		<g class="text" transform="translate(332.62, 136.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_15" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">15</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_15" class="mirrored_key_name key_name alphanumeric_punctuation">15</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="16">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M328.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V189.4z"/>
-		<g class="text" transform="translate(250.62, 136.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_16" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">16</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_16" class="mirrored_key_name key_name alphanumeric_punctuation">16</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="17">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M246.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V189.4z"/>
-		<g class="text" transform="translate(168.62, 136.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_17" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">17</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_17" class="mirrored_key_name key_name alphanumeric_punctuation">17</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="tab">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M164.62,189.4c0,5.5-4.5,10-10,10h-143c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h143c5.5,0,10,4.5,10,10
-			V189.4z"/>
-		<g class="text" transform="translate(1.62, 136.4)">
-			<text x="81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_tab" class="hide mirrored_font_key_name key_name single_state_key_names">Tab</text>
-			<text x="-81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_tab" class="mirrored_key_name key_name tab single_state_key_names">Tab</text>
-		</g>
-	</g>
-	
-	<g class="key_button_and_name" id="backspace">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,122.4c0,5.5-4.5,10-10,10h-140.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140.5
-			c5.5,0,10,4.5,10,10V122.4z"/>
-		<g class="text" transform="translate(945.11, 69.4)">
-			<text x="80.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_backspace" class="hide mirrored_font_key_name key_name single_state_key_names">Backspace</text>
-			<text x="-80.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_backspace" class="mirrored_key_name key_name single_state_key_names">Backspace</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="18">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M940.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V122.4z"/>
-		<g class="text" transform="translate(862.62, 69.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_18" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">18</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_18" class="mirrored_key_name key_name alphanumeric_punctuation">18</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="19">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M858.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V122.4z"/>
-		<g class="text" transform="translate(780.62, 69.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_19" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">19</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_19" class="mirrored_key_name key_name alphanumeric_punctuation">19</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="20">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M776.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V122.4z"/>
-		<g class="text" transform="translate(698.62, 69.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_20" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">20</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_20" class="mirrored_key_name key_name alphanumeric_punctuation">20</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="21">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M694.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V122.4z"/>
-		<g class="text" transform="translate(616.62, 69.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_21" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">21</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_21" class="mirrored_key_name key_name alphanumeric_punctuation">21</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="22">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M612.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V122.4z"/>
-		<g class="text" transform="translate(534.62, 69.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_22" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">22</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_22" class="mirrored_key_name key_name alphanumeric_punctuation">22</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="23">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M530.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V122.4z"/>
-		<g class="text" transform="translate(452.62, 69.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_23" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">23</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_23" class="mirrored_key_name key_name alphanumeric_punctuation">23</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="24">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M448.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V122.4z"/>
-		<g class="text" transform="translate(370.62, 69.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_24" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">24</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_24" class="mirrored_key_name key_name alphanumeric_punctuation">24</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="25">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M366.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V122.4z"/>
-		<g class="text" transform="translate(288.62, 69.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_25" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">25</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_25" class="mirrored_key_name key_name alphanumeric_punctuation">25</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="26">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M284.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V122.4z"/>
-		<g class="text" transform="translate(206.62, 69.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_26" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">26</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_26" class="mirrored_key_name key_name alphanumeric_punctuation">26</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="27">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M202.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
-			V122.4z"/>
-		<g class="text" transform="translate(124.62, 69.4)">
-			<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_27" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">27</text>
-			<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_27" class="mirrored_key_name key_name alphanumeric_punctuation">27</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="delete">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M120.62,122.4c0,5.5-4.5,10-10,10h-99c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h99c5.5,0,10,4.5,10,10
-			V122.4z"/>
-		<g class="text" transform="translate(1.62, 69.4)">
-			<text x="59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_delete" class="hide mirrored_font_key_name key_name single_state_key_names">Delete</text>
-			<text x="-59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_delete" class="mirrored_key_name key_name single_state_key_names">Delete</text>
-		</g>
-	</g>
-	
-	<g class="key_button_and_name" id="keyboard_state_6">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
-			c5.5,0,10,4.5,10,10V55.74z"/>
-		<g class="text" transform="translate(950.4, 2.26)">
-			<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_6" class="hide mirrored_font_key_name key_name option_key_names option_6">€[}§|…</text>
-			<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_6" class="mirrored_key_name key_name option_key_names option_6">€[}§|…</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="keyboard_state_5">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M946.96,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
-			c5.5,0,10,4.5,10,10V55.74z"/>
-		<g class="text" transform="translate(792.23, 2.26)">
-			<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_5" class="hide mirrored_font_key_name key_name option_key_names option_5">.?123</text>
-			<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_5" class="mirrored_key_name key_name option_key_names option_5">.?123</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="keyboard_state_4">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M788.79,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
-			c5.5,0,10,4.5,10,10V55.74z"/>
-		<g class="text" transform="translate(634.06, 2.26)">
-			<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_4" class="hide mirrored_font_key_name key_name option_key_names option_4">ŧ-žðþ</text>
-			<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_4" class="mirrored_key_name key_name option_key_names option_4">ŧ-žðþ</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="keyboard_state_3">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M630.62,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
-			c5.5,0,10,4.5,10,10V55.74z"/>
-		<g class="text" transform="translate(475.89, 2.26)">
-			<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_3" class="hide mirrored_font_key_name key_name option_key_names option_3">ķ-ñ-ß</text>
-			<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_3" class="mirrored_key_name key_name option_key_names option_3">ķ-ñ-ß</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="keyboard_state_2">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M472.45,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
-			c5.5,0,10,4.5,10,10V55.74z"/>
-		<g class="text" transform="translate(317.73, 2.26)">
-			<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_2" class="hide mirrored_font_key_name key_name option_key_names option_2">ůøçđ</text>
-			<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_2" class="mirrored_key_name key_name option_key_names option_2">ůøçđ</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="keyboard_state_1">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M314.29,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
-			c5.5,0,10,4.5,10,10V55.74z"/>
-		<g class="text" transform="translate(159.56, 2.26)">
-			<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_1" class="hide mirrored_font_key_name key_name option_key_names option_1">áëį</text>
-			<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_1" class="mirrored_key_name key_name option_key_names option_1">áëį</text>
-		</g>
-	</g>
-	<g class="key_button_and_name" id="keyboard_state_0">
-		<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M156.12,55.74c0,5.5-4.5,10-10,10H11.62c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
-			c5.5,0,10,4.5,10,10V55.74z"/>
-		<g class="text" transform="translate(1.39, 2.26)">
-			<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_0" class="hide mirrored_font_key_name key_name option_key_names option_0">abc</text>
-			<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_0" class="mirrored_key_name key_name option_key_names option_0">abc</text>
-		</g>
-	</g>
-
-</svg>
+			<g class="key_button_and_name" id="keyboard_state_0">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M156.12,55.74c0,5.5-4.5,10-10,10H11.62c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(1.39, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_0" class="hide mirrored_font_key_name key_name option_key_names option_0">cba</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_0" class="mirrored_key_name key_name option_key_names option_0">abc</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_1">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M314.29,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(159.56, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_1" class="hide mirrored_font_key_name key_name option_key_names option_1">&#303;&#235;&#225;</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_1" class="mirrored_key_name key_name option_key_names option_1">&#225;&#235;&#303;</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_2">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M472.45,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(317.73, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_2" class="hide mirrored_font_key_name key_name option_key_names option_2">&#273;&#231;&#248;&#367;</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_2" class="mirrored_key_name key_name option_key_names option_2">&#367;&#248;&#231;&#273;</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_3">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M630.62,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(475.89, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_3" class="hide mirrored_font_key_name key_name option_key_names option_3">&#223;-&#241;-&#311;</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_3" class="mirrored_key_name key_name option_key_names option_3">&#311;-&#241;-&#223;</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_4">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M788.79,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(634.06, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_4" class="hide mirrored_font_key_name key_name option_key_names option_4">&#254;&#240;&#382;-&#359;</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_4" class="mirrored_key_name key_name option_key_names option_4">&#359;-&#382;&#240;&#254;</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_5">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M946.96,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(792.23, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_5" class="hide mirrored_font_key_name key_name option_key_names option_5">321?.</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_5" class="mirrored_key_name key_name option_key_names option_5">.?123</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="keyboard_state_6">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,55.74c0,5.5-4.5,10-10,10h-134.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h134.5
+					c5.5,0,10,4.5,10,10V55.74z"/>
+				<g class="text" transform="translate(950.4, 2.26)">
+					<text x="77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_keyboard_state_6" class="hide mirrored_font_key_name key_name option_key_names option_6">&#8230;|&#167;}[&#8364;</text>
+					<text x="-77.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_keyboard_state_6" class="mirrored_key_name key_name option_key_names option_6">&#8364;[}&#167;|&#8230;</text>
+				</g>
+			</g>
+			
+			<g class="key_button_and_name" id="delete">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M120.62,122.4c0,5.5-4.5,10-10,10h-99c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h99c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(1.62, 69.4)">
+					<text x="59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_delete" class="hide mirrored_font_key_name key_name single_state_key_names">eteleD</text>
+					<text x="-59.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_delete" class="mirrored_key_name key_name single_state_key_names">Delete</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_zero">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M202.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(124.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_27" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">0</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_27" class="mirrored_key_name key_name alphanumeric_punctuation">0</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_one">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M284.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(206.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_26" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">1</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_26" class="mirrored_key_name key_name alphanumeric_punctuation">1</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_two">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M366.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(288.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_25" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">2</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_25" class="mirrored_key_name key_name alphanumeric_punctuation">2</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_three">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M448.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(370.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_24" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">3</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_24" class="mirrored_key_name key_name alphanumeric_punctuation">3</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_four">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M530.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(452.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_23" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">4</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_23" class="mirrored_key_name key_name alphanumeric_punctuation">4</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_five">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M612.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(534.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_22" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">5</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_22" class="mirrored_key_name key_name alphanumeric_punctuation">5</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_six">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M694.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(616.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_21" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">6</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_21" class="mirrored_key_name key_name alphanumeric_punctuation">6</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_seven">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M776.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(698.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_20" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">7</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_20" class="mirrored_key_name key_name alphanumeric_punctuation">7</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_eight">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M858.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(780.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_19" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">8</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_19" class="mirrored_key_name key_name alphanumeric_punctuation">8</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_nine">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M940.62,122.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V122.4z"/>
+				<g class="text" transform="translate(862.62, 69.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_18" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">9</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_18" class="mirrored_key_name key_name alphanumeric_punctuation">9</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="backspace">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,122.4c0,5.5-4.5,10-10,10h-140.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140.5
+					c5.5,0,10,4.5,10,10V122.4z"/>
+				<g class="text" transform="translate(945.11, 69.4)">
+					<text x="80.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_backspace" class="hide mirrored_font_key_name key_name single_state_key_names">ecapskcaB</text>
+					<text x="-80.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_backspace" class="mirrored_key_name key_name single_state_key_names">Backspace</text>
+				</g>
+			</g>
+			
+			<g class="key_button_and_name" id="tab">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M164.62,189.4c0,5.5-4.5,10-10,10h-143c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h143c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(1.62, 136.4)">
+					<text x="81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_tab" class="hide mirrored_font_key_name key_name single_state_key_names">baT</text>
+					<text x="-81.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_tab" class="mirrored_key_name key_name tab single_state_key_names">Tab</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_ten">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M246.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(168.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_17" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">10</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_17" class="mirrored_key_name key_name alphanumeric_punctuation">10</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_eleven">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M328.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(250.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_16" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">11</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_16" class="mirrored_key_name key_name alphanumeric_punctuation">11</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twelve">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M410.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(332.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_15" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">12</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_15" class="mirrored_key_name key_name alphanumeric_punctuation">12</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_thirteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M492.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(414.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_14" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">13</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_14" class="mirrored_key_name key_name alphanumeric_punctuation">13</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_fourteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M574.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(496.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_13" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">14</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_13" class="mirrored_key_name key_name alphanumeric_punctuation">14</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_fifteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M656.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(578.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_12" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">15</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_12" class="mirrored_key_name key_name alphanumeric_punctuation">15</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_sixteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M738.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(660.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_11" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">16</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_11" class="mirrored_key_name key_name alphanumeric_punctuation">16</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_seventeen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M820.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(742.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_10" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">17</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_10" class="mirrored_key_name key_name alphanumeric_punctuation">17</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_eighteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M902.62,189.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V189.4z"/>
+				<g class="text" transform="translate(824.62, 136.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_9" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">18</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_9" class="mirrored_key_name key_name alphanumeric_punctuation">18</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="enter">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,189.4c0,5.5-4.5,10-10,10h-178.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h178.5
+					c5.5,0,10,4.5,10,10V189.4z"/>
+				<g class="text" transform="translate(906.62, 136.4)">
+					<text x="99.25" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_enter" class="hide mirrored_font_key_name key_name single_state_key_names">retnE</text>
+					<text x="-99.25" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_enter" class="mirrored_key_name key_name single_state_key_names">Enter</text>
+				</g>
+			</g>
+			
+			<g class="key_button_and_name" id="left_caps_lock">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M182.62,256.4c0,5.5-4.5,10-10,10h-161c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h161c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(1.62, 203.4)">
+					<text x="90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_caps_lock" class="hide mirrored_font_key_name key_name caps_lock_group two_state_key_names">kcoL spaC</text>
+					<text x="-90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_caps_lock" class="mirrored_key_name key_name caps_lock_group two_state_key_names">Caps Lock</text>
+					<text x="90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" id="l_uncaps_lock" class="hide mirrored_font_key_name key_name uncaps_lock_group two_state_key_names">kcolnU spaC</text>
+					<text x="-90.5" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_l_uncaps_lock" class="hide mirrored_key_name key_name uncaps_lock_group two_state_key_names">Caps Unlock</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_nineteen">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M265.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(187.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_8" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">19</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_8" class="mirrored_key_name key_name alphanumeric_punctuation">19</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M347.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(269.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_7" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">20</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_7" class="mirrored_key_name key_name alphanumeric_punctuation">20</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_one">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M429.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(351.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_6" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">21</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_6" class="mirrored_key_name key_name alphanumeric_punctuation">21</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_two">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M511.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(433.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_5" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">22</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_5" class="mirrored_key_name key_name alphanumeric_punctuation">22</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_three">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M593.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+						V256.4z"/>
+				<g class="text" transform="translate(515.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_4" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">23</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_4" class="mirrored_key_name key_name alphanumeric_punctuation">23</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_four">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M675.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(597.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_3" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">24</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_3" class="mirrored_key_name key_name alphanumeric_punctuation">24</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_five">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button alphabet_button numbers_punctuation_button" d="M757.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(679.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_2" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">25</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_2" class="mirrored_key_name key_name alphanumeric_punctuation">25</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_six">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button numbers_punctuation_button" d="M839.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(761.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_1" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">26</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_1" class="mirrored_key_name key_name alphanumeric_punctuation">26</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="character_key_twenty_seven">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button numbers_punctuation_button" d="M921.62,256.4c0,5.5-4.5,10-10,10h-58c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h58c5.5,0,10,4.5,10,10
+					V256.4z"/>
+				<g class="text" transform="translate(843.62, 203.4)">
+					<text x="39" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_index_0" class="hide mirrored_font_key_name key_name alphanumeric_punctuation">27</text>
+					<text x="-39" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_index_0" class="mirrored_key_name key_name alphanumeric_punctuation">27</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="right_caps_lock">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,256.4c0,5.5-4.5,10-10,10h-159.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h159.5
+					c5.5,0,10,4.5,10,10V256.4z"/>
+				<g class="text" transform="translate(925.62, 203.4)">
+					<text x="88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_caps_lock" class="hide mirrored_font_key_name key_name caps_lock_group two_state_key_names">kcoL spaC</text>
+					<text x="-88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_caps_lock" class="mirrored_key_name key_name caps_lock_group two_state_key_names">Caps Lock</text>
+					<text x="88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="r_uncaps_lock" class="hide mirrored_font_key_name key_name uncaps_lock_group two_state_key_names">kcolnU spaC</text>
+					<text x="-88.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_r_uncaps_lock" class="hide mirrored_key_name key_name uncaps_lock_group two_state_key_names">Caps Unlock</text>
+				</g>
+			</g>
+			
+			<g class="key_button_and_name" id="punctuation_numbers_one">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M161.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
+					V323.4z"/>
+				<g class="text" transform="translate(1.62, 270.4)">		
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_one" class="hide mirrored_font_key_name key_name punctuation_numbers_group two_state_key_names">321?.</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_one" class="mirrored_key_name key_name punctuation_numbers_group two_state_key_names">.?123</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_one_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">cba</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_one_alphabet" class="hide mirrored_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="punctuation_numbers_two">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M325.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
+					V323.4z"/>
+				<g class="text" transform="translate(165.62, 270.4)">
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_two" class="hide mirrored_font_key_name key_name accent_chars_group two_state_key_names">&#8230;|&#167;}[&#8364;</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_two" class="mirrored_key_name key_name accent_chars_group two_state_key_names">&#8364;[}&#167;|&#8230;</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_punctuation_numbers_two_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_accent_chars_group two_state_key_names">cba</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_punctuation_numbers_two_alphabet" class="hide mirrored_key_name key_name alphabet_key_accent_chars_group two_state_key_names">abc</text>
+				</g>
+			</g>
+			<g class="key_button_and_name" id="space_bar">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M777.62,323.4c0,5.5-4.5,10-10,10h-428c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h428c5.5,0,10,4.5,10,10
+					V323.4z"/>
+			</g>
+			<g class="key_button_and_name" id="accent_chars_one">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M941.62,323.4c0,5.5-4.5,10-10,10h-140c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h140c5.5,0,10,4.5,10,10
+					V323.4z"/>
+				<g class="text" transform="translate(781.62, 270.4)">
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_one" class="hide mirrored_font_key_name key_name accent_chars_group two_state_key_names">&#303;&#235;&#225;</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_one" class="mirrored_key_name key_name accent_chars_group two_state_key_names">&#225;&#235;&#303;</text>
+					<text x="80" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_one_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_accent_chars_group two_state_key_names">cba</text>
+					<text x="-80" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_one_alphabet" class="hide mirrored_key_name key_name alphabet_key_accent_chars_group two_state_key_names">abc</text>
+				</g>
+			</g>			
+			<g class="key_button_and_name" id="accent_chars_two">
+				<path role="button" aria-pressed="false" tabindex="0" class="key_button" d="M1105.12,323.4c0,5.5-4.5,10-10,10h-139.5c-5.5,0-10-4.5-10-10v-43c0-5.5,4.5-10,10-10h139.5
+					c5.5,0,10,4.5,10,10V323.4z"/>
+				<g class="text" transform="translate(945.62, 270.4)">
+					<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_two" class="hide mirrored_font_key_name key_name punctuation_numbers_group two_state_key_names">&#273;&#231;&#248;&#367;</text>
+					<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_two" class="mirrored_key_name key_name punctuation_numbers_group two_state_key_names">&#367;&#248;&#231;&#273;</text>
+					<text x="79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" id="mirrored_font_accent_chars_two_alphabet" class="hide mirrored_font_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">cba</text>
+					<text x="-79.75" y="31.5" alignment-baseline="middle" text-anchor="middle" transform="scale(-1, 1)" id="mirrored_accent_chars_two_alphabet" class="hide mirrored_key_name key_name alphabet_key_punctuation_numbers_group two_state_key_names">abc</text>
+				</g>
+			</g>
+		</svg>
