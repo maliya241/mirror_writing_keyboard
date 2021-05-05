@@ -1,48 +1,38 @@
-@font-face {
-	font-family: "test_1";
-	src: url("../test_1.woff") format("woff");
-}
-
-.page_header {
-    text-align: center;
-}
+/* mirrored_font
+.mirror_font_text {
+	text-align: right;
+	unicode-bidi: bidi-override; 
+	direction: rtl;
+} */
 
 .page_header, .page_header_space, .page_footer_space {
-    height: 75px;
-}
-
-.page_footer {
     height: 50px;
 }
 
 .page_footer {
     position: fixed;
-    bottom: 24px; /* 0.25 in */
+    bottom: 12px; /* 0.25 in */
     width: 100%;
+    height: 50px;
+    text-align: center;
 }
 
 .page_header {
     position: fixed;
-    top: 48px; /* 0.5 in */
+    top: 12px; /* 0.5 in */
     width: 100%;
+    text-align: center;
+}
+
+.page_footer_space {
+    margin-top: 12px;
 }
 
 .page {
     page-break-after: always;
 }
 
-@page {
-    size: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 @media print {
-    @page {
-        size: auto;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
     thead {
         display: table_header_group;
     } 
@@ -50,6 +40,8 @@
         display: table_footer_group;
     }  
     body {
+        width: 8.5in;
+        height: 11in;
         margin: 0;
     }
 }
@@ -64,7 +56,84 @@ header, #introduction, #text_editor, #onscreen_keyboard {
 	-webkit-transform: scale(-1, 1);
 	transform: scale(-1, 1);
 }
-  
-.print_formating {
+
+.page {
+    display: block;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    resize: none;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+} 
+
+#print_formating {
+    table-layout: fixed;
+    width: 8.5in;
+}
+
+#print_content td {
     width: 100%;
+}
+
+#mirror_writing_logo_printable {
+    height: 3.5em;
+}
+
+#logo_text_cursor {
+	fill: #BF2B2B;
+}
+
+.logo_text {
+	font-size: 3.5em;
+	color: #000000;
+}
+
+/********************************************************************************
+Fonts
+********************************************************************************/
+.arial {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.brush_script_mt {
+	font-family: "Brush Script MT", cursive;
+}
+
+.copperplate {
+	font-family: Copperplate, Papyrus, fantasy;
+}
+
+.courier_new {
+	font-family: "Courier New", Courier, monospace;
+}
+
+.garamond {
+	font-family: Garamond, serif;
+}
+
+.georgia {
+	font-family: Georgia, serif;
+}
+
+.helvetica {
+	font-family: Helvetica, sans-serif;
+}
+
+.tahoma {
+	font-family: Tahoma, Verdana, sans-serif;
+}
+
+.times_new_roman {
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.trebuchet_ms {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.verdana {
+	font-family: Verdana, sans-serif;
 }
