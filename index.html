@@ -30,7 +30,7 @@
 		</header>
 		<p id="introduction">hallo, people. gato. neko. cat. </p>
 		<section id="text_editor">
-			<fieldset id="font_family" class="dropdown">
+			<fieldset id="font_family" class="dropdown text_controls">
 				<legend><button type="button" id="font_dropdown_button" class="dropdown_button font_dropdown_element">Font &#9660;</button></legend>
 				<div id="font_dropdown" class="dropdown_content">
 					<div class="dropdown_element">
@@ -79,7 +79,7 @@
 					</div>
 				</div>
 			</fieldset>
-			<fieldset id="font_size" class="dropdown">
+			<fieldset id="font_size" class="dropdown text_controls">
 				<legend><button type="button" id="font_size_dropdown_button" class="dropdown_button font_size_dropdown_element">Font Size &#9660;</button></legend>
 				<div id="font_size_dropdown" class="dropdown_content">
 					<div class="dropdown_element">
@@ -141,7 +141,62 @@
 				</div>
 			</fieldset>
 			<textarea id="mirrored_textarea" class="textarea mirrored_text" aria-label="Textarea for Mirrored Writing" placeholder="Type here." autofocus></textarea>
-			<button type="button" id="print_button">Print</button>
+			<p class="warning">Page Size and Page Layout do not change the paper size and layout settings for the printer automatically.</p>
+			<fieldset id="page_size" class="dropdown print_controls">
+				<legend><button type="button" id="page_size_dropdown_button" class="dropdown_button page_size_dropdown_element">Page Size &#9660;</button></legend>
+				<div id="page_size_dropdown" class="dropdown_content">
+					<div class="dropdown_element">
+						<input type="radio" id="a_zero_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="33.1in 46.8in" onchange="change_page_size(this)">
+						<label for="a_zero_page_size" id="a_zero" class="dropdown_label page_size_dropdown_element">A0</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="a_one_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="23.4in 33.1in" onchange="change_page_size(this)">
+						<label for="a_one_page_size" id="a_one" class="dropdown_label page_size_dropdown_element">A1</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="a_two_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="16.5in 23.4in" onchange="change_page_size(this)">
+						<label for="a_two_page_size" id="a_two" class="dropdown_label page_size_dropdown_element">A2</label>
+					</div>	
+					<div class="dropdown_element">
+						<input type="radio" id="a_three_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="11.7in 16.5in" onchange="change_page_size(this)">
+						<label for="a_three_page_size" id="a_three" class="dropdown_label page_size_dropdown_element">A3</label>
+					</div>	
+					<div class="dropdown_element">
+						<input type="radio" id="a_four_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="8.3in 11.7" onchange="change_page_size(this)">
+						<label for="a_four_page_size" id="a_four" class="dropdown_label page_size_dropdown_element">A4</label>
+					</div>		
+					<div class="dropdown_element">
+						<input type="radio" id="a_five_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="5.8in 8.3in" onchange="change_page_size(this)">
+						<label for="a_five_page_size" id="a_five" class="dropdown_label page_size_dropdown_element">A5</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="legal_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="8.5in 14in" onchange="change_page_size(this)">
+						<label for="legal_page_size" id="legal" class="dropdown_label page_size_dropdown_element">Legal</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="letter_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="8.5in 11in" onchange="change_page_size(this)" checked>
+						<label for="letter_page_size" id="letter" class="dropdown_label page_size_dropdown_element">Letter</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="tabloid_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="11in 17in" onchange="change_page_size(this)">
+						<label for="tabloid_page_size" id="tabloid" class="dropdown_label page_size_dropdown_element">Tabloid</label>
+					</div>	
+				</div>
+			</fieldset>
+			<fieldset id="page_layout" class="dropdown print_controls">
+				<legend><button type="button" id="page_layout_dropdown_button" class="dropdown_button page_layout_dropdown_element">Page Layout &#9660;</button></legend>
+				<div id="page_layout_dropdown" class="dropdown_content">
+					<div class="dropdown_element">
+						<input type="radio" id="portrait_page_layout" class="input_radio_button page_layout_dropdown_element" name="page_layout_selection" value="portrait" onchange="change_page_layout(this)" checked>
+						<label for="portrait_page_layout" id="portrait" class="dropdown_label page_layout_dropdown_element">Portrait</label>
+					</div>
+					<div class="dropdown_element">
+						<input type="radio" id="landscape_page_layout" class="input_radio_button page_layout_dropdown_element" name="page_layout_selection" value="landscape" onchange="change_page_layout(this)">
+						<label for="landscape_page_layout" id="landscape" class="dropdown_label page_layout_dropdown_element">Landscape</label>
+					</div>	
+				</div>
+			</fieldset>
+			<button type="button" id="print_button" class="print_controls">Print</button>
 		</section>
 
 		<svg id="onscreen_keyboard" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1107 335.66" style="enable-background:new 0 0 1107 335.66;">
@@ -541,7 +596,7 @@
 					<path id="logo_text_cursor" d="M525.2,171.2h-18c-2.9,0-5.6-1.1-7.4-2.9c-1.8,1.8-4.5,2.9-7.4,2.9h-18c-1.4,0-2.5-1.1-2.5-2.5s1.1-2.5,2.5-2.5h18 c2.5,0,4.9-1.7,4.9-3.6c0-0.1,0-0.2,0-0.2l0.5-152.7c0-1.8-2.4-3.5-4.9-3.5h-18c-1.4,0-2.5-1.1-2.5-2.5s1.1-2.5,2.5-2.5h18 c2.9,0,5.6,1.2,7.4,2.9c1.8-1.8,4.5-2.9,7.4-2.9h18c1.4,0,2.5,1.1,2.5,2.5s-1.1,2.5-2.5,2.5h-18c-2.5,0-4.9,1.7-4.9,3.5 c0,0,0,0,0,0l-0.5,153.1c0.2,1.8,2.5,3.4,4.9,3.4h18c1.4,0,2.5,1.1,2.5,2.5S526.6,171.2,525.2,171.2z"/>
 				</svg>
 			</div>
-			<table class="print_formating">
+			<table id="print_formating">
 				<thead>
 					<tr>
 						<td id="print_header">
@@ -560,7 +615,7 @@
 				</tbody>
 				<tfoot>
 					<tr>
-						<td id="print_header">
+						<td id="print_footer">
 							<!--place holder for the fixed-position footer-->
 							<div class="page_footer_space"></div>
 						</td>
