@@ -234,7 +234,7 @@ function input(event_type) {
 	input_character_keys(17, event_type, 9, "KeyP"); //p (112), P (80), 0 (48)
 	input_editing_keys(18, event_type, backspace_function, "Backspace") //backspace
 	
-	input_whitespace_keys(19, event_type, 9); //horizonal tab (9)
+	input_whitespace_keys(19, event_type, 9, "Tab"); //horizonal tab (9)
 	input_character_keys(20, event_type, 10, "KeyA"); //a (97), A (65), @ (64)
 	input_character_keys(21, event_type, 11, "KeyS"); //s (115), S (83), # (35)
 	input_character_keys(22, event_type, 12, "KeyD"); //d (100), D (68), $ (36)
@@ -244,7 +244,7 @@ function input(event_type) {
 	input_character_keys(26, event_type, 16, "KeyJ"); //j (106), J (74), ) (41)
 	input_character_keys(27, event_type, 17, "KeyK"); //k (107), K (75),' (39)
 	input_character_keys(28, event_type, 18, "KeyL"); //l (108), L (76), " (34)
-	input_whitespace_keys(29, event_type, 13) //enter (13)
+	input_whitespace_keys(29, event_type, 13, "Enter") //enter (13)
 
 	input_caps_lock(30, event_type, 0, 1, 2, 3, "CapsLock"); //left caps lock
 	input_character_keys(31, event_type, 19, "KeyZ"); //z (122), Z (90), % (37)
@@ -260,17 +260,17 @@ function input(event_type) {
 
 	input_keyboard_options_with_two_states(41, event_type, "punctuation_numbers_one", 4, 5); // punctuation numbers 
 	input_keyboard_options_with_two_states(42, event_type, "punctuation_numbers_two", 6, 7);//punctuation 2
-	input_whitespace_keys(43, event_type, 32); //space (32)
+	input_whitespace_keys(43, event_type, 32, "Space"); //space (32)
 	input_keyboard_options_with_two_states(44, event_type, "lowercase_accent_characters_one", 8, 9); //accent chars
 	input_keyboard_options_with_two_states(45, event_type, "lowercase_accent_characters_two", 10, 11); //accent chars 2	
 }
 
 /*
-input_keyboard_options_with_one_state function add the event listener to reset the keyboard option keys to their initial state and switch the virtual keyboard to the given keyboard option.
+input_keyboard_options_with_one_state function adds the event listener to reset the keyboard option keys to their initial state and switch the virtual keyboard to the given keyboard option.
 key_array_index parameter: given index for key_array as a number
 event_type parameter: passed from input function
 given_virtual_keyboard_option paramter: given virtual keyboard option as a string
-Executes when called in the input function
+Executes when called in the input function.
 */
 function input_keyboard_options_with_one_state(key_array_index, event_type, given_virtual_keyboard_option) {
 	key_array[key_array_index].addEventListener(event_type, function(event)  {
@@ -292,13 +292,13 @@ function input_keyboard_options_with_one_state(key_array_index, event_type, give
 }
 
 /*
-input_keyboard_options_with_two_states function add the event listener to reset the keyboard option keys to their initial state and switch the virtual keyboard to the given keyboard option. The corresponding keyboard option key will toggle between key states that indicates what the keyboard can change to.
+input_keyboard_options_with_two_states function adds the event listener to reset the keyboard option keys to their initial state and switch the virtual keyboard to the given keyboard option. The corresponding keyboard option key will toggle between key states that indicates what the keyboard can change to.
 key_array_index parameter: given index for key_array as a number
 event_type parameter: passed from input function
 given_virtual_keyboard_option paramter: given virtual keyboard option as a string
 first_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to initial state for the key
 second_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to other state for the key
-Executes when called in the input function
+Executes when called in the input function.
 */
 function input_keyboard_options_with_two_states(key_array_index, event_type, given_virtual_keyboard_option, first_state_index, second_state_index) {
 	key_array[key_array_index].addEventListener(event_type, function(event)  {
@@ -316,14 +316,14 @@ function input_keyboard_options_with_two_states(key_array_index, event_type, giv
 }
 
 /*
-input_keyboard_options_with_two_states function add the event listener to switch the keyboard to its capitalized state if it has one.
+input_caps_lock function adds the event listener to switch the keyboard to its capitalized state if it has one.
 key_array_index parameter: given index for key_array as a number
 event_type parameter: passed from input function
 first_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to initial state for the key
 second_state_index parameter: index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to other state for the key
 first_state_index_two parameter: second index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to initial state for the key because there are two keys that control capitalization
 second_state_index_two parameter: second index for two state arrays (arrays ending in two_state_key_names_array) which corresponds to other state for the key because there are two keys that control capitalization
-Executes when called in the input function
+Executes when called in the input function.
 */
 function input_caps_lock(key_array_index, event_type, first_state_index, second_state_index, first_state_index_two, second_state_index_two, key_code) {
 	key_array[key_array_index].addEventListener(event_type, function(event)  {
@@ -343,7 +343,7 @@ function input_caps_lock(key_array_index, event_type, first_state_index, second_
 		if (event.defaultPrevented) {
 			return; // Do nothing if event already handled
 		}
-		if (event.code == key_code) {
+		if (event.code == key_code && (event.Control == false || event.Shift == false || event.Alt == false)) {
 			toggle_button(event.target);
 			key_button_array[30].classList.add("focus");
 			key_button_array[40].classList.add("focus");
@@ -357,7 +357,15 @@ function input_caps_lock(key_array_index, event_type, first_state_index, second_
 	});
 }
 
-function input_whitespace_keys(key_array_index, event_type, unicode) {
+/*
+input_whitespace_keys function adds the event listener to add character to textarea.
+key_array_index parameter: given index for key_array as a number
+event_type parameter: passed from input function
+unicode parameter: unicode decimal code for character
+key_code paramter: physical key code for physical keyboard use
+Executes when called in the input function.
+*/
+function input_whitespace_keys(key_array_index, event_type, unicode, key_code) {
 	key_array[key_array_index].addEventListener(event_type, function(event)  {
 		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
 			if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
@@ -375,7 +383,7 @@ function input_whitespace_keys(key_array_index, event_type, unicode) {
 		if (event.defaultPrevented) {
 			return; // Do nothing if event already handled
 		}
-		if (event.code == key_code && document.getElementById("mirrored_textarea") == document.activeElement) {
+		if (event.code == key_code && document.getElementById("mirrored_textarea") == document.activeElement && (event.Control == false || event.Shift == false || event.Alt == false)) {
 			toggle_button(event.target);
 			key_button_array[key_array_index].classList.add("focus");
 			setTimeout(function () {key_button_array[key_array_index].classList.remove("focus");}, 250);
@@ -385,6 +393,14 @@ function input_whitespace_keys(key_array_index, event_type, unicode) {
 	});
 }
 
+/*
+input_character_keys function adds the event listener to add character to textarea.
+key_array_index parameter: given index for key_array as a number
+event_type parameter: passed from input function
+character_key_index parameter: index for character arrays that hold unicode decimal code for character
+key_code paramter: physical key code for physical keyboard use
+Executes when called in the input function.
+*/
 function input_character_keys(key_array_index, event_type, character_key_index, key_code) {
 	key_array[key_array_index].addEventListener(event_type, function(event)  {
 		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
@@ -403,7 +419,7 @@ function input_character_keys(key_array_index, event_type, character_key_index, 
 		if (event.defaultPrevented) {
 			return; // Do nothing if event already handled
 		}
-		if (event.code == key_code) {
+		if (event.code == key_code && (event.Control == false || event.Shift == false || event.Alt == false)) {
 			toggle_button(event.target);
 			key_button_array[key_array_index].classList.add("focus");
 			setTimeout(function () {key_button_array[key_array_index].classList.remove("focus");}, 250);
@@ -413,6 +429,14 @@ function input_character_keys(key_array_index, event_type, character_key_index, 
 	});
 }
 
+/*
+input_keyboard_options_with_two_states function adds the event listener to delete character(s).
+key_array_index parameter: given index for key_array as a number
+event_type parameter: passed from input function
+edit_function parameter: function for the corresponding key
+key_code paramter: physical key code for physical keyboard use
+Executes when called in the input function.
+*/
 function input_editing_keys(key_array_index, event_type, edit_function, key_code) {
 	key_array[key_array_index].addEventListener(event_type, function(event)  {
 		if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
@@ -431,7 +455,7 @@ function input_editing_keys(key_array_index, event_type, edit_function, key_code
 		if (event.defaultPrevented) {
 			return; // Do nothing if event already handled
 		}
-		if (event.code == key_code) {
+		if (event.code == key_code && (event.Control == false || event.Shift == false || event.Alt == false)) {
 			toggle_button(event.target);
 			key_button_array[key_array_index].classList.add("focus");
 			setTimeout(function () {key_button_array[key_array_index].classList.remove("focus");}, 250);
