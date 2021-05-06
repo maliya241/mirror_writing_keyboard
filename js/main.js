@@ -12,6 +12,25 @@ window.addEventListener("load", main_set_up);
 function main_set_up() {
     textarea_element.addEventListener("input", auto_resize, false);
     textarea_element.addEventListener("input", update_printable_table, false);
+    
+    //switch arrow key directions because the textarea is mirrored
+    textarea_element.addEventListener("keydown", function(event) {
+        if (event.defaultPrevented) {
+			return; // Do nothing if event already handled
+		}
+        if (event.code == "ArrowLeft") {
+			toggle_button(event.target);
+            textarea_element.selectionEnd++;
+            textarea_element.selectionStart = textarea_element.selectionEnd;
+            event.preventDefault();
+        }
+        if (event.code == "ArrowRight" && textarea_element.selectionStart > 0) {
+			toggle_button(event.target);
+            textarea_element.selectionStart--;
+            textarea_element.selectionEnd = textarea_element.selectionStart;
+            event.preventDefault();
+        }
+    });
 
     button_input("click"); //mouse click events
 	button_input("touchend"); //touch screen events
@@ -24,64 +43,40 @@ event_type parameter: accepts events in quotation such as "click" as arguments
 Executes in main_set_up.
 */
 function button_input(event_type) {
-    document.getElementById("font_dropdown_button").addEventListener(event_type, function(event) {
+    button_input_event_listener("font_dropdown_button", event_type, dropdown, "font_dropdown");
+    button_input_event_listener("font_size_dropdown_button", event_type, dropdown, "font_size_dropdown");
+    button_input_event_listener("page_size_dropdown_button", event_type, dropdown, "page_size_dropdown");
+    button_input_event_listener("page_layout_dropdown_button", event_type, dropdown, "page_layout_dropdown");
+    button_input_event_listener("print_button", event_type, prepare_to_print);
+}
+
+/*
+button_input_event_listener function add the event listener to each button.
+element_id parameter: id of the button element
+event_type parameter: accepts events in quotation such as "click" as arguments
+button_function parameter: function for the button to be executed
+function_argument: arugment for the function
+Executes in button_input.
+*/
+function button_input_event_listener(element_id, event_type, button_function, function_argument) {
+    document.getElementById(element_id).addEventListener(event_type, function(event) {
         if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
             if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
                 toggle_button(event.target);
-                event.preventDefault();
-                dropdown("font_dropdown");
+                event.preventDefault(); //takes care of multiple event listener inputs
+                if (function_argument != null) {
+                    button_function(function_argument);
+                } else {
+                    button_function();
+                }
             }
         } else {
-            event.preventDefault();//takes care of multiple event listener inputs
-            dropdown("font_dropdown");
-        }
-    });
-    document.getElementById("font_size_dropdown_button").addEventListener(event_type, function(event) {
-        if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-            if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-                toggle_button(event.target);
-                event.preventDefault();
-                dropdown("font_size_dropdown");
+            event.preventDefault();
+            if (function_argument != null) {
+                button_function(function_argument);
+            } else {
+                button_function();
             }
-        } else {
-            event.preventDefault();//takes care of multiple event listener inputs
-            dropdown("font_size_dropdown");
-        }
-    });
-    document.getElementById("page_size_dropdown_button").addEventListener(event_type, function(event) {
-        if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-            if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-                toggle_button(event.target);
-                event.preventDefault();
-                dropdown("page_size_dropdown");
-            }
-        } else {
-            event.preventDefault();//takes care of multiple event listener inputs
-            dropdown("page_size_dropdown");
-        }
-    });
-    document.getElementById("page_layout_dropdown_button").addEventListener(event_type, function(event) {
-        if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-            if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-                toggle_button(event.target);
-                event.preventDefault();
-                dropdown("page_layout_dropdown");
-            }
-        } else {
-            event.preventDefault();//takes care of multiple event listener inputs
-            dropdown("page_layout_dropdown");
-        }
-    });
-    document.getElementById("print_button").addEventListener(event_type, function(event) {
-        if (event_type == "keydown" && document.getElementById("mirrored_textarea") != document.activeElement) {
-            if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-                toggle_button(event.target);
-                event.preventDefault();
-                prepare_to_print();
-            }
-        } else {
-            event.preventDefault();//takes care of multiple event listener inputs
-            prepare_to_print();
         }
     });
 }
@@ -125,7 +120,7 @@ function prepare_to_print() {
 
 /*
 change_font_family function changes the font family of all the text in the body based on the selected font from font_selection.
-radio_font: input element of the selected font
+radio_font parameter: input element of the selected font
 Executes when the selected font has been changed in font_selection.
 */
 function change_font_family(radio_font) {
@@ -133,14 +128,19 @@ function change_font_family(radio_font) {
     selected_font = radio_font.value;
     var font_input_radio_button_id = selected_font + "_font";
     var button_array = document.getElementsByTagName("button");
+    var key_text_array = document.getElementsByClassName("key_name");
     document.getElementById("font_dropdown_button").innerText = document.getElementById(selected_font).innerText + " " + String.fromCharCode("9660");
 
     document.getElementById(font_input_radio_button_id).checked = true;
+
 
     document.body.classList.remove(previous_selected_font);
     textarea_element.classList.remove(previous_selected_font);
     for (i = 0; i < button_array.length; i++) {
         button_array[i].classList.remove(previous_selected_font);
+    }
+    for (i = 0; i < key_text_array.length; i++) {
+        key_text_array[i].classList.remove(previous_selected_font);
     }
     document.getElementById("font_dropdown").classList.remove(selected_font);
     document.body.classList.add(selected_font);
@@ -148,11 +148,14 @@ function change_font_family(radio_font) {
     for (i = 0; i < button_array.length; i++) {
         button_array[i].classList.add(selected_font);
     }
+    for (i = 0; i < key_text_array.length; i++) {
+        key_text_array[i].classList.add(selected_font);
+    }
 }
 
 /*
 change_font_size function changes the font size of the textarea and the printable content based on the selected font size from font_size_selection.
-radio_font_size: input element of the selected font
+radio_font_size parameter: input element of the selected font
 Executes when the selected font size has been changed in font_size_selection.
 */
 function change_font_size(radio_font_size) {
@@ -169,7 +172,7 @@ function change_font_size(radio_font_size) {
 
 /*
 change_page_size function changes the size of the mirrored text for printing; does not change it for actual print page setting.
-radio_font_size: input element of the selected page size
+radio_font_size parameter: input element of the selected page size
 Executes when the selected page size has been changed in the page_size_selection or called by change_page_layout.
 */
 function change_page_size(radio_page_size) {
@@ -192,7 +195,7 @@ function change_page_size(radio_page_size) {
 
 /*
 change_page_layout function changes the layout of the mirrored text for printing; does not change it for actual print page setting.
-radio_font_layout: input element of the selected page layout
+radio_font_layout parameter: input element of the selected page layout
 Executes when the selected page layout has been changed in the page_layout_selection or called by change_page_size.
 */
 function change_page_layout(radio_page_layout) {
@@ -208,7 +211,7 @@ function change_page_layout(radio_page_layout) {
 
 /*
 dropdown function handles the opening and closing of the dropdown content.
-dropdown_id: id of the dropdown content 
+dropdown_id parameter: id of the dropdown content 
 Executes when the corresponding dropdown button is pressed. 
 */
 function dropdown(dropdown_id) {
