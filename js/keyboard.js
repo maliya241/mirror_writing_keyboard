@@ -24,6 +24,10 @@ var mirrored_key_name_array = []; //normal text that has been mirrored;
 var mirrored_font_alphanumeric_punctuation_key_names_arrray = []; //group alphanumeric_punctuation key names; 28 keys
 var mirrored_alphanumeric_punctuation_key_names_arrray = []; //group alphanumeric_punctuation key names; 28 keys
 
+var modifier_key_pressed = false;
+var start;
+var end;
+
 /*
 Character Keyboard Arrays 
 contains the unicode value of the characters
@@ -176,6 +180,62 @@ function virtual_keyboard_set_up() {
 	input("click"); //mouse click events
 	input("touchend"); //touch screen events
 	input("keydown"); //physical keyboard events
+
+	document.addEventListener("keydown", function(event)  {
+		if (event.defaultPrevented) {
+			return; // Do nothing if event already handled
+		}
+		if (event.key == "Control" || event.key == "Alt" || event.key == "Shift"){
+			toggle_button(event.target);
+			modifier_key_pressed = true;
+			event.preventDefault();
+		}
+	});
+
+	document.addEventListener("keyup", function(event)  {
+		if (event.defaultPrevented) {
+			return; // Do nothing if event already handled
+		}
+		if (event.key == "Control" || event.key == "Alt" || event.key == "Shift") {
+			toggle_button(event.target);
+			modifier_key_pressed = false;
+			event.preventDefault();
+		}
+	});
+
+	//switch arrow key directions because the textarea is mirrored
+    textarea_element.addEventListener("keydown", function(event) {
+        if (event.defaultPrevented) {
+			return; // Do nothing if event already handled
+		}
+        if (event.code == "ArrowLeft") {
+			toggle_button(event.target);
+            start = textarea_element.selectionStart;
+            textarea_element.selectionEnd++;
+            textarea_element.selectionStart = textarea_element.selectionEnd;
+            event.preventDefault();
+        }
+        if (event.code == "ArrowRight" && textarea_element.selectionStart > 0) {
+			toggle_button(event.target);
+            end = textarea_element.selectionEnd;
+            textarea_element.selectionStart--;
+            textarea_element.selectionEnd = textarea_element.selectionStart;
+            event.preventDefault();
+        }
+		//Select with arrow keys
+        if (event.code == "ArrowLeft" && modifier_key_pressed == true) {
+			toggle_button(event.target);
+            end = textarea_element.selectionEnd++;
+            textarea_element.setSelectionRange(start, end);
+            event.preventDefault();
+        }
+        if (event.code == "ArrowRight" && modifier_key_pressed == true && textarea_element.selectionStart > 0) {
+			toggle_button(event.target);
+            start = textarea_element.selectionStart--;
+            textarea_element.setSelectionRange(start, end);
+            event.preventDefault();
+        }
+    });
 }
 
 /*
@@ -343,7 +403,7 @@ function input_caps_lock(key_array_index, event_type, first_state_index, second_
 		if (event.defaultPrevented) {
 			return; // Do nothing if event already handled
 		}
-		if (event.code == key_code && (event.Control == false || event.Shift == false || event.Alt == false)) {
+		if (event.code == key_code && modifier_key_pressed == false) {
 			toggle_button(event.target);
 			key_button_array[30].classList.add("focus");
 			key_button_array[40].classList.add("focus");
@@ -383,7 +443,7 @@ function input_whitespace_keys(key_array_index, event_type, unicode, key_code) {
 		if (event.defaultPrevented) {
 			return; // Do nothing if event already handled
 		}
-		if (event.code == key_code && document.getElementById("mirrored_textarea") == document.activeElement && (event.Control == false || event.Shift == false || event.Alt == false)) {
+		if (event.code == key_code && document.getElementById("mirrored_textarea") == document.activeElement && modifier_key_pressed == false) {
 			toggle_button(event.target);
 			key_button_array[key_array_index].classList.add("focus");
 			setTimeout(function () {key_button_array[key_array_index].classList.remove("focus");}, 250);
@@ -419,7 +479,7 @@ function input_character_keys(key_array_index, event_type, character_key_index, 
 		if (event.defaultPrevented) {
 			return; // Do nothing if event already handled
 		}
-		if (event.code == key_code && (event.Control == false || event.Shift == false || event.Alt == false)) {
+		if (event.code == key_code && modifier_key_pressed == false) {
 			toggle_button(event.target);
 			key_button_array[key_array_index].classList.add("focus");
 			setTimeout(function () {key_button_array[key_array_index].classList.remove("focus");}, 250);
@@ -455,7 +515,7 @@ function input_editing_keys(key_array_index, event_type, edit_function, key_code
 		if (event.defaultPrevented) {
 			return; // Do nothing if event already handled
 		}
-		if (event.code == key_code && (event.Control == false || event.Shift == false || event.Alt == false)) {
+		if (event.code == key_code && modifier_key_pressed == false) {
 			toggle_button(event.target);
 			key_button_array[key_array_index].classList.add("focus");
 			setTimeout(function () {key_button_array[key_array_index].classList.remove("focus");}, 250);
