@@ -13,25 +13,6 @@ function main_set_up() {
     textarea_element.addEventListener("input", auto_resize, false);
     textarea_element.addEventListener("input", update_printable_table, false);
     
-    //switch arrow key directions because the textarea is mirrored
-    textarea_element.addEventListener("keydown", function(event) {
-        if (event.defaultPrevented) {
-			return; // Do nothing if event already handled
-		}
-        if (event.code == "ArrowLeft") {
-			toggle_button(event.target);
-            textarea_element.selectionEnd++;
-            textarea_element.selectionStart = textarea_element.selectionEnd;
-            event.preventDefault();
-        }
-        if (event.code == "ArrowRight" && textarea_element.selectionStart > 0) {
-			toggle_button(event.target);
-            textarea_element.selectionStart--;
-            textarea_element.selectionEnd = textarea_element.selectionStart;
-            event.preventDefault();
-        }
-    });
-
     button_input("click"); //mouse click events
 	button_input("touchend"); //touch screen events
 	button_input("keydown"); //physical keyboard events
@@ -129,7 +110,7 @@ function change_font_family(radio_font) {
     var font_input_radio_button_id = selected_font + "_font";
     var button_array = document.getElementsByTagName("button");
     var key_text_array = document.getElementsByClassName("key_name");
-    document.getElementById("font_dropdown_button").innerText = document.getElementById(selected_font).innerText + " " + String.fromCharCode("9660");
+    document.getElementById("font_dropdown_button").innerHTML= document.getElementById(selected_font).innerText + " " + "<span aria-hidden='true'>&#9660;</span>";
 
     document.getElementById(font_input_radio_button_id).checked = true;
 
@@ -162,7 +143,7 @@ function change_font_size(radio_font_size) {
     var pt_to_px_number = 4/3;
     selected_font_size = (Number(document.getElementById(radio_font_size.value).innerHTML)*pt_to_px_number).toString() + "px";
     var font_input_radio_button_id = radio_font_size.value + "_font_size";
-    document.getElementById("font_size_dropdown_button").innerText = document.getElementById(radio_font_size.value).innerHTML + " pt " + String.fromCharCode("9660");
+    document.getElementById("font_size_dropdown_button").innerHTML= document.getElementById(radio_font_size.value).innerHTML + " pt " + "<span aria-hidden='true'>&#9660;</span>";
 
     document.getElementById(font_input_radio_button_id).checked = true;
 
@@ -179,8 +160,7 @@ function change_page_size(radio_page_size) {
     if (radio_page_size != null) {
         selected_page_size = radio_page_size.value.split(" "); //array: width, height in inches 
         var radio_page_size_label_id = radio_page_size.id.replace("_page_size", "");
-        document.getElementById("introduction").innerHTML += radio_page_size_label_id;
-        document.getElementById("page_size_dropdown_button").innerText = document.getElementById(radio_page_size_label_id).innerText + String.fromCharCode("9660");
+        document.getElementById("page_size_dropdown_button").innerHTML= document.getElementById(radio_page_size_label_id).innerText + "<span aria-hidden='true'>&#9660;</span>";
         radio_page_size.checked = true;
     } else {
         change_page_layout();
@@ -203,7 +183,7 @@ function change_page_layout(radio_page_layout) {
         selected_page_layout = radio_page_layout.value; 
         var radio_page_layout_label_id = radio_page_layout.id.replace("_page_layout", "");
         document.getElementById("introduction").innerHTML += radio_page_layout_label_id;
-        document.getElementById("page_layout_dropdown_button").innerText = document.getElementById(radio_page_layout_label_id).innerText + String.fromCharCode("9660");
+        document.getElementById("page_layout_dropdown_button").innerHTML= document.getElementById(radio_page_layout_label_id).innerText + "<span aria-hidden='true'>&#9660;</span>";
         radio_page_layout.checked = true;
     }
      change_page_size();
