@@ -209,29 +209,33 @@ function virtual_keyboard_set_up() {
 			return; // Do nothing if event already handled
 		}
         if (event.code == "ArrowLeft") {
-			toggle_button(event.target);
             start = textarea_element.selectionStart;
             textarea_element.selectionEnd++;
             textarea_element.selectionStart = textarea_element.selectionEnd;
             event.preventDefault();
         }
-        if (event.code == "ArrowRight" && textarea_element.selectionStart > 0) {
-			toggle_button(event.target);
+        if (event.code == "ArrowRight") {
             end = textarea_element.selectionEnd;
-            textarea_element.selectionStart--;
+			if (textarea_element.selectionStart > 0) {
+				textarea_element.selectionStart--;
+            } else if (textarea_element.selectionStart <= 0) {
+				textarea_element.selectionStart = 0;
+			}
             textarea_element.selectionEnd = textarea_element.selectionStart;
             event.preventDefault();
         }
 		//Select with arrow keys
         if (event.code == "ArrowLeft" && modifier_key_pressed == true) {
-			toggle_button(event.target);
             end = textarea_element.selectionEnd++;
             textarea_element.setSelectionRange(start, end);
             event.preventDefault();
         }
-        if (event.code == "ArrowRight" && modifier_key_pressed == true && textarea_element.selectionStart > 0) {
-			toggle_button(event.target);
-            start = textarea_element.selectionStart--;
+        if (event.code == "ArrowRight" && modifier_key_pressed == true) {
+			if (textarea_element.selectionStart > 0) {
+				start = textarea_element.selectionStart--;
+            } else if (textarea_element.selectionStart <= 0) {
+				start = 0;
+			}
             textarea_element.setSelectionRange(start, end);
             event.preventDefault();
         }
@@ -341,17 +345,19 @@ function input_keyboard_options_with_one_state(key_array_index, event_type, give
 				virtual_keyboard_option = given_virtual_keyboard_option;
 				virtual_keyboard_toggle_reset();
 				switch_virtual_keyboard();
+				textarea_element.focus();
 			}
 		} else {
 			event.preventDefault();
 			virtual_keyboard_option = given_virtual_keyboard_option;
 			virtual_keyboard_toggle_reset();
 			switch_virtual_keyboard();
+			textarea_element.focus();
 		}
 	});
 }
 
-/*
+/* 
 input_keyboard_options_with_two_states function adds the event listener to reset the keyboard option keys to their initial state and switch the virtual keyboard to the given keyboard option. The corresponding keyboard option key will toggle between key states that indicates what the keyboard can change to.
 key_array_index parameter: given index for key_array as a number
 event_type parameter: passed from input function
@@ -367,10 +373,12 @@ function input_keyboard_options_with_two_states(key_array_index, event_type, giv
 				toggle_button(event.target);
 				event.preventDefault();
 				virtual_keyboard_toggle(first_state_index, second_state_index, given_virtual_keyboard_option);
+				textarea_element.focus();
 			}
 		} else {
 			event.preventDefault();
 			virtual_keyboard_toggle(first_state_index, second_state_index, given_virtual_keyboard_option);
+			textarea_element.focus();
 		}
 	});
 }
@@ -392,10 +400,12 @@ function input_caps_lock(key_array_index, event_type, first_state_index, second_
 				toggle_button(event.target);
 				event.preventDefault();
 				capitalize_alphabet(first_state_index, second_state_index, first_state_index_two, second_state_index_two);
+				textarea_element.focus();
 			}
 		} else {
 			event.preventDefault();
 			capitalize_alphabet(first_state_index, second_state_index, first_state_index_two, second_state_index_two);
+			textarea_element.focus();
 		}
 	});
 
@@ -443,11 +453,11 @@ function input_whitespace_keys(key_array_index, event_type, unicode, key_code) {
 		if (event.defaultPrevented) {
 			return; // Do nothing if event already handled
 		}
-		if (event.code == key_code && document.getElementById("mirrored_textarea") == document.activeElement && modifier_key_pressed == false) {
+		if (event.code == key_code && document.getElementById("mirrored_textarea") == document.activeElement && modifier_key_pressed == false && key_code != "Tab") {
 			toggle_button(event.target);
 			key_button_array[key_array_index].classList.add("focus");
 			setTimeout(function () {key_button_array[key_array_index].classList.remove("focus");}, 250);
-			edit_textarea(character_key_index);
+			add_character_move_cursor(String.fromCharCode(unicode));
 			event.preventDefault();
 		}
 	});
@@ -527,14 +537,19 @@ function input_editing_keys(key_array_index, event_type, edit_function, key_code
 
 /*
 toggle_button function changes the aria-pressed attribute to true.
-ele parameter: takes event.target
+event_target parameter: takes event.target
 Executes when specific physical keys are pressed down.
 */
-function toggle_button(ele) {
-	ele.setAttribute(
-	  "aria-pressed",
-	  ele.getAttribute("aria-pressed") === "true" ? "false" : "true"
-	);
+function toggle_button(event_target) {
+	var event_target_aria_pressed = event_target.getAttribute("aria-pressed");
+	document.getElementById("introduction").innerHTML += "c " + event_target.getAttribute("aria-pressed");
+	if (!event_target_aria_pressed) { //if false
+		event_target_aria_pressed = true;
+	} else {
+		event_target_aria_pressed = false;
+	}
+	event_target.setAttribute("aria-pressed", event_target_aria_pressed);
+	document.getElementById("introduction").innerHTML += " " + event_target.getAttribute("aria-pressed");
 }
 
 /*
@@ -767,7 +782,7 @@ Executes in edit_textarea and when called for Tab, spacebar, and Enter.
 */
 function add_character_move_cursor(input_string) {
 	textarea_element.setRangeText(input_string, textarea_element.selectionStart, textarea_element.selectionEnd, "end");
-	textarea_element.focus();
+	//textarea_element.focus();
 	auto_resize();
 	update_printable_table();
 }
