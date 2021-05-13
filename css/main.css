@@ -79,7 +79,7 @@ fieldset {
 	margin: 0;
 }
 
-text_controls, .print_controls {
+.text_controls, .print_controls {
 	vertical-align: middle;
 }
 
@@ -120,7 +120,7 @@ text_controls, .print_controls {
 	display: inline-block;
 }
 
-#print_button, .dropdown_button, .dropdown_content {
+.button, .dropdown_button, .dropdown_content {
 	padding: 4px;
 	border: 1.5px solid #837F7E;
 	border-radius: 4px;
@@ -128,13 +128,13 @@ text_controls, .print_controls {
 	color: #BF2B2B;
 }
 
-#mirrored_textarea:focus, #print_button:focus, .dropdown_button:focus {
+#mirrored_textarea:focus, .button:focus, .dropdown_button:focus {
 	outline: none;
 	border: 3px solid #000000;
 	border-radius: 4px;
 }
 
-#print_button:focus, #print_button:hover, .dropdown_button:focus, .dropdown_button:hover {
+.button:focus, .button:hover, .dropdown_button:focus, .dropdown_button:hover {
 	color: #000000;
 	background-color: #22BFA8;
 }
@@ -259,19 +259,43 @@ Keyboard
 	stroke-width: 2.5px;
 }
 
-#onscreen_keyboard {
+.keyboard_buttons {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#onscreen_keyboard_section {
 	display: block;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 1em auto;
 	padding: 4px;
-	white-space: pre;
 	position: relative;
 	position: -webkit-sticky;
 	position: sticky;
-	bottom: 1em;
-	width: inherit;
 	background-color: rgba(191, 42, 42, 0.75);
 	border-radius: 4px;
+	bottom: 1em;
+	text-align: right;
+}
+
+#onscreen_keyboard {
+	margin-top: 4px;
+	white-space: pre;
+	width: inherit;
+}
+
+.screen_reader_only {
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	-webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	height: 1px; 
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
 }
