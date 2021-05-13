@@ -10,7 +10,6 @@ var selected_page_layout = "portrait";
 window.addEventListener("load", main_set_up);
 
 function main_set_up() {
-    textarea_element.addEventListener("input", auto_resize, false);
     textarea_element.addEventListener("input", update_printable_table, false);
     
     button_input("click"); //mouse click events
@@ -29,6 +28,8 @@ function button_input(event_type) {
     button_input_event_listener("page_size_dropdown_button", event_type, dropdown, "page_size_dropdown");
     button_input_event_listener("page_layout_dropdown_button", event_type, dropdown, "page_layout_dropdown");
     button_input_event_listener("print_button", event_type, prepare_to_print);
+    button_input_event_listener("screen_read_button", event_type, screen_read_text);
+    button_input_event_listener("hide_keyboard_button", event_type, hide_keyboard);
 }
 
 /*
@@ -110,7 +111,7 @@ function change_font_family(radio_font) {
     var font_input_radio_button_id = selected_font + "_font";
     var button_array = document.getElementsByTagName("button");
     var key_text_array = document.getElementsByClassName("key_name");
-    document.getElementById("font_dropdown_button").innerHTML= document.getElementById(selected_font).innerText + " " + "<span aria-hidden='true'>&#9660;</span>";
+    document.getElementById("font_dropdown_button").innerHTML= document.getElementById(selected_font).innerText + " " + "<span aria-hidden='true'>&#9660;</span>"; //change font family label to selected font 
 
     document.getElementById(font_input_radio_button_id).checked = true;
 
@@ -132,6 +133,7 @@ function change_font_family(radio_font) {
     for (i = 0; i < key_text_array.length; i++) {
         key_text_array[i].classList.add(selected_font);
     }
+    auto_resize();
 }
 
 /*
@@ -143,12 +145,13 @@ function change_font_size(radio_font_size) {
     var pt_to_px_number = 4/3;
     selected_font_size = (Number(document.getElementById(radio_font_size.value).innerHTML)*pt_to_px_number).toString() + "px";
     var font_input_radio_button_id = radio_font_size.value + "_font_size";
-    document.getElementById("font_size_dropdown_button").innerHTML= document.getElementById(radio_font_size.value).innerHTML + " pt " + "<span aria-hidden='true'>&#9660;</span>";
+    document.getElementById("font_size_dropdown_button").innerHTML= document.getElementById(radio_font_size.value).innerHTML + " pt " + "<span aria-hidden='true'>&#9660;</span>"; //change font size label to the selected font size
 
     document.getElementById(font_input_radio_button_id).checked = true;
 
     textarea_element.style.fontSize = selected_font_size;
     document.getElementById("mirror_writing_printable_content").style.fontSize = selected_font_size;
+    auto_resize();
 }
 
 /*
@@ -160,7 +163,7 @@ function change_page_size(radio_page_size) {
     if (radio_page_size != null) {
         selected_page_size = radio_page_size.value.split(" "); //array: width, height in inches 
         var radio_page_size_label_id = radio_page_size.id.replace("_page_size", "");
-        document.getElementById("page_size_dropdown_button").innerHTML= document.getElementById(radio_page_size_label_id).innerText + "<span aria-hidden='true'>&#9660;</span>";
+        document.getElementById("page_size_dropdown_button").innerHTML= document.getElementById(radio_page_size_label_id).innerText + "<span aria-hidden='true'>&#9660;</span>"; //change page size label to the selected page size
         radio_page_size.checked = true;
     } else {
         change_page_layout();
@@ -183,7 +186,7 @@ function change_page_layout(radio_page_layout) {
         selected_page_layout = radio_page_layout.value; 
         var radio_page_layout_label_id = radio_page_layout.id.replace("_page_layout", "");
         document.getElementById("introduction").innerHTML += radio_page_layout_label_id;
-        document.getElementById("page_layout_dropdown_button").innerHTML= document.getElementById(radio_page_layout_label_id).innerText + "<span aria-hidden='true'>&#9660;</span>";
+        document.getElementById("page_layout_dropdown_button").innerHTML= document.getElementById(radio_page_layout_label_id).innerText + "<span aria-hidden='true'>&#9660;</span>"; //change page layout label to the selected page layout
         radio_page_layout.checked = true;
     }
      change_page_size();
@@ -216,4 +219,28 @@ function dropdown(dropdown_id) {
     }, false);
 }
 
+function screen_read_text() {
+    if (document.getElementById("screen_read_textarea") != null) {
+        document.getElementById("screen_read_textarea").remove();
+    }
+    var screen_reader_paragraph = document.createElement("p");
+    screen_reader_paragraph.setAttribute("id", "screen_read_textarea");
+    var textarea_content = document.createTextNode(textarea_element.value);
+    screen_reader_paragraph.appendChild(textarea_content);
+    screen_reader_paragraph.classList.add("screen_reader_only"); //visually hide the new paragraph
+    document.body.appendChild(screen_reader_paragraph);
 
+}
+
+/*
+hide_keyboard funtion toggles the visibility of the onscreen keyboard.
+Executes when the hide keyboard is pressed.
+*/
+function hide_keyboard() {
+    document.getElementById("onscreen_keyboard").classList.toggle("hide");
+    if (document.getElementById("hide_keyboard_button").innerHTML == "Hide Keyboard") {
+        document.getElementById("hide_keyboard_button").innerHTML = "Unhide Keyboard";
+    } else {
+        document.getElementById("hide_keyboard_button").innerHTML = "Hide Keyboard";
+    }
+}
