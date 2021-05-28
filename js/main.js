@@ -6,10 +6,10 @@ var selected_font_size = "24px";
 var selected_page_size = "8.5in 11in";
 var selected_page_layout = "portrait";
 
-
 window.addEventListener("load", main_set_up);
 
 function main_set_up() {
+    document.addEventListener("mousemove", mouse_position);
     textarea_element.addEventListener("input", update_printable_table, false);
     
     button_input("click"); //mouse click events
@@ -244,3 +244,11 @@ function hide_keyboard() {
         document.getElementById("hide_keyboard_button").innerHTML = "Hide Keyboard";
     }
 }
+
+// function mouse_position(e) {
+//     document.getElementById("introduction").innerHTML = e.pageY;
+//     document.getElementById("introduction").innerHTML += " " + Number(e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop));
+//     document.getElementById("introduction").innerHTML += " offset " + window.pageYOffset + " fixed " + document.getElementById("onscreen_keyboard_section").scrollHeight;
+//     document.getElementById("introduction").innerHTML += " fixed_scroll_height " + fixed_scroll_height + " scrollbar offset " + scrollbar_placement_offset;
+
+// }
