@@ -9,195 +9,197 @@
 		<meta charset="UTF-8">
 	</head>
 	<body class="">
-		<header>
-			<h1 >Mirror Writing Keyboard</h1>
-			<svg id="mirror_writing_logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			viewBox="0 0 500 172.5" style="enable-background:new 0 0 500 172.5;" aria-hidden="true" aria-label="Mirror Writing Keyboard Logo">
-				<g>
-					<text aria-hidden="true" class="logo_text" transform="matrix(1 0 0 1 256.3123 49.9899)">
-						<tspan x="0" y="0">Mirror </tspan>
-						<tspan x="0" y="48">Writing</tspan>
-						<tspan x="0" y="96">Keyboard</tspan>
-					</text>
-					<text aria-hidden="true" class="logo_text" transform="matrix(-1 0 0 1 243.6875 49.9901)">
-						<tspan x="0" y="0">Mirror </tspan>
-						<tspan x="0" y="48">Writing</tspan>
-						<tspan x="0" y="96">Keyboard</tspan>
-					</text>
-				</g>
-				<path id="logo_text_cursor" d="M275.18,171.25h-18.04c-2.91,0-5.58-1.15-7.41-2.94c-1.83,1.79-4.5,2.94-7.42,2.94h-18.04c-1.38,0-2.5-1.12-2.5-2.49 s1.12-2.49,2.5-2.49h18.04c2.53,0,4.92-1.72,4.92-3.55c0-0.08,0-0.16,0.01-0.24l0.53-152.72c-0.02-1.81-2.4-3.52-4.92-3.52h-18.04 c-1.38,0-2.5-1.12-2.5-2.49s1.12-2.49,2.5-2.49h18.04c2.91,0,5.58,1.15,7.42,2.94c1.83-1.79,4.5-2.94,7.41-2.94h18.04 c1.38,0,2.5,1.12,2.5,2.49s-1.12,2.49-2.5,2.49h-18.04c-2.53,0-4.91,1.72-4.91,3.55c0,0.01,0,0.03,0,0.04l-0.53,153.09 c0.17,1.75,2.47,3.35,4.9,3.35h18.04c1.38,0,2.5,1.12,2.5,2.49S276.56,171.25,275.18,171.25z"/>
-			</svg>
-		</header>
-		<p id="introduction">hallo, people. gato. neko. cat. </p>
-		<section id="text_editor">
-			<fieldset id="font_family" class="dropdown text_controls">
-				<legend><button type="button" id="font_dropdown_button" class="dropdown_button font_dropdown_element" aria-label="Font">Font <span aria-hidden="true">&#9660;</span></button></legend>
-				<div id="font_dropdown" class="dropdown_content">
-					<div class="dropdown_element">
-						<input type="radio" id="arial_font" class="input_radio_button font_dropdown_element" name="font_selection" value="arial" onchange="change_font_family(this)">
-						<label for="arial_font" id="arial" class="dropdown_label font_dropdown_element arial">Arial</label>
+		<div id="main_body"> 
+			<header>
+				<h1 >Mirror Writing Keyboard</h1>
+				<svg id="mirror_writing_logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				viewBox="0 0 500 172.5" style="enable-background:new 0 0 500 172.5;" aria-hidden="true" aria-label="Mirror Writing Keyboard Logo">
+					<g>
+						<text aria-hidden="true" class="logo_text" transform="matrix(1 0 0 1 256.3123 49.9899)">
+							<tspan x="0" y="0">Mirror </tspan>
+							<tspan x="0" y="48">Writing</tspan>
+							<tspan x="0" y="96">Keyboard</tspan>
+						</text>
+						<text aria-hidden="true" class="logo_text" transform="matrix(-1 0 0 1 243.6875 49.9901)">
+							<tspan x="0" y="0">Mirror </tspan>
+							<tspan x="0" y="48">Writing</tspan>
+							<tspan x="0" y="96">Keyboard</tspan>
+						</text>
+					</g>
+					<path id="logo_text_cursor" d="M275.18,171.25h-18.04c-2.91,0-5.58-1.15-7.41-2.94c-1.83,1.79-4.5,2.94-7.42,2.94h-18.04c-1.38,0-2.5-1.12-2.5-2.49 s1.12-2.49,2.5-2.49h18.04c2.53,0,4.92-1.72,4.92-3.55c0-0.08,0-0.16,0.01-0.24l0.53-152.72c-0.02-1.81-2.4-3.52-4.92-3.52h-18.04 c-1.38,0-2.5-1.12-2.5-2.49s1.12-2.49,2.5-2.49h18.04c2.91,0,5.58,1.15,7.42,2.94c1.83-1.79,4.5-2.94,7.41-2.94h18.04 c1.38,0,2.5,1.12,2.5,2.49s-1.12,2.49-2.5,2.49h-18.04c-2.53,0-4.91,1.72-4.91,3.55c0,0.01,0,0.03,0,0.04l-0.53,153.09 c0.17,1.75,2.47,3.35,4.9,3.35h18.04c1.38,0,2.5,1.12,2.5,2.49S276.56,171.25,275.18,171.25z"/>
+				</svg>
+			</header>
+			<p id="introduction">hallo, people. gato. neko. cat. </p>
+			<section id="text_editor">
+				<fieldset id="font_family" class="dropdown text_controls">
+					<legend><button type="button" id="font_dropdown_button" class="dropdown_button font_dropdown_element" aria-label="Font">Font <span aria-hidden="true">&#9660;</span></button></legend>
+					<div id="font_dropdown" class="dropdown_content">
+						<div class="dropdown_element">
+							<input type="radio" id="arial_font" class="input_radio_button font_dropdown_element" name="font_selection" value="arial" onchange="change_font_family(this)">
+							<label for="arial_font" id="arial" class="dropdown_label font_dropdown_element arial">Arial</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="brush_script_mt_font" class="input_radio_button font_dropdown_element" name="font_selection" value="brush_script_mt" onchange="change_font_family(this)">
+							<label for="brush_script_mt_font" id="brush_script_mt" class="dropdown_label font_dropdown_element brush_script_mt">Brush Script MT</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="copperplate_font" class="input_radio_button font_dropdown_element" name="font_selection" value="copperplate" onchange="change_font_family(this)">
+							<label for="copperplate_font" id="copperplate" class="dropdown_label font_dropdown_element copperplate">Copperplate</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="courier_new_font" class="input_radio_button font_dropdown_element" name="font_selection" value="courier_new" onchange="change_font_family(this)">
+							<label for="courier_new_font" id="courier_new" class="dropdown_label font_dropdown_element courier_new">Courier New</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="garamond_font" class="input_radio_button font_dropdown_element" name="font_selection" value="garamond" onchange="change_font_family(this)">
+							<label for="garamond_font" id="garamond" class="dropdown_label font_dropdown_element garamond">Garamond</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="georgia_font" class="input_radio_button font_dropdown_element" name="font_selection" value="georgia" onchange="change_font_family(this)">
+							<label for="georgia_font" id="georgia" class="dropdown_label font_dropdown_element georgia">Georgia</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="helvetica_font" class="input_radio_button font_dropdown_element" name="font_selection" value="helvetica" onchange="change_font_family(this)">
+							<label for="helvetica_font" id="helvetica" class="dropdown_label font_dropdown_element helvetica">Helvetica</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="tahoma_font" class="input_radio_button font_dropdown_element" name="font_selection" value="tahoma" onchange="change_font_family(this)">
+							<label for="tahoma_font" id="tahoma" class="dropdown_label font_dropdown_element tahoma">Tahoma</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="times_new_roman_font" class="input_radio_button font_dropdown_element" name="font_selection" value="times_new_roman" onchange="change_font_family(this)" checked>
+							<label for="times_new_roman_font" id="times_new_roman" class="dropdown_label font_dropdown_element times_new_roman">Times New Roman</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="trebuchet_ms_font" class="input_radio_button font_dropdown_element" name="font_selection" value="trebuchet_ms" onchange="change_font_family(this)">
+							<label for="trebuchet_ms_font" id="trebuchet_ms" class="dropdown_label font_dropdown_element trebuchet_ms">Trebuchet MS</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="verdana_font" class="input_radio_button font_dropdown_element" name="font_selection" value="verdana" onchange="change_font_family(this)">
+							<label for="verdana_font" id="verdana" class="dropdown_label font_dropdown_element verdana">Verdana</label>
+						</div>
 					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="brush_script_mt_font" class="input_radio_button font_dropdown_element" name="font_selection" value="brush_script_mt" onchange="change_font_family(this)">
-						<label for="brush_script_mt_font" id="brush_script_mt" class="dropdown_label font_dropdown_element brush_script_mt">Brush Script MT</label>
+				</fieldset>
+				<fieldset id="font_size" class="dropdown text_controls">
+					<legend><button type="button" id="font_size_dropdown_button" class="dropdown_button font_size_dropdown_element" aria-label="Font Size">Font Size <span aria-hidden="true">&#9660;</span></button></legend>
+					<div id="font_size_dropdown" class="dropdown_content">
+						<div class="dropdown_element">
+							<input type="radio" id="eight_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eight" onchange="change_font_size(this)">
+							<label for="eight_font_size" id="eight" class="dropdown_label font_size_dropdown_element">8</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="nine_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="nine" onchange="change_font_size(this)">
+							<label for="nine_font_size" id="nine" class="dropdown_label font_size_dropdown_element">9</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="ten_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="ten" onchange="change_font_size(this)">
+							<label for="ten_font_size" id="ten" class="dropdown_label font_size_dropdown_element">10</label>
+						</div>	
+						<div class="dropdown_element">
+							<input type="radio" id="eleven_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eleven" onchange="change_font_size(this)">
+							<label for="eleven_font_size" id="eleven" class="dropdown_label font_size_dropdown_element">11</label>
+						</div>	
+						<div class="dropdown_element">
+							<input type="radio" id="twelve_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="twelve" onchange="change_font_size(this)">
+							<label for="twelve_font_size" id="twelve" class="dropdown_label font_size_dropdown_element">12</label>
+						</div>		
+						<div class="dropdown_element">
+							<input type="radio" id="fourteen_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="fourteen" onchange="change_font_size(this)">
+							<label for="fourteen_font_size" id="fourteen" class="dropdown_label font_size_dropdown_element">14</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="eighteen_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eighteen" onchange="change_font_size(this)">
+							<label for="eighteen_font_size" id="eighteen" class="dropdown_label font_size_dropdown_element">18</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="twenty_four_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="twenty_four" onchange="change_font_size(this)" checked>
+							<label for="twenty_four_font_size" id="twenty_four" class="dropdown_label font_size_dropdown_element">24</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="thirty_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="thirty" onchange="change_font_size(this)">
+							<label for="thirty_font_size" id="thirty" class="dropdown_label font_size_dropdown_element">30</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="thirty_six_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="thirty_six" onchange="change_font_size(this)">
+							<label for="thirty_six_font_size" id="thirty_six" class="dropdown_label font_size_dropdown_element">36</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="forty_eight_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="forty_eight" onchange="change_font_size(this)">
+							<label for="forty_eight_font_size" id="forty_eight" class="dropdown_label font_size_dropdown_element">48</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="sixty_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="sixty" onchange="change_font_size(this)">
+							<label for="sixty_font_size" id="sixty" class="dropdown_label font_size_dropdown_element">60</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="seventy_two_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="seventy_two" onchange="change_font_size(this)">
+							<label for="seventy_two_font_size" id="seventy_two" class="dropdown_label font_size_dropdown_element">72</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="ninety_six_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="ninety_six" onchange="change_font_size(this)">
+							<label for="ninety_six_font_size" id="ninety_six" class="dropdown_label font_size_dropdown_element">96</label>
+						</div>		
 					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="copperplate_font" class="input_radio_button font_dropdown_element" name="font_selection" value="copperplate" onchange="change_font_family(this)">
-						<label for="copperplate_font" id="copperplate" class="dropdown_label font_dropdown_element copperplate">Copperplate</label>
+				</fieldset>
+				<textarea id="mirrored_textarea" class="textarea mirrored_text" aria-hiden="true" placeholder="Type here." autofocus></textarea>
+				<p class="warning">Page Size and Page Layout do not automatically change the paper size and layout settings for the printer.</p>
+				<fieldset id="page_size" class="dropdown print_controls">
+					<legend><button type="button" id="page_size_dropdown_button" class="dropdown_button page_size_dropdown_element" aria-label="Page Size">Page Size <span aria-hidden="true">&#9660;</span></button></legend>
+					<div id="page_size_dropdown" class="dropdown_content">
+						<div class="dropdown_element">
+							<input type="radio" id="a_zero_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="33.1in 46.8in" onchange="change_page_size(this)">
+							<label for="a_zero_page_size" id="a_zero" class="dropdown_label page_size_dropdown_element">A0</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="a_one_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="23.4in 33.1in" onchange="change_page_size(this)">
+							<label for="a_one_page_size" id="a_one" class="dropdown_label page_size_dropdown_element">A1</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="a_two_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="16.5in 23.4in" onchange="change_page_size(this)">
+							<label for="a_two_page_size" id="a_two" class="dropdown_label page_size_dropdown_element">A2</label>
+						</div>	
+						<div class="dropdown_element">
+							<input type="radio" id="a_three_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="11.7in 16.5in" onchange="change_page_size(this)">
+							<label for="a_three_page_size" id="a_three" class="dropdown_label page_size_dropdown_element">A3</label>
+						</div>	
+						<div class="dropdown_element">
+							<input type="radio" id="a_four_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="8.3in 11.7" onchange="change_page_size(this)">
+							<label for="a_four_page_size" id="a_four" class="dropdown_label page_size_dropdown_element">A4</label>
+						</div>		
+						<div class="dropdown_element">
+							<input type="radio" id="a_five_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="5.8in 8.3in" onchange="change_page_size(this)">
+							<label for="a_five_page_size" id="a_five" class="dropdown_label page_size_dropdown_element">A5</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="legal_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="8.5in 14in" onchange="change_page_size(this)">
+							<label for="legal_page_size" id="legal" class="dropdown_label page_size_dropdown_element">Legal</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="letter_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="8.5in 11in" onchange="change_page_size(this)" checked>
+							<label for="letter_page_size" id="letter" class="dropdown_label page_size_dropdown_element">Letter</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="tabloid_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="11in 17in" onchange="change_page_size(this)">
+							<label for="tabloid_page_size" id="tabloid" class="dropdown_label page_size_dropdown_element">Tabloid</label>
+						</div>	
 					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="courier_new_font" class="input_radio_button font_dropdown_element" name="font_selection" value="courier_new" onchange="change_font_family(this)">
-						<label for="courier_new_font" id="courier_new" class="dropdown_label font_dropdown_element courier_new">Courier New</label>
+				</fieldset>
+				<fieldset id="page_layout" class="dropdown print_controls">
+					<legend><button type="button" id="page_layout_dropdown_button" class="dropdown_button page_layout_dropdown_element" aria-label="Page Layout">Page Layout <span aria-hidden="true">&#9660;</span></button></legend>
+					<div id="page_layout_dropdown" class="dropdown_content">
+						<div class="dropdown_element">
+							<input type="radio" id="portrait_page_layout" class="input_radio_button page_layout_dropdown_element" name="page_layout_selection" value="portrait" onchange="change_page_layout(this)" checked>
+							<label for="portrait_page_layout" id="portrait" class="dropdown_label page_layout_dropdown_element">Portrait</label>
+						</div>
+						<div class="dropdown_element">
+							<input type="radio" id="landscape_page_layout" class="input_radio_button page_layout_dropdown_element" name="page_layout_selection" value="landscape" onchange="change_page_layout(this)">
+							<label for="landscape_page_layout" id="landscape" class="dropdown_label page_layout_dropdown_element">Landscape</label>
+						</div>	
 					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="garamond_font" class="input_radio_button font_dropdown_element" name="font_selection" value="garamond" onchange="change_font_family(this)">
-						<label for="garamond_font" id="garamond" class="dropdown_label font_dropdown_element garamond">Garamond</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="georgia_font" class="input_radio_button font_dropdown_element" name="font_selection" value="georgia" onchange="change_font_family(this)">
-						<label for="georgia_font" id="georgia" class="dropdown_label font_dropdown_element georgia">Georgia</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="helvetica_font" class="input_radio_button font_dropdown_element" name="font_selection" value="helvetica" onchange="change_font_family(this)">
-						<label for="helvetica_font" id="helvetica" class="dropdown_label font_dropdown_element helvetica">Helvetica</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="tahoma_font" class="input_radio_button font_dropdown_element" name="font_selection" value="tahoma" onchange="change_font_family(this)">
-						<label for="tahoma_font" id="tahoma" class="dropdown_label font_dropdown_element tahoma">Tahoma</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="times_new_roman_font" class="input_radio_button font_dropdown_element" name="font_selection" value="times_new_roman" onchange="change_font_family(this)" checked>
-						<label for="times_new_roman_font" id="times_new_roman" class="dropdown_label font_dropdown_element times_new_roman">Times New Roman</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="trebuchet_ms_font" class="input_radio_button font_dropdown_element" name="font_selection" value="trebuchet_ms" onchange="change_font_family(this)">
-						<label for="trebuchet_ms_font" id="trebuchet_ms" class="dropdown_label font_dropdown_element trebuchet_ms">Trebuchet MS</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="verdana_font" class="input_radio_button font_dropdown_element" name="font_selection" value="verdana" onchange="change_font_family(this)">
-						<label for="verdana_font" id="verdana" class="dropdown_label font_dropdown_element verdana">Verdana</label>
-					</div>
-				</div>
-			</fieldset>
-			<fieldset id="font_size" class="dropdown text_controls">
-				<legend><button type="button" id="font_size_dropdown_button" class="dropdown_button font_size_dropdown_element" aria-label="Font Size">Font Size <span aria-hidden="true">&#9660;</span></button></legend>
-				<div id="font_size_dropdown" class="dropdown_content">
-					<div class="dropdown_element">
-						<input type="radio" id="eight_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eight" onchange="change_font_size(this)">
-						<label for="eight_font_size" id="eight" class="dropdown_label font_size_dropdown_element">8</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="nine_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="nine" onchange="change_font_size(this)">
-						<label for="nine_font_size" id="nine" class="dropdown_label font_size_dropdown_element">9</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="ten_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="ten" onchange="change_font_size(this)">
-						<label for="ten_font_size" id="ten" class="dropdown_label font_size_dropdown_element">10</label>
-					</div>	
-					<div class="dropdown_element">
-						<input type="radio" id="eleven_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eleven" onchange="change_font_size(this)">
-						<label for="eleven_font_size" id="eleven" class="dropdown_label font_size_dropdown_element">11</label>
-					</div>	
-					<div class="dropdown_element">
-						<input type="radio" id="twelve_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="twelve" onchange="change_font_size(this)">
-						<label for="twelve_font_size" id="twelve" class="dropdown_label font_size_dropdown_element">12</label>
-					</div>		
-					<div class="dropdown_element">
-						<input type="radio" id="fourteen_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="fourteen" onchange="change_font_size(this)">
-						<label for="fourteen_font_size" id="fourteen" class="dropdown_label font_size_dropdown_element">14</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="eighteen_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="eighteen" onchange="change_font_size(this)">
-						<label for="eighteen_font_size" id="eighteen" class="dropdown_label font_size_dropdown_element">18</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="twenty_four_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="twenty_four" onchange="change_font_size(this)" checked>
-						<label for="twenty_four_font_size" id="twenty_four" class="dropdown_label font_size_dropdown_element">24</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="thirty_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="thirty" onchange="change_font_size(this)">
-						<label for="thirty_font_size" id="thirty" class="dropdown_label font_size_dropdown_element">30</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="thirty_six_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="thirty_six" onchange="change_font_size(this)">
-						<label for="thirty_six_font_size" id="thirty_six" class="dropdown_label font_size_dropdown_element">36</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="forty_eight_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="forty_eight" onchange="change_font_size(this)">
-						<label for="forty_eight_font_size" id="forty_eight" class="dropdown_label font_size_dropdown_element">48</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="sixty_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="sixty" onchange="change_font_size(this)">
-						<label for="sixty_font_size" id="sixty" class="dropdown_label font_size_dropdown_element">60</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="seventy_two_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="seventy_two" onchange="change_font_size(this)">
-						<label for="seventy_two_font_size" id="seventy_two" class="dropdown_label font_size_dropdown_element">72</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="ninety_six_font_size" class="input_radio_button font_size_dropdown_element" name="font_size_selection" value="ninety_six" onchange="change_font_size(this)">
-						<label for="ninety_six_font_size" id="ninety_six" class="dropdown_label font_size_dropdown_element">96</label>
-					</div>		
-				</div>
-			</fieldset>
-			<textarea id="mirrored_textarea" class="textarea mirrored_text" aria-hiden="true" placeholder="Type here." autofocus></textarea>
-			<p class="warning">Page Size and Page Layout do not automatically change the paper size and layout settings for the printer.</p>
-			<fieldset id="page_size" class="dropdown print_controls">
-				<legend><button type="button" id="page_size_dropdown_button" class="dropdown_button page_size_dropdown_element" aria-label="Page Size">Page Size <span aria-hidden="true">&#9660;</span></button></legend>
-				<div id="page_size_dropdown" class="dropdown_content">
-					<div class="dropdown_element">
-						<input type="radio" id="a_zero_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="33.1in 46.8in" onchange="change_page_size(this)">
-						<label for="a_zero_page_size" id="a_zero" class="dropdown_label page_size_dropdown_element">A0</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="a_one_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="23.4in 33.1in" onchange="change_page_size(this)">
-						<label for="a_one_page_size" id="a_one" class="dropdown_label page_size_dropdown_element">A1</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="a_two_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="16.5in 23.4in" onchange="change_page_size(this)">
-						<label for="a_two_page_size" id="a_two" class="dropdown_label page_size_dropdown_element">A2</label>
-					</div>	
-					<div class="dropdown_element">
-						<input type="radio" id="a_three_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="11.7in 16.5in" onchange="change_page_size(this)">
-						<label for="a_three_page_size" id="a_three" class="dropdown_label page_size_dropdown_element">A3</label>
-					</div>	
-					<div class="dropdown_element">
-						<input type="radio" id="a_four_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="8.3in 11.7" onchange="change_page_size(this)">
-						<label for="a_four_page_size" id="a_four" class="dropdown_label page_size_dropdown_element">A4</label>
-					</div>		
-					<div class="dropdown_element">
-						<input type="radio" id="a_five_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="5.8in 8.3in" onchange="change_page_size(this)">
-						<label for="a_five_page_size" id="a_five" class="dropdown_label page_size_dropdown_element">A5</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="legal_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="8.5in 14in" onchange="change_page_size(this)">
-						<label for="legal_page_size" id="legal" class="dropdown_label page_size_dropdown_element">Legal</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="letter_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="8.5in 11in" onchange="change_page_size(this)" checked>
-						<label for="letter_page_size" id="letter" class="dropdown_label page_size_dropdown_element">Letter</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="tabloid_page_size" class="input_radio_button page_size_dropdown_element" name="page_size_selection" value="11in 17in" onchange="change_page_size(this)">
-						<label for="tabloid_page_size" id="tabloid" class="dropdown_label page_size_dropdown_element">Tabloid</label>
-					</div>	
-				</div>
-			</fieldset>
-			<fieldset id="page_layout" class="dropdown print_controls">
-				<legend><button type="button" id="page_layout_dropdown_button" class="dropdown_button page_layout_dropdown_element" aria-label="Page Layout">Page Layout <span aria-hidden="true">&#9660;</span></button></legend>
-				<div id="page_layout_dropdown" class="dropdown_content">
-					<div class="dropdown_element">
-						<input type="radio" id="portrait_page_layout" class="input_radio_button page_layout_dropdown_element" name="page_layout_selection" value="portrait" onchange="change_page_layout(this)" checked>
-						<label for="portrait_page_layout" id="portrait" class="dropdown_label page_layout_dropdown_element">Portrait</label>
-					</div>
-					<div class="dropdown_element">
-						<input type="radio" id="landscape_page_layout" class="input_radio_button page_layout_dropdown_element" name="page_layout_selection" value="landscape" onchange="change_page_layout(this)">
-						<label for="landscape_page_layout" id="landscape" class="dropdown_label page_layout_dropdown_element">Landscape</label>
-					</div>	
-				</div>
-			</fieldset>
-			<button type="button" id="print_button" class="print_controls button">Print Text</button>
-		</section>
+				</fieldset>
+				<button type="button" id="print_button" class="print_controls button">Print Text</button>
+			</section>
+		</div>
 
 		<section id="onscreen_keyboard_section">
 			<button type="button" id="screen_read_button" class="keyboard_buttons button">Screen Read Text</button>
