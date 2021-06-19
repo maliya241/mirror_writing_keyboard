@@ -27,10 +27,6 @@
 	display: none;
 }
 
-* {
-	font-family: 'Times New Roman', Times, serif;
-}
-
 body, header {
 	display: block;
 	width: 90vw;
@@ -271,7 +267,6 @@ Keyboard
 	box-sizing: border-box;
 	margin: 1em auto;
 	padding: 4px;
-	position: relative;
 	position: -webkit-sticky;
 	position: sticky;
 	background-color: rgba(191, 42, 42, 0.75);
