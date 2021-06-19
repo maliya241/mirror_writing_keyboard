@@ -46,7 +46,7 @@
     }
 }
 
-header, #introduction, #text_editor, #onscreen_keyboard {
+header, #introduction, #text_editor, #onscreen_keyboard, button {
     display: none !important;
 }
 
