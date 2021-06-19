@@ -1,5 +1,4 @@
 var textarea_element = document.getElementById("mirrored_textarea");
-var font_selection_radio;
 var selected_font = "times_new_roman";
 var previous_selected_font = "times_new_roman";
 var selected_font_size = "24px";
@@ -11,6 +10,8 @@ window.addEventListener("load", main_set_up);
 function main_set_up() {
     // document.addEventListener("mousemove", mouse_position);
     textarea_element.addEventListener("input", update_printable_table, false);
+	
+	change_font_family(document.getElementById("times_new_roman_font"));
     
     button_input("click"); //mouse click events
 	button_input("touchend"); //touch screen events
@@ -223,13 +224,14 @@ function screen_read_text() {
     if (document.getElementById("screen_read_textarea") != null) {
         document.getElementById("screen_read_textarea").remove();
     }
-    var screen_reader_paragraph = document.createElement("p");
+    var screen_reader_paragraph = document.createElement("input");
     screen_reader_paragraph.setAttribute("id", "screen_read_textarea");
-    var textarea_content = document.createTextNode(textarea_element.value);
-    screen_reader_paragraph.appendChild(textarea_content);
-    screen_reader_paragraph.classList.add("screen_reader_only"); //visually hide the new paragraph
+	screen_reader_paragraph.value = textarea_element.value;
+   	screen_reader_paragraph.classList.add("screen_reader_only"); //visually hide the new paragraph
+	
     document.body.appendChild(screen_reader_paragraph);
-
+	
+	screen_reader_paragraph.focus();
 }
 
 /*
