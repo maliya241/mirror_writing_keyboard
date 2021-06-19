@@ -82,7 +82,7 @@ header, #introduction, #text_editor, #onscreen_keyboard, button {
     height: 3.5em;
 }
 
-#logo_text_cursor {
+.logo_text_cursor_style {
 	fill: #BF2B2B;
 }
 
