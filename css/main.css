@@ -55,7 +55,7 @@ h1 {
 	white-space: pre;
 }
 
-#logo_text_cursor {
+.logo_text_cursor_style {
 	fill: #BF2B2B;
 }
 
