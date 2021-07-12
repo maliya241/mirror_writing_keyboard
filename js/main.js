@@ -76,12 +76,12 @@ function toggle_button(ele) {
 }
 
 /*
-auto_resize function resizes the textarea height as needed.
-Executes after the textarea value has been changed.
+scroll_to_cursor function scrolls to the textarea's cursor.
+Executes after the textarea value has been changed or arrow keys have been used.
 */
-function auto_resize() {
-    textarea_element.style.height = 'auto';
-    textarea_element.style.height = textarea_element.scrollHeight + 'px';
+function scroll_to_cursor() {
+    textarea_element.blur();
+    textarea_element.focus();
 }
 
 /*
@@ -133,7 +133,7 @@ function change_font_family(radio_font) {
     for (i = 0; i < key_text_array.length; i++) {
         key_text_array[i].classList.add(selected_font);
     }
-    auto_resize();
+    scroll_to_cursor();
 }
 
 /*
@@ -151,7 +151,7 @@ function change_font_size(radio_font_size) {
 
     textarea_element.style.fontSize = selected_font_size;
     document.getElementById("mirror_writing_printable_content").style.fontSize = selected_font_size;
-    auto_resize();
+    scroll_to_cursor();
 }
 
 /*
