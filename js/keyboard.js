@@ -212,6 +212,7 @@ function virtual_keyboard_set_up() {
             start = textarea_element.selectionStart;
             textarea_element.selectionEnd++;
             textarea_element.selectionStart = textarea_element.selectionEnd;
+            scroll_to_cursor();
             event.preventDefault();
         }
         if (event.code == "ArrowRight") {
@@ -222,12 +223,14 @@ function virtual_keyboard_set_up() {
 				textarea_element.selectionStart = 0;
 			}
             textarea_element.selectionEnd = textarea_element.selectionStart;
+            scroll_to_cursor();
             event.preventDefault();
         }
 		//Select with arrow keys
         if (event.code == "ArrowLeft" && modifier_key_pressed == true) {
             end = textarea_element.selectionEnd++;
             textarea_element.setSelectionRange(start, end);
+            scroll_to_cursor();
             event.preventDefault();
         }
         if (event.code == "ArrowRight" && modifier_key_pressed == true) {
@@ -237,6 +240,7 @@ function virtual_keyboard_set_up() {
 				start = 0;
 			}
             textarea_element.setSelectionRange(start, end);
+            scroll_to_cursor();
             event.preventDefault();
         }
     });
@@ -583,7 +587,7 @@ function edit_textarea(index) {
 	} else if (virtual_keyboard_option == "uppercase_accent_characters_four") {
 		add_character_move_cursor(String.fromCharCode(uppercase_accent_characters_four_utf_8_array[index]));
 	} 
-	auto_resize();
+	scroll_to_cursor();
 	update_printable_table();
 }
 
@@ -783,7 +787,7 @@ Executes in edit_textarea and when called for Tab, spacebar, and Enter.
 function add_character_move_cursor(input_string) {
 	textarea_element.setRangeText(input_string, textarea_element.selectionStart, textarea_element.selectionEnd, "end");
 	//textarea_element.focus();
-	auto_resize();
+	scroll_to_cursor();
 	update_printable_table();
 }
 
@@ -798,7 +802,7 @@ function backspace_function() {
 	}
 	textarea_element.setRangeText("", backspace_beginning_char, textarea_element.selectionEnd, "end");
 	textarea_element.focus();
-	auto_resize();
+	scroll_to_cursor();
 	update_printable_table();
 }
 
@@ -813,17 +817,17 @@ function delete_function() {
 	}
 	textarea_element.setRangeText("", textarea_element.selectionStart, delete_end_char, "end");
 	textarea_element.focus();
-	auto_resize();
+	scroll_to_cursor();
 	update_printable_table(); 
 }
 
 /*
-auto_resize function resizes the textarea height as needed.
-Executes after the textarea has been edited.
+scroll_to_cursor function scrolls to the textarea's cursor.
+Executes after the textarea value has been changed or arrow keys have been used.
 */
-function auto_resize() {
-    textarea_element.style.height = 'auto';
-    textarea_element.style.height = textarea_element.scrollHeight + 'px';
+function scroll_to_cursor() {
+    textarea_element.blur();
+    textarea_element.focus();
 }
 
 /*
