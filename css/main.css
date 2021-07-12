@@ -90,8 +90,6 @@ fieldset {
 	font-size: 24pt;
 	resize: vertical;
 	overflow-y: auto;
-	overflow-wrap: break-word;
-	word-wrap: break-word;
 	border: 1.5px solid #837F7E;
 	border-radius: 4px;
 }
