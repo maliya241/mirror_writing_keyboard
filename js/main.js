@@ -8,7 +8,6 @@ var selected_page_layout = "portrait";
 window.addEventListener("load", main_set_up);
 
 function main_set_up() {
-    // document.addEventListener("mousemove", mouse_position);
     textarea_element.addEventListener("input", update_printable_table, false);
 	
 	change_font_family(document.getElementById("times_new_roman_font"));
