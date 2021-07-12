@@ -220,6 +220,12 @@ function dropdown(dropdown_id) {
     }, false);
 }
 
+
+/*
+screen_read_text function creates a visually hidden input and adds the mirrored text value to it and then focuses on it to make the screen reader read it. 
+Important Note: Screen reader may say something like "Edit" before reading the mirrored text because of the input.
+Executes when the Screen Read Mirrored Text is pressed.
+*/
 function screen_read_text() {
     if (document.getElementById("screen_read_textarea") != null) {
         document.getElementById("screen_read_textarea").remove();
@@ -246,11 +252,3 @@ function hide_keyboard() {
         document.getElementById("hide_keyboard_button").innerHTML = "Hide Keyboard";
     }
 }
-
-// function mouse_position(e) {
-//     document.getElementById("introduction").innerHTML = e.pageY;
-//     document.getElementById("introduction").innerHTML += " " + Number(e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop));
-//     document.getElementById("introduction").innerHTML += " offset " + window.pageYOffset + " fixed " + document.getElementById("onscreen_keyboard_section").scrollHeight;
-//     document.getElementById("introduction").innerHTML += " fixed_scroll_height " + fixed_scroll_height + " scrollbar offset " + scrollbar_placement_offset;
-
-// }
